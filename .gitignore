@@ -1,0 +1,22 @@
+# Everything derived from a local game install. These files carry the
+# original game's script and assets and are NOT distributed by this
+# project -- regenerate them with `ifalsus.py extract-*`.
+work/
+patch/
+backups/
+
+# Pristine fetched font binaries (see tools/fetch_fonts.sh). The line-metric
+# patched copies this patch actually ships are vendored in fonts/
+# (NanumBarunGothic's OFL license permits redistribution).
+tools/fonts/
+
+.venv/
+__pycache__/
+*.pyc
+.oc_drafts/
+.idea/
+
+# Private local tooling (QA scripts, second-agent review orchestration, and
+# the style guide / workflow doc written for them) -- not part of the
+# open-source release; used only to produce translation/ko/*.txt locally.
+.local-tools/

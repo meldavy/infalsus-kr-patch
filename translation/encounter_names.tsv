@@ -1,0 +1,85 @@
+# Korean encounter/Reflect titles -- In Falsus
+# Format: <Id><TAB><IdStr><TAB><korean>. Id is the integer key and
+# IdStr the human-readable key (e.g. "1-1-a", "2-r-7") in
+# DynamicStringMapping.encounterIdTypeMapping -- both informational, packing
+# matches by Id+IdStr together, never by Korean text.
+# Only rows this project translates are listed.
+1	1-r-2	두 번째 발걸음
+2	1-r-3	죽음과 여름
+3	1-r-4	학교 복귀
+4	Hacker	열정 없는 발걸음
+5	1-r-6	눈앞의 바다
+6	Story	스토리
+7	Officer	경관
+8	Ayame	아야메
+9	Mei	메이
+10	Student	학생
+11	Mei	메이
+12	Stranger	낯선 사람
+13	Hacker	해커
+14	Hacker	해커
+15	2-r-1	'예전' 친구
+16	2-r-2	외출
+17	Shopkeep	숨겨진 손길
+18	2-r-4	결렬
+19	Aria	거울에 비친 분노
+20	Aria	후회, 그리고 재회
+21	2-r-7	어두워진 천상
+22	Mei	메이
+23	Nia	니아
+24	Touko	토코
+25	Shopkeep	가게 주인
+26	Iris	아이리스
+27	Aria	아리아
+28	Aria	아리아
+29	Ayame	내면의 빛
+30	2b-r-2	뒤흔들린 일상
+31	Iris	아이리스
+32	Ayame	아야메
+33	Ayame	아야메
+34	Mei	메이
+35	Nia	니아
+36	Thug	악한
+44	AARC: The Unseen Before Your Eyes	AARC: 보이지 않았던 것들
+45	AARC: The Unseen Before Your Eyes	AARC: 보이지 않았던 것들
+46	AARC: The Unseen Before Your Eyes	AARC: 보이지 않았던 것들
+47	AARC: The Unseen Before Your Eyes	AARC: 보이지 않았던 것들
+48	AARC: The Unseen Before Your Eyes	AARC: 보이지 않았던 것들
+51	AARC: The Unseen Before Your Eyes	AARC: 보이지 않았던 것들
+52	3-r-1	은빛 유대
+53	3-r-2	가라앉는 마음
+54	3-r-3	위험한 한 수
+55	Student	능숙한 조종
+56	Iris	아이리스
+57	House	하우스
+58	Iris	아이리스
+59	Keats	키츠
+60	Keats	키츠
+61	Keats	키츠
+62	Mei	메이
+63	Student	학생
+64	Student	학생
+65	House	하우스
+66	Iris	아이리스
+67	Iris	아이리스
+68	demo-r-1	불안한 다이브
+69	demo-r-2	단련의 다이브
+70	demo-r-3	불의의 다이브
+73	Nia	돌진
+74	Nia	니아
+75	Nia	니아
+78	4-r-1	추억: 잃어버린 나날
+79	4-r-2	'뒷골목'에서
+80	4-r-3	추억: 천상 아래 두 사람
+81	4-r-4	만남과 결별
+82	4-r-5	냉대의 도시 베리키아
+83	4-r-6	이름 없는 여자
+84	4-r-7	끊어진 자
+85	4-r-8	추억: 신의 손바닥
+99	4-s-1	펠
+100	4-s-13	펠
+101	3-r-10	숙명과 두려움
+102	3-r-11	요동치는 마음
+103	3-r-12	신들에게 농락당한 남자
+104	3-r-9	견제
+105	4-r-9	불굴의 폭풍

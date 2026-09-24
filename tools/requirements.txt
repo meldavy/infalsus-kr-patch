@@ -1,0 +1,2 @@
+UnityPy>=1.25
+TypeTreeGeneratorAPI>=0.0.10  # only needed for extract-ui-strings/pack-ui-strings (see README §4.5)

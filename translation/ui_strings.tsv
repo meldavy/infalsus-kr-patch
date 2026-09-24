@@ -1,0 +1,1104 @@
+# Korean UI strings -- In Falsus
+# Format: <Key><TAB><KeyName><TAB><korean>. Key is the integer
+# Str.Strings.Key enum value; KeyName is that enum member's name
+# (informational only -- pack-ui-strings matches by Key, never by name).
+# Only rows this project translates are listed; everything else keeps
+# its English text (format strings, judgment badges like EXACT/NEAR,
+# debug/unused entries, language self-names).
+1	DiveFailed	다이브 실패
+2	DiveCleared	다이브 클리어
+3	FullLink	풀 링크
+4	PerfectDive	퍼펙트 다이브
+5	DiveResults	다이브 결과
+10	Minimal	미니멀
+11	Evolved	에볼브드
+12	Ultimate	얼티밋
+13	Forbidden	포비든
+18	Card	카드
+19	Blueprint	설계도
+20	BlueprintAcquired	설계도 획득
+21	Craft	제작
+22	CreateCard	카드 제작
+23	CardObtained	카드 제작 완료
+24	Iota	입자
+25	Potency	출력
+26	Inventory	인벤토리
+27	Blanktile	빈 칸
+28	Zone	컬러존
+29	Darktile	다크 타일
+30	MasteryState	마스터리 현황
+31	Fog	안개
+32	Discovery	발견
+33	Intuition	힌트 정확도
+34	IntuitionAccuracy	힌트 정확도
+35	ConceptionChallenges	컨셉션 챌린지
+36	Conception	컨셉션
+37	MasteryComplete	마스터리 완료
+38	IotaLimit	입자 한도
+39	TheorecticalIotaCapacity	이론상 입자 용량
+40	Penalties	페널티
+41	Overload	과부하
+42	OutofBounds	범위 이탈
+43	Overlap	중복
+44	Disconnect	단절
+45	Falsehood	거짓
+46	IgnorePenatlies	페널티 무시
+47	IgnoreOverload	과부하 무시
+48	IgnoreBounds	범위 이탈 무시
+49	IgnoreOverlap	중복 무시
+50	IgnoreDisconnects	단절 무시
+51	IgnoreFalsehood	거짓 무시
+52	Encounter	인카운터
+53	Connect	커넥트
+54	Reflect	리플렉트
+55	opponent	상대
+56	Remembrance	리멤브런스
+57	Connected	커넥트 성공
+58	ConnectFailed	커넥트 실패
+59	Collapsed	붕괴
+60	ReflectionComplete	리플렉트 완료
+61	ReflectionFailed	리플렉트 실패
+62	Loadout	로드아웃
+64	ResolveDamage	HP 피해
+65	Power	공격력
+66	Defence	방어력
+67	Resonance	공명
+68	Dissonance	중복
+69	Broken	파손
+70	EncounterScore	인카운터 점수
+71	Pulse	펄스
+72	CriticalPulse	크리티컬 펄스
+73	ActivationPhases	발동 페이즈
+74	AffinityBonus	친화 보너스
+75	ChromaticBonus	크로매틱 보너스
+76	DifficultyBonus	난이도 보너스
+77	Skills	스킬
+78	Traits	특성
+79	Range	범위
+80	Color	색상
+81	Play	시작
+82	Options	옵션
+83	Credits	크레딧
+84	Quit	종료
+85	Pressanykey	아무 키나 누르세요
+86	Recipes	설계도
+87	Recipes_Upper	설계도
+88	Cards	카드
+89	Cards_Upper	카드
+90	Iota_Upper	입자
+91	Scenario_Upper	시나리오
+92	MusicPlay_Upper	뮤직 플레이
+93	Skill_Upper	스킬
+94	Skills_Upper	스킬
+95	Traits_Upper	특성
+96	Color_Upper	색상
+97	Properties_Upper	스탯
+98	IotaLimit_Upper	입자 한도
+99	Power_Upper	공격력
+100	Fortitude_Upper	방어력
+101	Range_Upper	카드 범위
+102	Craft_Upper	제작
+103	Mastery	마스터리
+104	Mastered_Upper	마스터리 완료
+105	Intuition_Upper	힌트
+106	Accuracy_Upper	정확도
+107	IotaUsed	사용한 입자
+108	AveragePotency	평균 출력
+109	Strikes_Upper	페널티
+110	TotalStrikes_Upper	총 페널티
+111	Potency_Upper	출력
+112	CreateCard_Upper	카드 제작
+117	Cancel	취소
+118	SongObtained	곡 해금
+119	RecipeObtained	설계도 해금
+120	StartUpper	시작
+121	ClearUpper	클리어
+122	ReReadStoryDescription	시나리오를 다시 읽으시겠습니까?
+123	ReReadStory	다시 읽기
+124	ChallengeSong	곡 도전
+125	ContinueStoryDescription	중단한 부분부터 이어서 읽으시겠습니까?
+126	StartOver	처음부터
+127	Continue	계속
+128	MonthUpper	월
+129	ContinueUpper	계속
+130	LockedUpper	잠김
+131	SortButtonDescription_PotencyDescBaseIdAsc	출력 우선⏎(내림차순)
+132	SortButtonDescription_PotencyAscBaseIdAsc	출력 우선⏎(오름차순)
+133	SortButtonDescription_BaseIdAscPotencyDesc	타입별 우선⏎(출력 내림차순)
+134	SortButtonDescription_BaseIdAscPotencyAsc	타입별 우선⏎(출력 오름차순)
+135	DeleteUpper	삭제
+136	FloatingDeleteSelectTextFormat	{0}개 선택됨
+137	UnreadUpper	안 읽음
+138	Delete	삭제
+139	CardUnlinkedUpper	카드 미연결
+140	BackButtonTextUpper	뒤로
+141	RemembranceUpper	리멤브런스
+142	DifficultyRatingUpper	난이도 레이팅
+143	TotalPowerUpper	총 공격력
+144	TotalDefenseUpper	총 방어력
+145	DifficultyUpper	난이도 배율
+146	MeditateUpper	리플렉트
+147	CraftingUpper	카드 제작
+148	GameRank_None	없음
+162	FreePlay	미연결
+163	Conflict	커넥트
+164	Meditation	리플렉트
+170	TimeOfDay_AfterMidnightUpper	자정 이후
+171	TimeOfDay_SunriseUpper	새벽
+172	TimeOfDay_MorningUpper	아침
+173	TimeOfDay_NoonUpper	정오
+174	TimeOfDay_AfternoonUpper	오후
+175	TimeOfDay_EveningUpper	저녁
+176	TimeOfDay_NightUpper	밤
+177	TimeOfDay_LateNightUpper	심야
+178	TimeOfDay_MidnightUpper	자정
+179	TimeOfDay_AfterMidnight	자정 이후
+180	TimeOfDay_Sunrise	새벽
+181	TimeOfDay_Morning	아침
+182	TimeOfDay_Noon	정오
+183	TimeOfDay_Afternoon	오후
+184	TimeOfDay_Evening	저녁
+185	TimeOfDay_Night	밤
+186	TimeOfDay_LateNight	심야
+187	TimeOfDay_Midnight	자정
+190	TimelineReadRequirementStoryIdentifier	<b>읽음</b>: {0}, {2}월 {1}일, {3}
+192	SlotUnavailable	빈 슬롯 없음
+193	NoTraitSelected	특성 미선택
+212	Selected_Int_Iotas	입자 {0}개 선택됨
+213	PlayUpper	플레이
+214	HandSelectUpper	로드아웃
+216	Selected_Int_Cards	카드 {0}개 선택됨
+217	Illustrator_NonTranslatedName	일러스트: {0}
+220	BonusScoreMillionsCompressable	보너스 +{0:###}'{1:000}'{2:000}
+221	BonusScoreThousandsCompressable	보너스 +{0:###}{1:000}
+222	BonusScoreHundredsCompressable	보너스 +{0:##0}
+226	HexColor_Red	빨강
+227	HexColor_Yellow	노랑
+228	HexColor_Green	초록
+229	HexColor_Blue	파랑
+230	HexColor_Purple	보라
+231	ChangeTo_HexColor	카드 색상을 {0}(으)로 변경
+232	TraitSlotsUpper_Plus_Int	특성 슬롯 +{0}
+233	RangeUpper_Plus_Int	카드 범위 +{0}
+234	HighscoreUnplayed	최고 점수: -
+235	Highscore_Score	최고 점수: {0:000'000'000}
+236	Nia	니아
+237	Mei	메이
+238	Ayame	아야메
+239	Iris	아이리스
+240	Story	스토리
+241	Freya	프레이야
+242	Touko	토코
+243	Keats	키츠
+244	Io	이오
+245	Hana	하나
+246	Raine	레인
+247	Wren	렌
+248	Aria	아리아
+249	Fell	펠
+250	Extras	사이드 캐릭터
+252	Lily	릴리
+253	Lynn	린
+254	Mireille	미레유
+255	Jeremy	제레미
+256	NiaUpper	니아
+257	MeiUpper	메이
+258	AyameUpper	아야메
+259	IrisUpper	아이리스
+260	StoryUpper	스토리
+261	FreyaUpper	프레이야
+262	ToukoUpper	토코
+263	KeatsUpper	키츠
+264	IoUpper	이오
+265	HanaUpper	하나
+266	RaineUpper	레인
+267	WrenUpper	렌
+268	AriaUpper	아리아
+269	FellUpper	펠
+270	ExtrasUpper	사이드 캐릭터
+272	LilyUpper	릴리
+273	LynnUpper	린
+274	MireilleUpper	미레유
+275	JeremyUpper	제레미
+276	NavigateToLatestEntryFor_Character	{0}의 최신 항목으로 이동
+280	CraftingStrikeTooltip_OverloadPenalties	<b>과부하 페널티</b>는 입자 한도를 초과해⏎배치된 입자 개수만큼 발생합니다.
+281	CraftingStrikeTooltip_OutOfBoundsPenalties	<b>범위 이탈 페널티</b>는 안전하지 않은 칸에⏎배치된 입자 개수만큼 발생합니다. 빈 칸과 컬러존만⏎안전한 칸으로 취급되며, 입자 하나당 페널티는⏎최대 1개까지만 발생합니다.
+282	CraftingStrikeTooltip_OverlapPenalties	<b>중복 페널티</b>는 여러 개의 입자가 겹쳐⏎배치된 칸의 개수만큼 발생합니다. 한 칸에 입자가⏎몇 개 겹치든 페널티는 최대 1개까지만 발생합니다.
+283	CraftingStrikeTooltip_DisconnectPenalties	<b>단절 페널티</b>는 입자 무리가 서로 떨어져⏎있을 때 발생합니다. 첫 번째 무리를 제외한⏎무리마다 페널티가 1개씩 추가됩니다.
+284	InMasteryUpper	마스터리 진행 중
+286	InDiscoveryUpper	발견 진행 중
+287	NextEntryUpper	다음 항목
+288	ToTimelineUpper	타임라인으로
+289	Sort_SongNameAscUpper	제목순(오름차순)
+290	Sort_SongNameDescUpper	제목순(내림차순)
+291	Sort_ArtistAscUpper	아티스트순(오름차순)
+292	Sort_ArtistDescUpper	아티스트순(내림차순)
+293	Sort_LevelAscUpper	레벨순(오름차순)
+294	Sort_LevelDescUpper	레벨순(내림차순)
+295	Sort_GradeAscUpper	등급순(오름차순)
+296	Sort_GradeDescUpper	등급순(내림차순)
+297	Sort_ClearAscUpper	클리어순(오름차순)
+298	Sort_ClearDescUpper	클리어순(내림차순)
+299	SelectACard	카드를 선택하세요
+300	DiveFailedUpper	다이브 실패
+301	DiveClearedUpper	다이브 클리어
+302	FullLinkUpper	풀 링크
+303	PerfectDiveUpper	퍼펙트 다이브
+304	SelectAnIota	입자를 선택하세요
+305	Tooltip_UnableToCraftCardZeroStats	<b>공격력이 0</b>이거나 <b>방어력이 0인</b> 카드는⏎제작할 수 없습니다
+306	Tooltip_FullDiscoveryRequired	마스터리 챌린지에 도전하려면⏎설계도를 모두 발견해야 합니다
+307	Tooltip_StackLimitedReached	한 칸에 배치할 수 있는 입자 개수를 초과했습니다
+308	Tooltip_TryingOOBPiece	입자가 설계도 범위를 벗어나 배치되었습니다
+309	Sort_ColorTypeAscUpper	색상별(오름차순)
+310	Sort_TotalStatsDescUpper	총 스탯(내림차순)
+311	Tooltip_UnableCraftInventoryLimit	카드 인벤토리가 가득 차 있어 더 이상 제작할 수 없습니다
+312	TopBar_SelectASongUpper	곡을 선택하세요
+313	TopBar_DiveResults	다이브 결과
+314	Action_Return	뒤로
+315	YouStillHaveEmptySlots	아직 비어 있는 슬롯이 있습니다!
+316	AreYouSureYouCraftCard	이대로 카드 제작을 확정하시겠습니까?
+317	OptionalStory	선택 시나리오
+318	TheNextStoryIsOptional	다음 시나리오 항목은 선택 사항입니다.⏎지금 읽으시겠습니까?
+319	Action_Read	읽기
+320	Action_Exit	나가기
+321	AreYouSureCardDeleteQuestion	선택한 카드 {0}장을 삭제하시겠습니까?
+323	Settings_DefaultDisabledReason	이 설정은 타이틀 화면에서만 변경할 수 있습니다.
+324	Settings_Slowest	최저속
+325	Settings_Slower	느림
+326	Settings_Normal	보통
+327	Settings_Faster	빠름
+328	Settings_Fastest	최고속
+329	Settings_KeybindDisplay_Always	항상
+330	Settings_KeybindDisplay_OnlyStart	플레이 시작 시에만
+331	Settings_KeybindDisplay_Never	없음
+332	Settings_LaneColor_Pink	핑크
+333	Settings_JudgementTextPos_None	없음
+334	Settings_JudgementTextPos_Judgement	기본
+335	Settings_JudgementTextPos_Top	위쪽
+336	Settings_JudgementTextPos_Middle	가운데
+339	Settings_Display_Windowed	창모드
+340	Settings_Display_FullScreenWindowed	전체화면 창모드
+341	Settings_Display_FullScreen	전체화면
+343	SettingsName_FullScreen	화면 타입
+344	SettingsName_Resolution	해상도
+345	SettingsName_RefreshRate	주사율
+346	SettingsName_TrackSpeed	노트 속도
+347	SettingsName_AudioOffset	음 오프셋
+348	SettingsName_HitNoteSound	탭 노트음
+349	SettingsName_HoldNoteSound	홀드 노트음
+350	SettingsName_FlippedGameplay	반전 모드
+351	SettingsName_RightLaneColor	오른쪽 레인 색상
+352	SettingsName_KeybindIndicator	조작 키 표시
+353	SettingsName_JudgmentPosition	판정 위치
+354	SettingsName_ExactEarlyLate	EXACT 판정 Early/Late 표시
+355	SettingsName_TextSpeed	텍스트 속도
+356	SettingsName_Language	언어
+357	SettingsName_VolumeMaster	마스터 볼륨
+358	SettingsName_VolumeBGM	리듬 게임 BGM 볼륨
+359	SettingsName_VolumeSFX	리듬 게임 SFX 볼륨
+360	SettingsName_VolumeHold	홀드 볼륨
+361	SettingsName_VolumeSky	필드 볼륨
+362	SettingsName_MouseSensitivity	마우스 감도
+363	SettingsButton_QuickSettings	퀵 설정
+364	SettingsButton_Display	화면
+365	SettingsButton_Gameplay	게임플레이 & UI
+366	SettingsButton_Audio	오디오
+367	SettingsButton_Controls	조작
+368	SettingsHeader_QuickSettings	리듬 게임플레이
+369	SettingsHeader_Window	화면
+371	SettingsHeader_VisualNovel	비주얼 노벨
+372	SettingsHeader_Audio	오디오
+373	BestBattleScore_Upper	인카운터 최고 점수
+374	OppositionsCards_Upper	상대 카드
+375	Drops_Upper	획득
+376	Connected_Upper	커넥트 성공
+377	MaxPotency_Upper	최대 출력
+379	Modal_SongUnlockedTitle	곡 해금
+380	Modal_SongsUnlockedTitle	곡 해금
+381	Modal_SongUnlockedBody	새로운 곡을 플레이할 수 있습니다
+382	Modal_SongsUnlockedBody	새로운 곡들을 플레이할 수 있습니다
+383	Modal_ButtonTextOk	확인
+386	SettingsExplain_FullScreen	화면 모드를 조정합니다.
+387	SettingsExplain_Resolution	화면 해상도를 조정합니다.
+388	SettingsExplain_RefreshRate	주사율을 조정합니다.
+389	SettingsExplain_TrackSpeed	노트가 내려오는 속도를 조정합니다.
+390	SettingsExplain_AudioOffset	LATE 판정이 많다면⏎수치를 늘려 주세요.
+391	SettingsExplain_HitNoteSound	탭 노트음을 조정합니다.
+392	SettingsExplain_HoldNoteSound	홀드 노트음을 조정합니다.
+393	SettingsExplain_FlippedGameplay	노트의 좌우 배치를⏎반전합니다.
+394	SettingsExplain_RightLaneColor	뮤직 플레이 중 오른쪽 레인 색상을 조정합니다.
+395	SettingsExplain_KeybindIndicator	레인에 할당된 키 표시를⏎변경합니다.
+396	SettingsExplain_JudgmentPosition	EARLY/LATE 표시 위치를⏎변경합니다.
+397	SettingsExplain_ExactEarlyLate	EXACT 판정에서의 EARLY/LATE⏎표시를 변경합니다.
+398	SettingsExplain_TextSpeed	텍스트 표시 속도를 조정합니다.
+399	SettingsExplain_Language	게임 언어를 변경합니다.
+400	SettingsExplain_VolumeMaster	전체 음량을 조정합니다.
+401	SettingsExplain_VolumeBGM	리듬 게임 내 곡의⏎음량을 조정합니다.
+402	SettingsExplain_VolumeSFX	탭 노트 연주 시⏎효과음 음량을 조정합니다.
+403	SettingsExplain_VolumeHold	홀드 노트 연주 시⏎효과음 음량을 조정합니다.
+404	SettingsExplain_VolumeSky	필드 노트 연주 시⏎효과음 음량을 조정합니다.
+405	SettingsExplain_MouseSensitivity	마우스 감도를 조정합니다.
+407	Skill_Infusion	인퓨전
+408	Skill_Synesthesia	시너스타지아
+409	Skill_ExpandedIotaLimit	입자 한도 확장
+410	Skill_OutOfBoundsTolerance	범위 이탈 내성
+411	Skill_OverlapTolerance	중복 내성
+412	Skill_DisconnectedTolerance	단절 내성
+413	Skill_DiscoveryBoost	발견 부스트
+414	Skill_IotaInventoryExpansion	입자 소지 확장
+415	Skill_CardInventoryExpansion	카드 소지 확장
+416	Skill_IotaRetrievalBoost	입자 획득 부스트
+417	Skill_IotaPotencyBoost	입자 출력 부스트
+418	Skill_AugmentResolve	정신력 강화
+419	Skill_Infusion_Description	제작 시 사용 가능한 입자 종류를 확장
+420	Skill_Synesthesia_Description	로드아웃에 편성된 카드 색상 종류마다⏎공격력과 방어력이 5%씩 상승
+421	Skill_ExpandedIotaLimit_Description	제작 시 입자 한도가 {0}까지 상승⏎(설계도 최대 한도 이내)
+422	Skill_OutOfBoundsTolerance_Description	제작 시 범위 이탈 페널티를 {0}개까지 무시
+423	Skill_OverlapTolerance_Description	제작 시 중복 페널티를 {0}개까지 무시
+424	Skill_DisconnectedTolerance_Description	제작 시 단절 페널티를 {0}개까지 무시
+425	Skill_DiscoveryBoost_Description	제작 시 발견되는 칸의 범위가 1 증가
+426	Skill_IotaInventoryExpansion_Description	입자 소지 한도 증가
+427	Skill_CardInventoryExpansion_Description	카드 인벤토리 크기를 {0}개 확장
+428	Skill_IotaRetrievalBoost_Description	획득하는 동일 종류 입자 수가 {0}개 증가
+429	Skill_IotaPotencyBoost_Description	획득하는 입자의 최소 출력이⏎최대치의 {0}%로 보장됨
+430	Skill_AugmentResolve_Description	인카운터 시작 HP가 10% 증가
+433	Day_Upper	일
+434	Action_Select	선택
+435	Action_Select_Upper	선택
+436	Skill_IotaStackBoost	입자 증가
+437	Skill_IotaStackBoost_Description	종류별 획득 가능한 입자 최대량이 {0}개 증가
+438	Skill_MaxPotencyChance	입자 출력 극대화
+439	Skill_MaxPotencyChance_Description	{0:F1}% 확률로 획득한 입자 출력이 최댓값으로 설정됨
+440	Skill_IntuitionBoost	힌트 정확도 부스트
+441	Skill_IntuitionBoost_Description	힌트 정확도가 {0:F1}%부터 시작
+442	Modal_MainExitConfirmation	나가기
+443	Modal_YouHaveIotaInTheGrid	제작 그리드에 배치된 입자가 있습니다.⏎정말 나가시겠습니까?
+444	Recipe_LimitMax	{0} (최대: {1})
+446	ForgiveDiscomfort_Plus_Int	범위 이탈 내성 +{0}
+447	ForgiveDissonance_Plus_Int	중복 내성 +{0}
+448	ForgiveDecoherence_Plus_Int	단절 내성 +{0}
+449	ForgiveComplexity_Plus_Int	과부하 내성 +{0}
+451	ProgressUpper	진행도
+452	ObstructionUpper	방해도
+454	FailedUpper	실패
+455	Results_MaxLinkUpper	맥스 링크
+456	Results_PastScoreUpper	최고 점수
+457	Results_DifferenceUpper	차이
+458	Results_ScoreUpper	점수
+459	TapUpper	탭
+460	HoldUpper	홀드
+461	SkyUpper	필드
+462	FlickUpper	플릭
+463	Results_DiveOverlayUpper	다이브 상세
+466	Results_MissHpUpper	미스 게이지
+467	Results_EncounterResultsUpper	인카운터 결과
+468	Results_OffensiveScoreUpper	공격 레이트
+469	Results_DefensiveScoreUpper	방어 레이트
+470	Results_DamageDealtUpper	준 피해
+471	Results_DamageTakenUpper	받은 피해
+472	Results_FromTraitsUpper	특성
+473	Results_FromDiveUpper	퍼포먼스
+474	Results_DivePotentialUpper	상한
+475	Results_PlayerEgoRecoveredUpper	회복한 HP (자신)
+476	Results_OpponentEgoRecoveredUpper	회복시킨 HP (상대)
+477	Results_EgoRecoveredUpper	회복한 HP
+478	Results_ProgressGainedUpper	얻은 진행도
+479	Results_ProgressReducedUpper	잃은 진행도
+480	Results_ObstructionGainedUpper	받은 방해도
+481	Results_ObstructionReducedUpper	막은 방해도
+482	PhaseUpper	페이즈
+483	DiveUpper	다이브
+484	Results_CriticalUpperBracketed	(크리티컬)
+485	Results_PhaseBreakdownUpper	페이즈 상세
+486	Results_ReplayUpper	재도전
+487	Results_RewardsUpper	입자
+488	Results_StartingStats	페이즈 시작 시 스탯
+490	SkillNotYetUnlockedDescription	아직 해금되지 않은 스킬입니다
+494	Settings_AudioOffsetDescriptionShort	권장값은 0ms입니다. LATE 판정이 많다면⏎수치를 늘려 주세요.⏎±100ms를 초과하면 노트음이 비활성화됩니다.
+495	Tooltip_NotAvailableInEventVersion	이벤트 체험판에서는 선택할 수 없습니다
+496	DefenceUpper	방어력
+499	Stats_Upper	스탯
+500	CoreSkillsUpper	캐릭터 스킬
+501	GenSkillsUpper	공용 스킬
+502	SpectralSkillsUpper	스펙트럴 스킬
+503	Skill_InfusionUpper	인퓨전
+504	Act1Name	첫 거짓말
+505	Act2Name	말하지 않는 편이 나은 과거
+506	Act2_5Name	매 순간을
+507	Act3Name	천상의 사슬
+508	Act4Name	재앙의 손
+509	EncounterScoreUpper	인카운터 점수
+510	HandSelect_SelectTitle	로드아웃에 장착할 카드를 선택하세요
+511	ConnectUpper	커넥트
+512	PreviewUpper	미리보기
+513	FilterUpper	필터
+514	SortUpper	정렬
+515	ColorTypeNewestFirstUpper	색상별 그룹
+516	InDiscovery	발견 중
+517	InMastery	마스터리 중
+518	Mastered	마스터리 완료
+519	NoTraits	특성 없음
+520	WithTraits	특성 있음
+521	ResetUpper	초기화
+522	CardPreviewUpper	카드 미리보기
+523	SongSelect_SelectAPackUpper	팩 선택
+524	SelectDifficultyUpper	난이도 선택
+525	LoadoutUpper	로드아웃으로
+526	Results_ByTraitsUpper	특성
+527	Results_ByDiveUpper	퍼포먼스
+528	Results_PerformanceUpper	퍼포먼스
+529	Settings_TrackSpeedDescriptionShort	노트가 내려오는 속도를 조정합니다.
+530	HighscoreUpper	최고 점수
+531	Tutorial_ColorAdvantageTitle	색상 상성
+532	Tutorial_ColorAdvantageDescription	색상 상성은 한쪽 방향으로만 적용됩니다.⏎빨강 카드가 초록 카드를 상대로 편성되면 빨강 카드의⏎공격력과 방어력이 상승하지만, 초록 카드는⏎영향을 받지 않습니다.
+534	Hub_SelectSong	곡 선택
+535	Hub_ViewTimeline	타임라인 보기
+536	Hub_ScenarioTime	시간대
+537	Hub_ExCount	EX 획득 수
+538	Hub_Clear	클리어 수
+539	Results_TotalUpper	합계
+549	HandSelect_DiveLoadoutNotChangeable	이번 다이브에서는 로드아웃을 변경할 수 없습니다
+550	Filter_ResetAllUpper	전체 초기화
+551	Filter_ColorUpper	색상
+552	Filter_TraitsUpper	특성
+553	Filter_None	특성 없음
+554	Filter_TraitsPresent	특성 있음
+555	IntroHand_LeftSideText	동시에
+556	IntroHand_RightSideText	눌러 시작
+557	SongTransition_Difficulty	난이도
+558	Event_WarningTitle	경고
+559	Event_RecommendationModalBody	이벤트 모드에서 첫 곡을 플레이할 때는⏎EVO 난이도 이하를 추천합니다.
+560	SortButtonDescription_ColorNewestAsc	색상별⏎획득순
+561	SortButtonDescription_ColorNewestDesc	색상 우선·획득순(내림차순)
+562	SortButtonDescription_PowerAscColorAsc	공격력 우선(오름차순)
+563	SortButtonDescription_PowerDescColorAsc	공격력 우선(내림차순)
+564	SortButtonDescription_FortFirstAscColorAsc	방어력 우선(오름차순)
+565	SortButtonDescription_FortFirstDescColorAsc	방어력 우선(내림차순)
+566	SettingsHeader_Keybinds	키 바인드
+567	SettingsName_AudioDevice	오디오 장치
+568	SettingsName_SideNoteSound	사이드 노트음
+569	SettingsName_SkyHoldNoteSound	필드 홀드 노트음
+570	SettingsName_FlickNoteSound	플릭 노트음
+571	SettingsName_SkyHitNoteSound	필드 히트 노트음
+572	SettingsName_SideHoldNoteSound	사이드 홀드 노트음
+573	SettingsName_Colorblindness	색각 보조 모드
+574	SettingsName_PauseOnLoseFocus	포커스 해제 시 일시정지
+576	DifficultyUnlock_FBD13AndAboveLocked	난이도 FORBIDDEN의 지식은, 아직 당신을 거부하고 있다.⏎레벨 12의 FBD 난이도를 공략하여 실력을 증명하라.
+577	DifficultyUnlock_FBD12Locked	난이도 FORBIDDEN의 지식은, 아직 당신을 거부하고 있다.⏎레벨 11의 FBD 난이도를 공략하여 실력을 증명하라.
+578	DifficultyUnlock_FBD11Locked	난이도 FORBIDDEN의 지식은, 아직 당신을 거부하고 있다.⏎레벨 10의 FBD 난이도를 공략하여 실력을 증명하라.
+579	DifficultyUnlock_FBD10Locked	난이도 FORBIDDEN의 지식은, 아직 당신을 거부하고 있다.⏎레벨 8 이상의 ULT 난이도를 공략하여 실력을 증명하라.
+580	DifficultyUnlock_UltsLocked	난이도 ULTIMATE의 지식은, 아직 당신을 거부하고 있다.⏎레벨 6 이상의 EVO 난이도를 공략하여 실력을 증명하라.
+581	DifficultyUnlock_SongLocked	이 곡을 해금하려면 시나리오를 더 진행해야 합니다
+582	ChapterUpper	챕터
+584	CraftingChallengeComparisonType_AtLeast_Description	{1} {0} 이상
+585	CraftingChallengeComparisonType_AtMost_Description	{1} {0} 이하
+586	CraftingChallengeComparisonType_Exactly_Description	{1} 정확히 {0}
+587	CraftingChallengeComparisonType_Between_Description	{2}을(를) {0}~{1} 사이로
+588	CraftingChallengeTarget_BasePower_Description	기초 공격력
+589	CraftingChallengeTarget_BaseFortitude_Description	기초 방어력
+590	CraftingChallengeTarget_FinalPower_Description	최종 공격력
+591	CraftingChallengeTarget_FinalFortitude_Description	최종 방어력
+592	CraftingChallengeTarget_TraitSlots_Description	특성 슬롯
+593	CraftingChallengeTarget_AveragePotency_Description	평균 출력
+594	CraftingChallengeTarget_PotencyOnAnyIota_Description	입자 출력
+595	CraftingChallengeTarget_Range_Description	카드 범위
+596	CraftingChallengeTarget_NumberOfIotaUsed_Description	사용 입자 수
+597	CraftingChallengeTarget_NumberOfZonesActive_Description	활성화된 구역
+598	CraftingChallengeTarget_StrikeCount_Description	페널티
+599	CraftingChallengeTarget_SpecificZone_Description	특정 구역
+600	CraftingChallengeTarget_TraitAvailable_Description	장착 가능한 특성
+602	CraftingStrikeTooltip_OverloadPenalties_Name	과부하
+603	CraftingStrikeTooltip_OutOfBoundsPenalties_Name	범위 이탈
+604	CraftingStrikeTooltip_OverlapPenalties_Name	중복
+605	CraftingStrikeTooltip_DisconnectPenalties_Name	단절
+606	CraftingStrikeTooltip_UnsafeClusterPenalties_Name	거짓
+607	SettingsName_DamageNumbers	데미지 수치
+608	ActTitleName	제{0}장: {1}
+609	Modal_RemembranceUnlockedTitle	리멤브런스 해금
+610	Modal_RemembranceUnlockedBody	새로운 리멤브런스 {0}개가 해금되었습니다
+611	CraftingStrikeTooltip_UnsafeClusterPenalties	<b>거짓 페널티</b>는 안전한 칸에 닿지 않는⏎입자 무리가 있을 때 발생합니다. 빈 칸과 컬러존만⏎안전한 칸으로 취급됩니다. 이 페널티는 항상⏎무한한 페널티를 부여합니다.
+612	HideUI	UI 숨기기
+613	Autoplay	오토플레이
+614	FastForward	빨리 감기
+615	ChatLog	로그
+616	SelectedIota	선택한 입자
+619	SortButtonDescription_TierAscColorAsc	TIER순
+631	ForgiveOutOfBounds_Description	일시적으로 <b>범위 이탈 내성</b>이 +{0}
+632	ForgiveOverlap_Description	일시적으로 <b>중복 내성</b>이 +{0}
+633	ForgiveDisconnect_Description	일시적으로 <b>단절 내성</b>이 +{0}
+634	ForgiveOverload_Description	일시적으로 <b>과부하 내성</b>이 +{0}
+636	FinalStatsUpper	최종 스탯
+637	TraitSlotUpper	특성 슬롯
+638	TraitUpper	특성
+641	WishlistNow	위시리스트에 추가
+642	FullVersionUpper	정식판
+643	DemoVersionUpper	데모판
+645	DemoCopyright	©lowiro ©2026 Valve Corporation. Steam 및 Steam 로고는 미국 및/또는⏎기타 국가에서 Valve Corporation의 상표 및/또는 등록 상표입니다.
+646	OpenBreakdownExplanation	판정을 클릭하면 상세 정보를 확인할 수 있습니다
+647	KeybindsPromptTitle	키 바인드
+648	KeybindsPromptDescription	설정할 키를 입력하세요.
+649	ResetKeybindsTitle	기본값으로 초기화
+650	ResetKeybindsDescription	모든 키 바인드를 기본값으로 되돌리시겠습니까?
+651	ResetKeybindsTitleUpper	기본값으로
+652	ApplyKeyboardBindingsUpper	적용
+653	AllSongs	전체 곡
+654	OverviewUpper	해금·클리어 현황
+655	ViewDifficultyUpper	난이도
+656	ClearedUpper	클리어
+657	UnlockedUpper	해금
+658	Tutorial_NextColonSpace	다음:
+659	Tutorial_PressSpacebar	<b>스페이스바</b>를 입력
+663	HandUpper	로드아웃
+664	HandSelectTrayTextDefault	이전에 사용한 로드아웃
+665	HandSelectTrayTextMissing	로드아웃의 카드가 삭제되었습니다
+666	HandSelectTrayTextWeak	현재 로드아웃으로는 인카운터를 감당할 수 없습니다
+667	ColorGuideUpper	색상 상성표
+668	ThanksForPlaying	《In Falsus》 Steam에서 호평 발매 중⏎아래에서 위시리스트 & 플레이
+669	SongPause_Paused	일시정지
+670	SongPause_Retry	재시도
+671	SongPause_Resume	재개
+672	SongPause_Quit	중단
+673	RemembranceDeselect	리멤브런스 선택 해제
+676	UnlockDifficulty	서로 다른 {0} 3곡을 플레이하면 이 난이도가 해금됩니다. ({1}/{2})
+677	DemoUnavailable	데모판에서는 선택할 수 없습니다.
+678	SettingsExplain_FullScreenWindowed	전체화면 창모드를 활성화합니다.
+679	SettingsExplain_Windowed	창모드를 활성화합니다.
+680	DifficultyUnlock_Generic	{0}의 지식⏎난이도 {1}은(는), 아직 당신을 거부하고 있다.⏎레벨 {2} {3}의 곡을 공략하여 실력을 증명하라.⏎⏎{4}% 완료
+681	Demo_ForbiddenDifficultyUnlocked	난이도 <b>FBD (FORBIDDEN)</b>이 해금되었습니다.
+682	Demo_DifficultyUnlockedDialogTitle	난이도 해금
+683	Demo_UltimateDifficultyLocked	서로 다른 <b>EVO</b> 3곡을 플레이하면 해금됩니다. ({0}/3)
+684	Demo_ForbiddenDifficultyLocked	서로 다른 <b>ULT</b> 3곡을 플레이하면 해금됩니다. ({0}/3)
+685	ReplayTutorialUpper	튜토리얼 다시 보기
+686	Tutorial_ReplayTutorialSelectBody	플레이할 튜토리얼의 난이도를 선택하세요.
+687	UnavailableInDemo	데모판에서는 이용할 수 없습니다
+688	ReplayScenarioUpper	시나리오 다시 보기
+689	SettingsExplain_DamageNumbers	인카운터 중 데미지를⏎표시합니다.
+690	SettingsExplain_AudioDevice	오디오를 출력할⏎장치를 변경합니다.
+692	SettingsName_VolumeVisualNovelBGM	비주얼 노벨 BGM 볼륨
+693	SettingsName_VolumeVisualNovelSFX	비주얼 노벨 SFX 볼륨
+694	SettingsName_VolumeVisualNovelVoice	비주얼 노벨 보이스 볼륨
+695	SettingsExplain_VolumeVisualNovelBGM	비주얼 노벨 음악 볼륨을 조정합니다.
+696	SettingsExplain_VolumeVisualNovelSFX	비주얼 노벨 SFX 볼륨을 조정합니다.
+697	SettingsExplain_VolumeVisualNovelVoice	비주얼 노벨 보이스 볼륨을 조정합니다.
+698	SettingsExplain_DisallowSettingsChange	이 설정은 타이틀 화면에서만 변경할 수 있습니다.
+699	SettingsName_VolumeBottomNotes	탭 노트음 볼륨
+700	SettingsName_VolumeHoldNotes	홀드 노트음 볼륨
+701	SettingsName_VolumeFieldNotes	필드 노트음 볼륨
+702	SettingsExplain_VolumeBottomNotes	탭 노트음을 조정합니다.
+703	SettingsExplain_VolumeHoldNotes	홀드 노트음을 조정합니다.
+704	SettingsExplain_VolumeFieldNotes	필드 노트음을 조정합니다.
+705	SettingsExplain_ExactEarlyLateDisabled	EARLY/LATE 상세 표시를 변경합니다.
+706	Tutorial_HubIntro_Index0	<b>홈 화면</b>에 오신 것을 환영합니다.
+707	Tutorial_HubIntro_Index1	홈 화면에서 In Falsus의 다양한 기능에 접근할 수 있습니다.
+708	Tutorial_HubIntro_Index2	왼쪽 위 홈 버튼을 클릭하면⏎언제든지 홈 화면으로 돌아올 수 있습니다.
+709	Tutorial_GameplayMin_Index0	In Falsus 튜토리얼을 시작합니다.
+710	Tutorial_GameplayMin_Index1	위쪽 레인의 <b>커서</b>는 마우스를 좌우로 움직여 조작합니다.
+711	Tutorial_GameplayMin_Index2	<b>플릭 노트</b>가 다가오면⏎노트의 작은 쪽 끝에서 큰 쪽 끝으로 커서를 통과시키세요.
+712	Tutorial_GameplayMin_Index3	<b>필드 노트</b>는 노트가 끝날 때까지 커서를 안에 유지하세요.
+713	Tutorial_GameplayMin_Index4	아래쪽 레인에서는 키보드로 노트를 연주합니다.⏎레인에는 대응하는 키가 표시되어 있습니다.
+714	Tutorial_GameplayMin_Index5	<b>탭 노트</b>가 아래쪽 레인에 겹치면 해당 키를 누르세요.
+715	Tutorial_GameplayMin_Index6	<b>홀드 노트</b>는 노트가 끝날 때까지 해당 키를 길게 누르세요.
+716	Tutorial_GameplayMin_Index7	노트는 맨 오른쪽 레인에도 흘러옵니다.
+717	Tutorial_GameplayMin_Index8	오른쪽 레인의 탭 노트와 홀드 노트를 연습해 봅시다.
+718	Tutorial_GameplayMin_Index9	노트를 놓치면 <b>미스 게이지</b>가 1 감소합니다.⏎노트를 성공적으로 연주하면 다시 회복됩니다.⏎곡이 끝날 때 게이지가 0 이상이면 클리어입니다.
+719	Tutorial_GameplayMin_Index10	지금까지 배운 것을 시험해 봅시다.
+720	Tutorial_GameplayEvoLong_Index0	In Falsus 튜토리얼을 시작합니다.
+721	Tutorial_GameplayEvoLong_Index1	위쪽 레인의 <b>커서</b>는 마우스를 좌우로 움직여 조작합니다.
+722	Tutorial_GameplayEvoLong_Index2	<b>플릭 노트</b>가 다가오면⏎노트의 작은 쪽 끝에서 큰 쪽 끝으로 커서를 통과시키세요.
+723	Tutorial_GameplayEvoLong_Index3	<b>필드 노트</b>는 노트가 끝날 때까지 커서를 안에 유지하세요.
+724	Tutorial_GameplayEvoLong_Index4	아래쪽 레인에서는 키보드로 노트를 연주합니다.⏎레인에는 대응하는 키가 표시되어 있습니다.
+725	Tutorial_GameplayEvoLong_Index5	<b>탭 노트</b>가 아래쪽 레인에 겹치면 해당 키를 누르세요.
+726	Tutorial_GameplayEvoLong_Index6	<b>홀드 노트</b>는 노트가 끝날 때까지 해당 키를 길게 누르세요.
+727	Tutorial_GameplayEvoLong_Index7	노트는 양쪽 끝 레인에도 흘러옵니다.
+728	Tutorial_GameplayEvoLong_Index8	양쪽 끝의 탭 노트와 홀드 노트를 연습해 봅시다.
+729	Tutorial_GameplayEvoLong_Index9	EVO 난이도에서는 가운데 3개의 활성 레인이 바뀔 수 있습니다.
+730	Tutorial_GameplayEvoLong_Index10	새 레인이 활성화되면 <b>가운데 세 손가락을 좌우로⏎한 칸씩 옮기는 것</b>을 추천합니다.⏎⏎연습해 봅시다.
+731	Tutorial_GameplayEvoLong_Index11	노트를 놓치면 <b>미스 게이지</b>가 1 감소합니다.⏎노트를 성공적으로 연주하면 다시 회복됩니다.⏎곡이 끝날 때 게이지가 0 이상이면 클리어입니다.
+732	Tutorial_GameplayEvoLong_Index12	지금까지 배운 모든 것을 시험해 봅시다.
+733	Tutorial_GameplayEvoShort_Index0	난이도 EVO(EVOLVED) 튜토리얼에 오신 것을 환영합니다.
+734	Tutorial_GameplayEvoShort_Index1	여러 종류의 노트가 등장합니다.⏎연습 구간에서 모든 노트를 연주해 봅시다.
+735	Tutorial_GameplayEvoShort_Index2	EVO 난이도에서는 노트가 맨 왼쪽 레인에도 흘러옵니다.⏎왼쪽 레인의 탭 노트와 홀드 노트를 연습해 봅시다.
+736	Tutorial_GameplayEvoShort_Index3	EVO 난이도에서는 가운데 3개의 활성 레인이 바뀔 수 있습니다.
+737	Tutorial_GameplayEvoShort_Index4	새 레인이 활성화되면 <b>가운데 세 손가락을 좌우로⏎한 칸씩 옮기는 것</b>을 추천합니다.⏎연습해 봅시다.
+738	Tutorial_GameplayEvoShort_Index5	추가 튜토리얼은 여기까지입니다. 이제 EVO 난이도에 도전해 보세요.
+739	Tutorial_CharacterSelect_Index0	<b>캐릭터 선택 화면</b>에서는 각 캐릭터의⏎해금된 <b>캐릭터 스킬</b>을 확인할 수 있습니다.
+740	Tutorial_CharacterSelect_Index1	스킬에 커서를 올리면 상세 정보를 확인할 수 있습니다.⏎<b>캐릭터 스킬</b>의 레벨은 캐릭터별로 독립적이며,⏎카드 제작 등에서는 해당 캐릭터의⏎스킬만 적용됩니다.
+741	Tutorial_CharacterSelect_Index2	캐릭터를 선택하면 홈 화면의 BGM을 바꿀 수 있습니다.
+742	Tutorial_SongSelect_Index0	<b>곡 선택</b>에서는 해금된 곡을 자유롭게 플레이할 수 있습니다.
+743	Tutorial_SongSelect_Index1	각 곡에는 난이도가 4단계 준비되어 있습니다.⏎잠긴 난이도에 커서를 올리면 해금 조건을 확인할 수 있습니다.
+745	TutorialFlow_TutorialSelectBody	In Falsus는 다층적인 비주얼 노벨과 음악을 깊이 결합한⏎리듬 게임입니다. 초보자도 숙련자도 원하는 난이도로⏎게임을 진행할 수 있습니다.⏎⏎시나리오 체험을 우선할지, 초반부터 본격적인⏎리듬 게임에 도전할지 선택하세요.⏎⏎이 선택은 첫 튜토리얼의 난이도에만 영향을 주며,⏎이후 게임 경험을 제한하지 않습니다.
+746	TutorialFlow_StoryFocus	시나리오 체험 우선
+747	TutorialFlow_GameplayFocus	리듬 게임에 도전
+748	DeselectRemembranceUpper	리멤브런스 선택 해제
+749	ResetDefaultsDescription	설정을 기본값으로 되돌리시겠습니까?
+750	ResolutionAcceptTitle	변경 사항을 적용하시겠습니까?
+751	ResolutionAcceptDescription	{0}초 후 설정이 되돌아갑니다
+752	ChangeLanguageTitle	언어를 변경하시겠습니까?
+753	ChangeLanguageDescription	게임이 타이틀 화면부터 다시 시작됩니다.
+754	Demo_DifficultyUnlock_DifficultyNotAvailable	데모판에서는 이 난이도를 플레이할 수 없습니다
+755	Demo_UltimateDifficultyUnlocked	난이도 <b>ULT (ULTIMATE)</b>가 해금되었습니다.
+757	Tutorial_SongSelectEvoTitle	난이도 EVO 튜토리얼
+758	Tutorial_SongSelectEvoDescription	EVO 난이도에서는 가운데 4번째 레인이 동적으로⏎전환됩니다. 플레이 전에 Evolved(EVO) 튜토리얼을⏎확인하는 것을 추천합니다.
+759	Tutorial_SongSelect_PlayTutorial	튜토리얼로
+760	Tutorial_SongSelect_PlaySong	건너뛰기
+761	Tutorial_SongSelectUltTitle	난이도 ULT
+762	Tutorial_SongSelectUltDescription	난이도 ULT(ULTIMATE) 이상에서는 레인이 어두워지지⏎않고 가운데 4개 레인이 항상 모두 활성 상태입니다.⏎⏎가운데 4개의 키를 세 손가락으로 좌우로 옮겨가며⏎노트를 연주하는 것을 추천합니다.
+763	Tutorial_SongSelectFbdTitle	난이도 FBD
+764	Tutorial_SongSelectFbdDescription	FBD(FORBIDDEN) 난이도에서는 아래쪽 레인에⏎여러 레인에 걸친 와이드 노트가 등장합니다.⏎⏎<b>아무 키나 하나만</b> 눌러도 연주할 수 있습니다.⏎걸쳐 있는 레인 중 어느 키를 눌러도 상관없습니다.
+765	ConnectFailed_Upper	커넥트 실패
+771	SpeedUpper	속도
+772	Level_lvl	Lv.
+773	QuitToTitleScreen	타이틀 화면으로
+774	Settings_RefreshRate_Uncapped	무제한
+776	SettingsExplain_Vsync	수직 동기화(VSync) 켜기/끄기를⏎전환합니다.
+779	Centered_Upper	중앙
+780	TierAscendingUpper	TIER (오름차순)
+781	TierDescendingUpper	TIER (내림차순)
+782	ColorAscendingUpper	색상별 (오름차순)
+783	ColorDescendingUpper	색상별 (내림차순)
+784	SizeAscendingUpper	크기 (오름차순)
+785	SizeDescendingUpper	크기 (내림차순)
+786	PotencyAscendingUpper	출력 (오름차순)
+787	PotencyDescendingUpper	출력 (내림차순)
+788	AllUpper	전체
+789	TraitsOnlyUpper	특성⏎있음
+790	NoTraitsUpper	특성⏎없음
+791	Story_RmiCoverage	RMI 분포
+792	Story_IntroVideo_Scattered	산란형
+793	Tutorial_DemoHubReturning_Index0	업데이트된 In Falsus 데모판에는 <b>새로운 신규⏎시나리오, 카드 제작 일부, 그리고 진행하면⏎해금되는 플레이 가능한 곡</b>이 추가되었습니다.
+794	Tutorial_DemoHubReturning_Index1	시나리오의 이어지는 내용은 <b>타임라인</b> 버튼에서⏎확인할 수 있습니다.
+795	EncounterFailedUpper	인카운터 실패
+796	Helvi	헬비
+797	HelviUpper	헬비
+798	Tsuru	츠루
+799	TsuruUpper	츠루
+800	RemembranceUnlinkedUpper	리멤브런스 미연결
+801	ScoreTooLowUpper	점수 부족
+802	Tutorial_EncounterConnect0	인카운터에서는 곡이 진행되는 동안⏎상대와 맞서게 됩니다.
+803	Tutorial_EncounterConnect1	자신의 HP를 0으로 만들지 않으면서 상대의 HP를⏎0까지 줄이면 승리합니다.
+804	Tutorial_EncounterConnect2	당신의 HP는 당신의 <b>방어력</b>과 같고,⏎상대의 HP는 상대의 <b>방어력</b>과 같습니다.
+805	Tutorial_EncounterConnect3	양측의 공격은 연주하는 노트마다 자동으로⏎발생합니다. 공격을 받으면 HP가 감소합니다.
+806	Tutorial_EncounterConnect4	기본 데미지량은 서로의 <b>공격력</b>으로 정해집니다.⏎다만 실제로 주는 데미지는 리듬 게임 퍼포먼스에도⏎좌우됩니다.
+807	Tutorial_EncounterConnect5	공격의 강함은 게임 중 당신의 퍼포먼스에⏎따라 달라집니다.⏎⏎<b>EXACT</b> 판정에서는 기본 데미지를 그대로,⏎<b>NEAR</b> 판정에서는 기본 데미지의 절반을 줍니다.⏎⏎<b>BREAK</b> 판정에서는 데미지를 줄 수 없으며,⏎오히려 상대의 크리티컬 히트(데미지 5배)를⏎받게 됩니다.
+808	Tutorial_EncounterConnect6	또한 HP 게이지 아래에 있는 <b>공명 게이지를⏎가득 채우면 크리티컬 히트를 날릴 수 있습니다</b>.⏎공명 게이지는 EXACT 판정으로 연주하면 상승하며,⏎최대까지 차면 주는 데미지가 5배로 늘어납니다!
+809	Tutorial_EncounterConnect7	인카운터는 곡의 진행에 따라 <b>5개의 페이즈</b>로⏎나뉩니다.⏎공명 게이지는 페이즈가 시작될 때마다 초기화됩니다.
+810	Tutorial_EncounterConnect8	주의하세요. HP가 0이 되면 곡이 중단됩니다.
+811	Tutorial_EncounterMeditation0	자신에게 다이브하는 것처럼 맞서는 상대가 없는⏎인카운터는 <b>리플렉트 인카운터</b>로 분류됩니다.⏎이 인카운터에서는 양측의 HP 게이지 대신 하나의⏎<b>진행 게이지</b>로 바뀝니다.
+812	Tutorial_EncounterMeditation1	곡이 끝날 때까지 진행 게이지를 100% 이상⏎채우는 것이 이 인카운터의 목표입니다.⏎⏎진행 게이지는 커넥트 인카운터와 마찬가지로⏎당신이 주는 데미지만큼 상승하며,⏎공격력이 높을수록 더 많이 상승합니다.
+813	Tutorial_EncounterMeditation2	판정에 따른 데미지 증감이나 공명 게이지에 의한⏎크리티컬 히트는 커넥트 인카운터와 동일합니다.⏎또한 리플렉트 인카운터에서는 곡이 도중에⏎중단되지 않습니다.
+814	Tutorial_Loadout0	<b>로드아웃</b> 화면에서는 인카운터 중 자신의⏎전투력에 영향을 주는 '카드'를 편성할 수 있습니다.
+815	Tutorial_Loadout1	인카운트에서 양측의 퍼포먼스에 영향을 주는 것이⏎'공격력'과 '방어력' 스탯입니다.
+816	Tutorial_Loadout2	상대의 '공격력'과 '방어력'은 상대 카드 각각이⏎가진 스탯의 합으로 정해집니다.
+817	Tutorial_Loadout3	마찬가지로 당신의 '공격력'과 '방어력'도⏎편성한 카드가 가진 스탯의 합으로 정해집니다.
+818	Tutorial_Loadout4	카드는 <b>아래쪽 목록에서 빈 슬롯으로⏎드래그</b>하면 장착할 수 있습니다.
+819	Tutorial_Loadout5	카드를 장착함으로써⏎공격력과 방어력이 크게 상승했습니다.
+820	Tutorial_Loadout6	새로운 카드는 시나리오를 진행하면 얻을 수 있습니다.⏎<b>또한 진행에 따라 이미 가진 카드를 강화할 수도⏎있게 됩니다</b>.⏎⏎실제로 카드 2장을 장착해 봅시다.
+821	Tutorial_ColorAdvantage0	<b>색상 상성</b>이 발동했습니다.
+822	Tutorial_ColorAdvantage1	상성상 유리한 카드는 <b>공격력과 방어력이⏎상승합니다</b>. 이 상승분은 로드아웃 전체의⏎공격력과 방어력에도 반영됩니다.
+823	Tutorial_ColorAdvantage2	오른쪽 위의 색상 상성표를 클릭하면⏎자세한 상성을 확인할 수 있습니다.
+824	Tutorial_Remembrance0	<b>리멤브런스</b>가 해금되었습니다.⏎리멤브런스는 뮤직 플레이에서 도전할 수 있는⏎인카운터입니다.⏎⏎여기를 클릭해서 리멤브런스를 선택해 봅시다.
+825	Tutorial_Remembrance1	해금된 리멤브런스는 목록으로 여기에 표시됩니다.⏎이번에는 맨 위의 리멤브런스가 선택됩니다.
+826	Tutorial_Remembrance2	리멤브런스는 각각 특정 캐릭터와 연결되어 있으며,⏎해당 캐릭터의 스킬이 그 인카운터에서 발동합니다.
+827	Tutorial_Remembrance3	리멤브런스를 클리어하면 보상으로 <b>'입자'</b>를⏎획득합니다.⏎이는 <b>카드 제작 시 소재로 사용하는 아이템</b>입니다.⏎자세한 내용은 카드 제작 튜토리얼에서도 확인할⏎수 있습니다.
+828	Tutorial_Remembrance4	각 리멤브런스마다 획득할 수 있는 입자 종류가⏎다릅니다. 또한 게임 후반의 리멤브런스일수록⏎더 강력한 입자를 얻을 수 있습니다.⏎다양한 종류의 입자를 모으기 위해, 새로운⏎리멤브런스를 해금하면 획득 가능한 입자를⏎확인하는 것을 추천합니다.
+829	Tutorial_Remembrance5	시나리오 내 인카운터와 달리, <b>리멤브런스는⏎HP가 0이 되어도 곡이 중단되지 않습니다</b>.⏎인카운터의 성패는 입자 획득 여부에만 영향을⏎줍니다. 더 좋은 보상을 위해 높은 성적을⏎노려 보세요.
+830	Tutorial_Remembrance6	그럼 선택한 리멤브런스를 위해⏎로드아웃을 편성해 봅시다.
+831	Tutorial_RemembranceOutOfIota0	<b>보유한 입자를 모두 사용했습니다.</b>
+832	Tutorial_RemembranceOutOfIota1	입자는 <b>뮤직 플레이에서 도전할 수 있는⏎'리멤브런스'</b>로 얻을 수 있습니다.⏎지금 이동하시겠습니까?
+833	Tutorial_RemembranceOutOfIota2	리멤브런스 튜토리얼은 이후 뮤직 플레이에서⏎확인할 수 있습니다.
+834	Tutorial_RecipeSelectCraftingSystem0	<b>카드 제작</b>에서는 더 강력한 새로운 카드를⏎만들어 획득할 수 있습니다.
+835	Tutorial_RecipeSelectCraftingSystem1	만들 수 있는 카드는 <b>설계도</b>에 따라 정해집니다.
+836	Tutorial_RecipeSelectCraftingSystem2	하나의 설계도로 같은 카드를 몇 장이든 만들 수⏎있지만, <b>로드아웃에는 같은 이름의 카드를 2장⏎이상 동시에 편성할 수 없습니다</b>.
+837	Tutorial_RecipeSelectCraftingSystem3	각 설계도는 특정 캐릭터와 연결되어 있으며,⏎<b>설계도에 대응하는 캐릭터의 스킬만이</b> 제작 중⏎적용됩니다. 스킬에는 제작 중 제한을 완화하는⏎효과 등이 있습니다.
+838	Tutorial_RecipeSelectCraftingSystem4	여기를 클릭하면 카드 제작이 시작됩니다.
+839	Tutorial_RecipeSelectCraftingSystem5	제작 중인 카드의 스탯은 여기에 표시됩니다.⏎<b>모든 카드는 공격력과 방어력 0에서 시작합니다.</b>
+840	Tutorial_RecipeSelectCraftingSystem6	스탯은 설계도 내 색이 있는 칸의 무리, 컬러존을⏎채우면 상승합니다.⏎⏎컬러존에 커서를 올리면, 그 컬러존을 채웠을 때⏎카드에 부여되는 <b>기초 스탯</b>을 확인할 수⏎있습니다.
+841	Tutorial_RecipeSelectCraftingSystem7	컬러존을 채우려면 같은 색의 <b>입자</b>를⏎그 위에 배치합니다. 실제로 해 봅시다.⏎가이드대로 입자를 놓아 두 개의 컬러존을⏎채워 보세요.
+842	Tutorial_RecipeSelectCraftingSystem8	컬러존이 채워지면서⏎카드에 <b>기초 스탯</b>이 부여되었습니다.
+843	Tutorial_RecipeSelectCraftingSystem9	그리고 카드의 최종적인 강함은 기초 스탯에⏎배율이 곱해진 <b>최종 스탯</b>으로 정해집니다.
+844	Tutorial_RecipeSelectCraftingSystem10	설계도에 놓은 입자로 산출되는⏎<b>평균 출력</b> 값이 <b>최종 스탯</b>에 주로⏎영향을 줍니다.
+845	Tutorial_RecipeSelectCraftingSystem11	입자는 저마다 다른 <b>출력</b>을 가지고 있으며,⏎이는 카드의 <b>최종 스탯</b>에 영향을 줍니다.⏎⏎각 입자 아래에 표시된 수치는, 소지한 같은 종류의⏎입자 중 가장 높은 출력을 가진 것입니다.
+846	Tutorial_RecipeSelectCraftingSystem12	가장 높은 출력값 이외의 입자를 사용하고 싶을 때는⏎이렇게 목록에서 선택할 수도 있습니다.
+847	Tutorial_RecipeSelectCraftingSystem13	<b>캐릭터마다 색상 등 사용 가능한 입자 종류가⏎정해져 있습니다.</b>⏎게임 진행에 따라 캐릭터가 사용할 수 있는 입자⏎종류는 점점 늘어납니다.
+848	Tutorial_RecipeSelectCraftingSystem14	<b>입자는 뮤직 플레이 내 '리멤브런스'</b>에서⏎획득할 수 있습니다.⏎입자 획득에 대해서는 뮤직 플레이 내 리멤브런스⏎튜토리얼에서도 확인할 수 있습니다.
+849	Tutorial_DiscoveryPart1_0	일부 설계도에서 <b>발견</b>을 할 수 있게⏎되었습니다. 이는 설계도를 확장해 나가는⏎요소입니다.
+850	Tutorial_DiscoveryPart1_1	발견이 가능한 설계도는 미탐색 칸을 나타내는⏎검은 칸──<b><ruby>『靄』<rt>안개</rt></ruby></b>로 둘러싸여 있습니다.
+851	Tutorial_DiscoveryPart1_2	안개는 입자로 걷을 수 있으며, <b>카드 제작 시⏎배치된 입자 주변</b>이 걷힙니다.⏎안개가 걷히면 가려져 있던 칸이 드러납니다.
+852	Tutorial_DiscoveryPart1_3	안개의 가장자리에는 <b>그 방향에 미발견 구역이⏎있을 가능성을 나타내는 하이라이트</b>가 표시되는⏎경우가 있습니다.⏎하지만 발견 초반에는 이 하이라이트의 신빙성이⏎낮고, 부정확한 경우가 더 많습니다.
+853	Tutorial_DiscoveryPart1_4	하이라이트의 정확도는 <b>직감 정확도</b>로⏎여기에 표시됩니다.⏎직감 정확도는 안개를 걷을 때마다 증가하며,⏎새로운 구역을 발견하면 초기화됩니다.
+854	Tutorial_DiscoveryPart1_5	여기에는 이 설계도의 발견 진행도가⏎표시됩니다. 설계도를 모두 발견하면⏎<b>캐릭터 스킬</b>을 얻을 수 있는 '마스터리⏎챌린지'에 도전할 수 있습니다.
+855	Tutorial_DiscoveryPart2_0	이 설계도의 가장자리에서 <b>미확정 구역</b>을⏎감지했습니다.
+856	Tutorial_DiscoveryPart2_1	미확정 구역을 발견하려면, <b>카드 제작 시 입자가⏎그 미확정 구역에 배치되어 있어야</b> 합니다.⏎<b>어느 한 칸과라도 겹쳐 있으면 그 구역 전체가⏎드러납니다</b>. 안개에 가려진 칸이라도 마찬가지⏎입니다.
+857	Tutorial_DiscoveryPart2_2	미확정 구역은 발견되기 전까지는 위험 칸으로⏎취급되어 <b>관련된 모든 페널티가 발동합니다</b>.⏎모든 카드는 제작 시 <b>공격력과 방어력이⏎1 이상</b> 필요하다는 점을 잊지 마세요.
+858	Tutorial_MasteryChallengesTutorial0	<b>마스터리 챌린지</b>를 통해 새로운 캐릭터⏎스킬을 얻을 수 있게 되었습니다.
+859	Tutorial_MasteryChallengesTutorial1	설계도를 모두 발견하면 그 설계도의⏎마스터리 챌린지가 해금됩니다.
+860	Tutorial_MasteryChallengesTutorial2	하나의 설계도에는 여러 개의 마스터리 챌린지가⏎설정되어 있을 수 있습니다. 각 챌린지의 달성⏎조건, 획득 가능한 스킬, 그리고 현재 입자⏎배치가 조건을 충족하는지를 확인할 수 있습니다.
+861	Tutorial_MasteryChallengesTutorial3	많은 마스터리 챌린지에서는 <b>일정 이상의⏎기초 공격력 또는 기초 방어력</b>이 필요합니다.⏎기초 스탯은 컬러존으로만 부여되며, 입자의⏎출력은 관계없다는 점을 기억하세요.
+862	Tutorial_MasteryChallengesTutorial4	<b>일부 마스터리 챌린지는 캐릭터의 스킬 습득⏎상황에 따라 달성이 어려울 수 있습니다.</b>⏎지금 어렵게 느껴진다면, 먼저 해당 캐릭터의⏎다른 설계도에서 마스터리 챌린지를 공략해 보세요!
+863	Tutorial_TraitSlotsNoTraits0	컬러존 중에는 카드에 <b>특성 슬롯</b>을⏎부여하는 효과를 가진 것도 있습니다.
+864	Tutorial_TraitSlotsNoTraits1	<b>일부 입자는 특성을 가지고 있으며</b>,⏎그런 특성을 가진 입자를 제작 시 사용하면⏎카드의 특성 슬롯에 특성 스킬을 장착할⏎수 있습니다.
+865	Tutorial_TraitSlotsNoTraits2	이번에 사용한 입자 중에는 특성을 가진 것이⏎없었던 것 같습니다.⏎그래서 카드에 특성 슬롯은 부여되었지만,⏎장착할 수 있는 특성 스킬은 없었습니다.
+866	Tutorial_TraitSlotsNoTraits3	<b>제작 후 카드에는 나중에 특성을 장착할 수⏎없습니다</b>. 제작을 확정하기 전에 어떤 입자를⏎사용할지, 그 배치를 잘 고민해 보는 것을⏎추천합니다.
+867	Tutorial_TraitSlotsAvailableTraits0	컬러존 중에는 카드에 <b>특성 슬롯</b>을⏎부여하는 효과를 가진 것도 있습니다.
+868	Tutorial_TraitSlotsAvailableTraits1	그리고 특성을 가진 입자를 제작 시 사용하면⏎빈 특성 슬롯에 장착할 수 있는 특성 스킬을⏎얻을 수 있습니다.
+869	Tutorial_TraitSlotsAvailableTraits2	카드에 빈 슬롯이 있다면, 왼쪽 '장착 가능한 특성'⏎목록에서 장착하고 싶은 특성을 선택하면⏎특성 슬롯에 스킬을 장착할 수 있습니다.
+870	Tutorial_TraitSlotsAvailableTraits3	<b>제작 후 카드에는 나중에 특성을 장착할 수⏎없습니다</b>. 카드에 장착하지 않은 특성은⏎카드 제작 확정 후 사라집니다.
+871	Tutorial_CraftingColorChange0	컬러존 중에는 카드에 <b>색상 변경</b>을⏎부여하는 효과를 가진 것도 있습니다.
+872	Tutorial_CraftingColorChange1	<b>색상 변경</b>이 부여되면, 최종 확인 시⏎카드의 색상을 변경할 수 있습니다.⏎<b>색상 상성</b>에 따른 유리함을 노릴 때⏎유용할 것입니다.
+873	Tutorial_CraftingRange0	방금 채운 것처럼, 컬러존 중에는 카드의 <b>카드 범위</b>를⏎넓히는 효과를 가진 것도 있습니다. 카드 범위는⏎특성 스킬의 효과가 발동하는 페이즈에 영향을⏎주는 특수 스탯입니다.
+874	Tutorial_CraftingRange1	<b>카드 범위의 칸은 인카운터에서의 페이즈를⏎나타냅니다.</b>⏎왼쪽으로 뻗은 칸은 그 카드 특성의 발동을⏎칸 수만큼 페이즈 앞당기고, 오른쪽으로 뻗은⏎칸은 그 카드 특성의 종료를 칸 수만큼⏎페이즈 늦춥니다.
+875	Tutorial_ScenarioEncounterFail0	시나리오 인카운터에서 패배했습니다.⏎이야기를 계속 읽으려면 이 인카운터를⏎클리어해야 합니다.
+876	Tutorial_ScenarioEncounterFail_FirstSongs0	인카운터는 카드의 강함뿐만 아니라 리듬 게임⏎퍼포먼스에도 좌우됩니다. 인카운터를 클리어하기⏎어렵다면, 곡의 난이도를 조절하는 것도⏎하나의 방법일 수 있습니다.
+877	Tutorial_ScenarioEncounterFail_NeedMoreCards0	편성 전체의 <b>공격력</b>과 <b>방어력</b>을⏎확인해 보세요.⏎자신의 공격력·방어력이 상대의 공격력·방어력을⏎웃돌면 인카운터 승리에 가까워집니다.⏎⏎빈 슬롯에 카드를 최대한 배치하는 것이⏎스탯을 확보하는 가장 효과적인 방법입니다.
+878	Tutorial_ScenarioEncounterFail_NotSeenCrafting0	편성의 <b>공격력</b>과 <b>방어력</b>을 확인해⏎보세요.⏎카드 강화는 <b>카드 형성</b> 시스템에서⏎할 수 있습니다.⏎⏎지금 카드 형성으로 이동하시겠습니까?
+879	Tutorial_ScenarioEncounterFail_NotSeenRemembrance0	편성의 <b>공격력</b>과 <b>방어력</b>을 확인해⏎보세요.⏎카드는 인카운터의 재현──<b>리멤브런스</b>에서⏎얻는 입자로 강화할 수 있습니다.⏎⏎지금 리멤브런스에 대해 알아보시겠습니까?
+880	Tutorial_ScenarioEncounterFail_NotDoneMastery0	가능한 한 많은 설계도에서 <b>발견</b>과⏎<b>마스터리 챌린지</b>를 완료하면, 카드 제작⏎능력을 크게 향상시키는 중요한 <b>캐릭터 스킬</b>을⏎습득할 수 있습니다.⏎⏎지금 카드 제작으로 이동하시겠습니까?
+881	Tutorial_ScenarioEncounterFail_NoReason0	카드 강화, 로드아웃 편성의 시행착오 등⏎지금까지 배운 것들을 활용하면⏎분명 극복할 수 있을 것입니다.
+882	Tutorial_ChromaticBonus0	캐릭터가 시너스타지아 스킬을 습득해서⏎<b>크로매틱 보너스</b>가 발동하고 있습니다.⏎⏎시너스타지아 스킬을 습득한 캐릭터의 인카운터에서는⏎로드아웃에 서로 다른 색상의 카드를 편성할⏎때마다, 총 공격력과 총 방어력이 상승합니다.
+883	Tutorial_LowIota0	<b>카드를 제작하는 데 충분한 입자를 보유하고⏎있지 않습니다.</b> 입자는 뮤직 플레이 내⏎<b>리멤브런스</b>에서 획득할 수 있습니다.⏎⏎지금 이동하시겠습니까?
+884	Tutorial_NotifyCraftingUnlocked0	CARD CRAFT에서 더 강력한 새로운 카드를⏎제작할 수 있게 되었습니다.⏎'<b>설계도</b>' 버튼을 클릭해서 카드 제작을⏎실제로 해 봅시다.
+885	SettingsName_AudioDeviceType	오디오 출력 방식
+886	SettingsName_AudioBufferSize	오디오 버퍼 크기
+887	SettingsExplain_AudioDeviceType	출력에 사용할 드라이버를 변경합니다.
+888	SettingsExplain_AudioBufferSize	드라이버의 버퍼 크기를 변경합니다.
+889	SettingsAudio_AudioBufferSize_DeviceDefault	장치 기본값
+890	SettingsAudio_AudioDeviceType_SystemDefault	시스템 기본값
+891	Story_IntroVideo_Stable	안정형
+892	Story_IntroVideo_Thin	희박형
+893	Story_IntroVideo_Dense	밀집형
+894	Story_IntroVideo_Islands	군도형
+895	Story_IntroVideo_Shifting	변이형
+896	Story_IntroVideo_LowVisibility	시야 불량형
+897	Story_IntroVideo_Splitting	분열형
+898	Story_IntroVideo_Needling	침상형
+899	SortButtonDescription_BaseIdAscTierAsc	TIER (오름차순)
+900	SortButtonDescription_BaseIdAscTierDesc	TIER (내림차순)
+901	SettingsName_EncounterSfxVolume	인카운터 SFX 볼륨
+902	SettingsName_VisualNovelVoiceVolume	비주얼 노벨 보이스 볼륨
+903	SettingsName_VisualNovelGeneralVolume	비주얼 노벨 전체 볼륨
+904	SettingsName_UiBgmVolume	UI BGM 볼륨
+905	SettingsName_UiSfxVolume	UI SFX 볼륨
+906	SettingsExplain_EncounterSfxVolume	인카운터 관련 효과음⏎음량을 조정합니다.
+907	SettingsExplain_VisualNovelVoiceVolume	비주얼 노벨 보이스 음량을 조정합니다.
+908	SettingsExplain_VisualNovelGeneralVolume	비주얼 노벨 BGM과 효과음⏎음량을 조정합니다.
+909	SettingsExplain_UiBgmVolume	메뉴 화면 등 UI에서의⏎BGM 음량을 조정합니다.
+910	SettingsExplain_UiSfxVolume	메뉴 화면 등 UI에서의⏎효과음 음량을 조정합니다.
+911	Settings_AdvancedAudio	고급 오디오 설정
+912	Settings_AdvancedAudio_WarningDescription	이 설정을 변경하면 음성이 끊기는 등의 문제가⏎발생할 수 있습니다.⏎음성이 불안정하다면 버퍼 크기를 늘리거나⏎시스템 기본 드라이버를 사용해 보세요.
+913	Settings_Instant	즉시 표시
+914	Tutorial_Timeline0	<b>타임라인</b>에 오신 것을 환영합니다. 여기서⏎각 이야기를 따라갈 수 있습니다.⏎또한 이미 읽은 장면도 다시 읽을 수 있습니다.
+915	Tutorial_Timeline1	각 캐릭터의 시점으로 그려지는 시나리오를 통해⏎《In Falsus》 세계의 진실을 파헤쳐 봅시다.
+916	Tutorial_DropResults0	인카운터를 클리어해서 <b>입자</b>를⏎획득했습니다.
+917	Tutorial_DropResults1	입자는 <b>뮤직 플레이</b> 내에서 도전할 수 있는⏎인카운터, '리멤브런스'에서도 획득할 수⏎있으며, 시나리오 인카운터를 처음 클리어할⏎때도 획득할 수 있습니다.
+918	FinalizeCard	카드 최종 확인
+919	AvailableTraitsUpper	특성 후보
+920	SwitchColorUpper	색상 변경
+921	ColorChangeNotAvailable	이번 제작에서는 카드의 색상을 변경할 수 없습니다
+922	NoTraitsAvailableUpper	장착 가능한 특성 없음
+923	NoTraitsAvailableDescription	이번 제작에서는 특성을 가진⏎입자가 사용되지 않았습니다
+924	IotaSelectedDeleteConfirmationTitle	입자 삭제
+925	IotaSelectedDeleteConfirmationDescription	선택한 종류의 입자를 모두 삭제하시겠습니까?
+926	Tutorial_CharacterSelect_Index3	캐릭터 선택을 변경하면 홈 화면의 BGM을⏎커스터마이즈할 수 있습니다.⏎리듬 게임 부분의 점수나 카드 제작 등⏎<b>다른 게임플레이 요소에는 영향을 주지⏎않습니다</b>.
+927	Tutorial_EncounterConnect7_5	<b>페이즈가 바뀌면 공명 게이지는 0으로⏎초기화</b>됩니다.⏎즉, 공명 게이지를 채울 기회는 5번.⏎⏎최대한 많이 EXACT 판정으로 연주해서⏎상대에게 큰 데미지를 입혀 봅시다!
+928	Tutorial_EncounterConnect8_5	<b>또한 상대의 HP를 0으로 만들어도 상대는⏎계속 공격합니다</b>. 곡이 끝날 때까지⏎상대의 공격을 버텨 내야 합니다.⏎⏎인카운터 튜토리얼은 여기까지입니다.
+929	Tutorial_EncounterMeditation1_1	진행 게이지는 노트를 연주할 때⏎<b>당신이 주는 데미지</b>로 상승합니다.
+930	Tutorial_EncounterMeditation1_2	반대로 상대로부터 데미지를 받으면⏎진행 게이지가 감소하고, 동시에 <b>방해도</b>가⏎쌓입니다.⏎⏎쌓인 방해도는 진행 게이지의 상승량을 줄여⏎게이지가 잘 차지 않게 됩니다.⏎⏎방어력이 높을수록 받는 방해도가⏎줄어듭니다.
+931	Tutorial_EncounterMeditation1_3	양측의 <b>공격력</b>은 서로가 주는 데미지량에⏎영향을 줍니다.⏎⏎<b>당신의 방어력</b>은 상대로부터 받는 방해도를⏎줄이고, <b>상대의 방어력</b>은 진행 게이지를⏎채우는 데 필요한, 당신이 줘야 할 데미지의⏎총량에 영향을 줍니다.
+932	Tutorial_EncounterMeditation2_1	곡이 끝나는 시점에 진행 게이지가 100% 이상이면⏎인카운터는 성공입니다.
+933	Tutorial_Loadout1_1	<b>공격력</b>: 노트 연주 시 기본 데미지량에⏎영향을 줍니다. 실제로 주는 데미지는 각 노트의⏎판정에 따라 달라지며, EXACT에서는 그대로,⏎NEAR에서는 줄어들고, BREAK에서는 0이 됩니다.⏎또한 노트를 BREAK하면 받는 데미지가⏎늘어납니다.
+934	Tutorial_Loadout1_2	<b>방어력</b>: 인카운터 시작 시 HP 총량에⏎영향을 줍니다. HP가 많을수록 받을 수 있는⏎데미지도 많아집니다.
+935	Tutorial_DiscoveryPart1_5_1	각 마스터리 챌린지와 습득 가능한 캐릭터⏎스킬은, 왼쪽 위 '마스터리' 옆 박스를⏎클릭하면 확인할 수 있습니다.
+936	Tutorial_DiscoveryPart2_0_1	미확정 구역은 설계도 내에서 아직 발견되지⏎않은 컬러존이 남아 있음을 나타냅니다.⏎이를 발견하면 카드 설계 시 선택지가 늘어나며,⏎설계도의 발견 게이지도 상승합니다.
+937	Tutorial_MasteryChallengesTutorial1_1	여기를 클릭하면 챌린지 내용을 확인할 수⏎있습니다.
+938	Tutorial_MasteryChallengesTutorial2_1	물론 마스터리 챌린지를 달성하려면 입자 배치가⏎조건을 만족하는 것뿐만 아니라, 카드가⏎올바르게 제작되어야 합니다.
+939	Tutorial_CraftingColorChange1_1	제작한 카드는 나중에 색상을 변경할 수⏎없습니다. 제작을 확정하기 전에 잘⏎고민해 보는 것을 추천합니다.
+940	Tutorial_CraftingRange0_1	카드 범위는 그 카드에만 반영되며, 로드아웃 내⏎다른 카드의 특성에는 영향을 주지 않습니다.
+941	Tutorial_CraftingRange1_1	특성의 효과 범위는 곡에 설정된 5개 페이즈의⏎한계를 넘지 않습니다.
+942	Tutorial_DialogTitle_ScenarioEncounters	시나리오 인카운터
+943	Tutorial_DialogTitle_SongDifficultyTiers	곡의 난이도
+944	Tutorial_DialogTitle_CardLoadout	로드아웃 확인
+945	Tutorial_DialogTitle_EnhancingCards	카드 강화
+946	Tutorial_DialogTitle_RemembranceAndIota	'리멤브런스'와 '입자'
+947	Tutorial_DialogTitle_DiscoveryAndMastery	'발견'과 '마스터리'
+948	Tutorial_DialogTitle_TryAgain	다시 시도해 봅시다
+949	Tutorial_DialogTitle_InsufficientIota	입자 부족
+950	ReflectionFailedUpper	리플렉트 실패
+951	HexColor_Red_Upper	빨강
+952	HexColor_Yellow_Upper	노랑
+953	HexColor_Green_Upper	초록
+954	HexColor_Blue_Upper	파랑
+955	HexColor_Purple_Upper	보라
+956	TraitPresent	특성 있음
+957	TraitNotPresent	특성 없음
+958	PotencyUpperLabel	출력
+960	RemoveUpper	삭제
+961	CannotDeleteLastCardPrompt	각 카드는 최소 1장씩 보유하고 있어야 합니다.
+962	Continue_Timeline	안읽음으로
+963	Continue_TimelineEntryContinueModal	이어서
+964	Continue_ResultsScene	다음으로
+965	PotencyMultiplierTitle	출력 배율
+966	BasePower_Upper	기초 공격력
+967	BaseFortitude_Upper	기초 방어력
+968	Hub_Upper	홈
+969	NoEncounterSelectedResultsUpper	리멤브런스 미연결
+970	FreePlayDescription	인카운터가 비활성화되어 입자를 획득하지⏎않습니다.⏎곡 점수는 평소처럼 기록됩니다.
+971	Tutorial_DropResults2_Demo	입자를 사용해 카드를 강화하고, 어려운⏎리멤브런스에 맞서 봅시다.⏎데모판 튜토리얼은 여기까지입니다.
+972	Tutorial_RecipeSelectCraftingSystem15	그럼 카드 제작을 확정합시다.⏎⏎여기를 클릭하면 제작할 카드의⏎최종 확인 화면으로 이동합니다.
+973	Tutorial_RecipeSelectCraftingSystem16	여기를 클릭하면 제작할 카드가 확정되고,⏎이번에 설계한 강함의 카드를 얻습니다.
+974	SelectMultiple	다중⏎선택
+976	Crafting_ProgressScenarioUnlockDescription	이 기능은 시나리오를 진행하면 해금됩니다
+977	Event_ThanksForPlaying	플레이해 주셔서 감사합니다
+978	Event_PleaseFollow	In Falsus 공식 계정을 팔로우해 주세요.
+979	IllustTitle_Upper	일러스트
+980	StoryModal_FastForwardAllowTitle	경고
+981	StoryModal_FastForwardAllowDescription_Long	아직 읽지 않은 시나리오 장면을 건너뛰려⏎합니다.⏎⏎시나리오의 중요한 순간을 더 깊이 즐기실 수⏎있도록, In Falsus는 중요한 장면에 도달하면⏎'자동 재생'으로 전환됩니다.⏎해당 장면이 끝나면 빨리 감기가 다시⏎활성화됩니다.⏎⏎정말 아직 읽지 않은 내용을 건너뛰시겠습니까?
+982	StoryModal_FastForwardAllowDescription_Short	아직 읽지 않은 내용을 건너뛰려 합니다.⏎⏎중요한 장면에 도달하면 '자동 재생'으로⏎전환됩니다.⏎⏎정말 아직 읽지 않은 내용을 건너뛰시겠습니까?
+983	Skill_Synesthesia_Upper	시너스타지아
+984	Tutorial_BackColonSpace	이전:
+985	Tutorial_PressShift	<b>Shift 키</b>를 입력
+986	Modal_ButtonTextConfirmUpper	확인
+987	Tooltip_UnableToExploreZeroNewTiles	새로 발견될 칸이 없으면 탐색할 수 없습니다
+988	Modal_ConfirmBlueprintExploration	설계도 탐색 확인
+990	SettingsName_Gameplay_SideNoteVisual	사이드 레인 강조 표시
+991	Settings_Explain_Gameplay_SideNoteVisual	사이드 레인 노트에⏎가이드를 추가합니다.
+992	Settings_SideNoteGuideVisual_Left	왼쪽 레인만
+993	Settings_SideNoteGuideVisual_Right	오른쪽 레인만
+994	Settings_SideNoteGuideVisual_Both	양쪽 레인
+995	Settings_SideNoteGuideVisual_None	없음
+996	Modal_ConfirmBlueprintExplorationDescription	입자 {0}개를 소모해 {1}칸을 탐색하고⏎힌트 정확도를 {2}% 상승시킵니다.⏎계속하시겠습니까?
+997	BlueprintFullyDiscovered	설계도 완전 발견
+998	UnlockDiscoveryBoost	발견 부스트 해금
+999	IntegrateCards	카드 제작 모드
+1000	ExploreMode	설계도 탐색 모드
+1001	Explore_Upper	탐색
+1002	ReduceIotaLimit_Minus_Int	입자 한도 감소
+1003	ReduceIotaLimit_Description	설계도 입자 한도 {0} 감소
+1010	Timeline_Modal_TimelineUnlockedTitle	타임라인 해금
+1011	Timeline_Modal_TimelineUnlockedBody	{0}의 시나리오 타임라인이 해금되었습니다.
+1012	CurrentDifficultyUpper	현재 난이도
+1013	Tutorial_ExplorationMode0	제작 시 <b>탐색 모드</b>를 사용할 수 있게⏎되었습니다.
+1014	Tutorial_ExplorationMode1	탐색 모드에서는 제작 시 발견될 설계도⏎범위가 하이라이트로 표시됩니다.
+1015	StartingInUpper	재개까지
+1020	CraftingChallengeTarget_LeftRange_Description	카드 범위(좌)
+1021	CraftingChallengeTarget_RightRange_Description	카드 범위(우)
+1022	CraftingChallengeComparisonType_AtLeastTwoValues_Description	{0}이(가) {1} 이상⏎또한 {2}이(가) {3} 이상
+1023	UnlockSkillsDescription	마스터리 챌린지를 달성해서 보상을 획득
+1029	DifficultyUnlock_FBDTitle	FORBIDDEN: 금단의 지식
+1030	DifficultyUnlock_UltsTitle	ULTIMATE: 궁극의 지식
+1031	ChangeTo_HexColorTitle	카드 색상 변경 활성화
+1032	UnformedHex_Description	이 칸에 입자를 배치하고 제작·탐색하면⏎내용이 드러납니다
+1034	ScreenshotDescription	스크린샷이 클립보드에 복사되었습니다
+1035	ReflectUpper	리플렉트
+1045	Tutorial_NotifyMasteryUnlocked0	<b>카드 제작</b>에서 설계도의 마스터리 챌린지가⏎해금되었습니다.⏎'<b>설계도</b>' 버튼을 클릭해서 시도해 봅시다.
+1046	Tutorial_MasteryChallengesTutorial_V2_0	각 설계도에서 마스터리 챌린지에⏎도전할 수 있게 되었습니다.
+1047	Tutorial_MasteryChallengesTutorial_V2_1	각 챌린지를 달성하면 보상으로 캐릭터의⏎스킬을 획득·강화할 수 있습니다.⏎실제로 챌린지에 도전해 봅시다.
+1048	Tutorial_MasteryChallengesTutorial_V2_2	여기를 클릭해서 카드 제작을 시작합시다.
+1049	Tutorial_MasteryChallengesTutorial_V2_3	마스터리 챌린지는 이 버튼으로⏎접근할 수 있습니다.
+1050	Tutorial_MasteryChallengesTutorial_V2_4	마스터리 챌린지에서는 한 번의 카드 제작으로⏎특정 스탯 목표 등을 노리게 됩니다.⏎각 설계도에는 여러 개의 챌린지가 있으며,⏎각 챌린지 내용과 보상이 여기에 나열됩니다.
+1051	Tutorial_MasteryChallengesTutorial_V2_5	이번에는 이 챌린지에 도전해 봅시다.⏎⏎챌린지 오른쪽 위의 '고정 표시'를 클릭하면⏎제작 중에도 이번 챌린지 조건인 스탯 목표를⏎고정 표시할 수 있습니다.
+1052	Tutorial_MasteryChallengesTutorial_V2_6	이 챌린지의 달성 조건은⏎일정 이상의 <b>기초 공격력</b>을 얻는 것입니다.⏎⏎일단 가이드와 같이 입자를 배치해 봅시다.
+1053	Tutorial_MasteryChallengesTutorial_V2_7	이걸로 기초 공격력 목표를 달성했습니다.⏎⏎하지만 하나 더, 챌린지 달성에는 제작 시⏎총 페널티가 0이어야 합니다.
+1054	Tutorial_MasteryChallengesTutorial_V2_8	하지만 지금 니아는 입자를 인접시키지 않고⏎배치했을 때 발생하는 <b>단절</b> 페널티를⏎무효화하는 스킬을 가지고 있지 않습니다.⏎그러니 컬러존을 채우면서 모든 입자가⏎인접하도록, 마지막 입자를 다시⏎놓아 봅시다.
+1055	Tutorial_MasteryChallengesTutorial_V2_9	그리고 챌린지 조건을 만족한 카드를⏎제작하면 보상을 획득할 수 있습니다.
+1056	Tutorial_MasteryChallengesTutorial_V2_10	그럼 설계한 카드를 확정하고⏎보상을 받읍시다.
+1057	Tutorial_MasteryChallengesTutorial_V2_11	이번에 니아가 습득한 스킬은, 한 번의 제작에서⏎동시에 사용할 수 있는 입자 개수를 늘려⏎줍니다.⏎이처럼 캐릭터의 스킬은 카드 제작 시⏎선택지를 넓혀 줄 수 있습니다.
+1059	Tutorial_RecipeSelectCraftingSystem5_2	소지한 입자는 화면 아래쪽 목록에서⏎선택할 수 있습니다.
+1060	Story_IntroVideo_ShroudSkyDenseDay	낮·슈라우드 밀집형
+1061	Story_IntroVideo_ShroudSkySplittingNight	밤·슈라우드 분열형
+1062	Story_IntroVideo_ShroudSkyThinDusk	저녁·슈라우드 희박형
+1063	ExploringAsUpper	스킬 발동 중
+1064	IntegratingAsUpper	스킬 발동 중
+1065	Discovered	발견됨
+1066	SortButtonDescription_NewestDesc	최신순
+1067	SortButtonDescription_PowerDescFortDescNewestDesc	공격력순
+1068	SortButtonDescription_FortDescPowerDescNewestDesc	방어력순
+1069	SortButtonDescription_ColorAscOrderAscNewestDesc	카드별⏎획득순
+1070	GiveUpUpper	뒤로
+1071	ImproveInfusionPopup	마스터리 챌린지로 {0}의 인퓨전 스킬 레벨을⏎올리면 사용 가능해집니다
+1072	DiscoveredUpper	발견됨
+1073	IotaTypesUpper	입자 타입
+1074	IncludeTypeChanges	색상 변경 가능 포함
+1075	KnownTypeChangesUpper	변경 가능한 색상
+1080	Tutorial_DiscoveryV2_0	설계도의 <b>발견</b>이 해금되었습니다.
+1081	Tutorial_DiscoveryV2_1	<b>발견</b>은 각 설계도의 레이아웃을 확장해⏎나가는 요소입니다. 실제로 해 봅시다.
+1082	Tutorial_DiscoveryV2_2	여기를 클릭해서 카드 제작을 시작합니다.
+1083	Tutorial_DiscoveryV2_3	발견에서는 설계도 내 미탐색 칸──'안개'에⏎숨겨진 컬러존을 찾는 것이 목표입니다.⏎그리고 안개의 가장자리에는 <b>하이라이트</b>가⏎표시됩니다.⏎이는 미발견 컬러존이 있는 방향에 대한⏎힌트입니다.
+1084	Tutorial_DiscoveryV2_4	하지만 발견 초반에는 이 하이라이트의⏎신빙성이 낮고, 부정확한 경우가 더 많습니다.⏎하이라이트의 정확도는 힌트 정확도로⏎여기에 표시됩니다.
+1085	Tutorial_DiscoveryV2_5	안개는 그 위에 입자를 배치하고⏎카드 제작을 확정하면 탐색할 수⏎있습니다.⏎⏎실제로 가이드대로 입자를 놓아 봅시다.
+1086	Tutorial_DiscoveryV2_6	그럼 카드 제작을 마치고 탐색한 칸을⏎확인해 봅시다.
+1087	Tutorial_DiscoveryV2_7	여기를 클릭해서 카드 제작을 확정합니다.
+1088	Tutorial_DiscoveryV2_8	제작 시 배치한 입자가 미발견 컬러존에⏎닿아 있었기 때문에, 해당 컬러존과 주변⏎안전 칸이 발견되었습니다.⏎⏎다음 제작부터는 이 일대가 처음부터⏎안전 칸으로 취급됩니다.
+1089	Tutorial_NotifyDiscoveryUnlocked0	<b>발견</b>이 <b>카드 제작</b>에서⏎해금되었습니다.⏎'<b>설계도</b>' 버튼을 클릭해서 시도해 봅시다.
+1090	MinorSplashBanner_MasteryChallengeCompleteTitle	마스터리 챌린지 달성
+1091	MinorSplashBanner_NewSkillUnlockedBody	새 스킬 해금
+1092	MinorSplashBanner_DifficultyUnlockedTitle	난이도 해금
+1093	MinorSplashBanner_DifficultyUnlockedBody_Ult	<b>ULTIMATE</b> 난이도 채보가 해금되었습니다
+1094	MinorSplashBanner_DifficultyUnlockedBody_Fbd10	<b>Level 10의 FORBIDDEN</b> 난이도 채보가⏎해금되었습니다
+1095	MinorSplashBanner_DifficultyUnlockedBody_Fbd11	<b>Level 11의 FORBIDDEN</b> 난이도 채보가 해금되었습니다
+1096	MinorSplashBanner_DifficultyUnlockedBody_Fbd12	<b>Level 12의 FORBIDDEN</b> 난이도 채보가 해금되었습니다
+1097	MinorSplashBanner_DifficultyUnlockedBody_All	모든 난이도의 채보가 해금되었습니다
+1098	MinorSplashBanner_DiscoveryProgressTitle	설계도 발견 진행
+1099	MinorSplashBanner_DiscoveryProgressBody_NewTilesDiscovered	설계도 내 새로운 칸을 발견했습니다
+1110	MinorSplashBanner_DiscoveryProgressBody_BlueprintFullyDiscovered	설계도 내 모든 칸을 발견했습니다
+1111	MinorSplashBanner_DiscoveryProgressBody_BlueprintMasteryCompleted	설계도 마스터리를 완료했습니다
+1112	IotaDropsTag_FirstClear	첫 클리어
+1113	IotaDropsTag_SongLength	곡 길이
+1114	IotaDropsTag_Skills	스킬
+1115	IotaDropsTag_Rank	랭크
+1116	SongSelect_FreeplayNoRewardsLabel	리멤브런스 미연결 프리 플레이에서는⏎보상을 획득할 수 없습니다
+1117	Skill_TokonagiEncounter	해방
+1118	Skill_TokonagiEncounter_Description	타인을 자신의 지배하에 두다
+1119	TokonagiEncounter_ObtainPowerModalDescription	내면의 세계를 손에 넣어라──
+1120	TokonagiEncounter_TakeControlDescription	이 팝업 다시 보지 않기
+1121	MasteryProgress_Upper	설계도 현황
+1122	Modal_GiveUp	인카운터를 포기하고 타임라인으로⏎돌아가시겠습니까?
+1123	Modal_GiveUpTitle	타임라인으로 돌아가기
+1124	SettingsName_BossVfx	보스곡 시각 효과
+1125	Settings_BossVfx_Full	최대
+1126	Settings_BossVfx_Reduced	약하게
+1127	Settings_BossVfx_None	없음
+1128	SettingsExplain_BossVfx	보스곡 시각 효과의⏎강도를 조정합니다.
+1129	RewardsUpper	보상
+1130	UnlockedBlueprintIdeation	카드 제작 해금
+1131	BlueprintFullyMastered	설계도 마스터리 완료
+1132	GenSkillLevelUp	공용 스킬 습득
+1133	CoreSkillLevelUp	캐릭터 스킬 레벨업
+1134	SpectralSkillLevelUp	스펙트럴 스킬 레벨업
+1135	AllCharactersUpper	전체 캐릭터
+1136	UltimateUnlockedDescription	<b>ULTIMATE 난이도</b>를 플레이할 수⏎있게 되었습니다
+1137	FBD10UnlockedDescription	<b>Lv. 10까지의 FORBIDDEN 난이도</b>를 플레이할 수⏎있게 되었습니다
+1138	FBD11UnlockedDescription	<b>Lv. 11까지의 FORBIDDEN 난이도</b>를 플레이할 수⏎있게 되었습니다
+1139	FBD12UnlockedDescription	<b>Lv. 12까지의 FORBIDDEN 난이도</b>를 플레이할 수⏎있게 되었습니다
+1140	NewDifficultyUnlocked	새 난이도 해금
+1141	MasteryChallengesUnlocked	마스터리 챌린지 해금
+1142	DiscoveryUnlocked	설계도 발견 해금
+1143	NewTilesDiscovered	새로운 칸 발견
+1144	NewUpper	NEW
+1145	KnownPotentialDrops	획득 가능한 입자
+1146	FBD13AndAboveUnlockedDescription	<b>Lv. 13 이상의 FORBIDDEN 난이도</b>를 플레이할 수⏎있게 되었습니다
+1180	Tutorial_LoadoutV2_0	'로드아웃'이 해금되었습니다.⏎앞으로의 인카운터에서는 인카운터 중 자신의⏎스탯에 영향을 주는 <b>'카드'</b>를 여기서⏎장착할 수 있습니다.
+1181	Tutorial_LoadoutV2_1	카드는 <b>아래쪽 목록에서 빈 슬롯으로⏎드래그</b>하면 장착할 수 있습니다.⏎⏎실제로 카드 2장을 장착해 봅시다.
+1182	Tutorial_LoadoutV2_2	각 카드를 장착해서 얻은 <b>총 공격력</b>과⏎<b>총 방어력</b>이 여기에 표시됩니다.⏎이 두 가지가 인카운터에서 당신의 주요⏎스탯이 됩니다.
+1183	Tutorial_LoadoutV2_3	인카운터에서는 상대도 카드를 장착하며,⏎위쪽에는 상대의 스탯이 표시됩니다.⏎당신의 스탯이 상대의 스탯을 웃돌고, 게임⏎중 정확하게 노트를 연주하는 것이 인카운터에서⏎승리하기 위한 핵심입니다.
+1184	Tutorial_LoadoutV2_4	현재 당신은 2장의 카드만 보유하고⏎있지만, 시나리오를 진행하면 더 많은 카드가⏎해금됩니다.
+1185	Tutorial_DiscoveryV2_9	힌트 정확도는 안개를 탐색할 때마다⏎상승하며, 퍼센트가 높을수록 하이라이트가⏎정확해져 컬러존이 숨겨진 방향이⏎좁혀집니다.
+1186	Tutorial_DiscoveryV2_10	이 '하이라이트'를 활용해서, 그 방향에⏎숨겨진 컬러존을 찾아냅시다.
+1187	Tutorial_LoadoutV2_Part2_0	상대의 카드에는 세트된 페이즈 부근에서⏎스탯 등에 큰 영향을 주는 효과가 있는⏎'특성'이 붙어 있는 경우도 있습니다.⏎커서를 올리면 그 효과를 확인할 수 있습니다.
+1188	Tutorial_Results_FailEncounterConflict	로드아웃 구성이 충분하지 않아 커넥트⏎인카운터에서 패배했습니다.⏎이 인카운터를 클리어하려면 더 강력한⏎카드를 새로 제작해야 할 수도 있습니다.
+1189	Tutorial_Results_FailEncounterMeditation	로드아웃 구성이 충분하지 않아 리플렉트⏎인카운터에서 패배했습니다.⏎이 인카운터를 클리어하려면 더 강력한⏎카드를 새로 제작해야 할 수도 있습니다.
+1190	Tutorial_Results_FailEncounter_DiveOverlay0	데미지 상황 등 인카운터 중 상세 내용을⏎이 버튼에서 확인할 수 있습니다.
+1191	Tutorial_Results_FailEncounter_DiveOverlay1	각 페이즈를 클릭하면 해당 페이즈에서의⏎데미지 등 상세 내용을 확인할 수 있습니다.⏎카드에 특성이 부여되어 있었다면, 그 특성에⏎의한 스탯 변화도 확인할 수 있습니다.
+1192	Tutorial_Results_FailEncounterMissHp	인카운터에서 승리하려면 곡이 끝날 때⏎<b>미스 게이지</b>가 0 이상이어야 합니다.
+1193	Tutorial_RecipeSelectCraftingSystem17	카드 제작의 소재가 되는 입자는⏎각각 다른 형상과 색상을 가지고 있습니다.⏎형상이 큰 입자일수록 하나로 여러 칸을⏎채울 수 있습니다.⏎⏎각 캐릭터는 처음에는 한정된 종류의⏎입자만 사용할 수 있습니다.
+1194	Tutorial_RecipeSelectCraftingSystem18	여기가 카드 제작 전 최종 확인 화면입니다.⏎이후 게임이 진행되면, 이 화면에서 카드에⏎'특성'을 부여할 수도 있게 됩니다.
+1195	Tutorial_RecipeSelectCraftingSystem19	그 밖에 선택 화면에서는 설계도별 정보를⏎확인할 수 있습니다.⏎⏎예를 들어 이 미리보기에서는, 제작을⏎시작하기 전에 컬러존 등 설계도의⏎레이아웃을 확인할 수 있습니다.
+1250	Tutorial_DropResults0_1	<b>입자</b>는 카드 제작 소재가 되는⏎아이템으로, 다양한 형상과 색상을 가지고⏎있습니다.⏎⏎또한 입자 하나하나는 각기 다른 출력값을⏎가지고 있으며, 제작 시 사용하는 입자의⏎출력 크기가 카드의 스탯을 좌우합니다.
+1251	MasteryUpper	마스터리
+1252	Challenges	챌린지
+1253	ChallengesUpper	챌린지 내용
+1254	RequirementsUpper	조건
+1255	CompleteChallengesDescription	페널티 없이 챌린지 조건을 달성하면⏎보상 획득
+1256	PinUpper	고정 표시
+1258	UnpinCompletedChallengeUpper	달성한 챌린지 고정 표시 해제
+1259	ClearSongToProceed	진행하려면 인카운터 클리어 필요
+1260	CommandUpper	커맨드
+1261	ToleratePenaltyUpper	페널티 완화
+1300	Tutorial_ConflictEncounter_HpStats0	시나리오 중 인카운터가 발생할 수 있습니다.⏎인카운터에서는 곡이 진행되는 동안 상대와⏎맞서게 됩니다.
+1301	Tutorial_ConflictEncounter_HpStats1	자신의 HP를 0으로 만들지 않으면서⏎상대의 HP를 0까지 줄여 인카운터에서⏎승리합시다.
+1302	Tutorial_ConflictEncounter_HpStats2	당신의 HP는 당신의 <b>방어력</b>과 같고,⏎상대의 HP는 상대의 <b>방어력</b>과 같습니다.⏎⏎주는 데미지도 각자의 <b>공격력</b>으로⏎정해지지만, 당신의 리듬 게임 플레이에 따라⏎실제로 주는 데미지가 달라집니다.
+1303	Tutorial_ConflictEncounter_HpStats3	서로의 공격은 노트를 연주할 때마다⏎자동으로 발생합니다.⏎데미지를 받으면 HP가 감소합니다.
+1304	Tutorial_ConflictEncounter_HpStats4	시나리오 중 인카운터에서는 HP가 0이 되면⏎그 시점에서 곡이 종료되고, 인카운터에서⏎패배합니다.
+1306	Tutorial_ConflictEncounter_CardsPhases0	인카운터 중, 화면 왼쪽에는 당신이 로드아웃에서⏎편성한 카드가 표시됩니다.
+1307	Tutorial_ConflictEncounter_CardsPhases1	또한 곡은 5개의 페이즈로 나뉘어⏎진행됩니다.⏎⏎현재 페이즈와, 그 페이즈에 대응하는⏎슬롯의 카드를 확인할 수 있습니다.
+1308	Tutorial_ConflictEncounter_Resonance0	인카운터 중, 곡은 <b>5개의 페이즈</b>로⏎나뉩니다.⏎⏎그리고 각 페이즈마다 공명 게이지를⏎채울 수 있습니다.
+1309	Tutorial_ConflictEncounter_Resonance1	공명 게이지는 당신의 HP 게이지⏎아래에 표시되며, 노트를 EXACT 판정으로⏎연주하면 상승합니다.⏎⏎공명 게이지가 최대까지 차면, 이후 그⏎페이즈 동안 당신의 공격은 크리티컬이⏎됩니다! 크리티컬은 주는 데미지가 5배가⏎됩니다.⏎⏎공명 게이지는 각 페이즈가 시작될 때마다⏎초기화됩니다.
+1311	Tutorial_Results_FirstTraitIotaDrop0	'특성'을 가진 입자를 획득했습니다.⏎⏎특성은 카드 제작 시 카드에 장착할 수 있는⏎강력한 추가 효과입니다.
+1312	Tutorial_Results_FirstTraitIotaDrop1	특성은 카드의 <b>특성 슬롯</b>에 장착하면⏎발동합니다.⏎⏎일부 설계도에는 카드에 빈 특성 슬롯을⏎추가하는 컬러존이 있으며, 그런 설계도에서⏎특성을 가진 입자를 사용하면 장착할 특성으로⏎선택할 수 있게 됩니다.
+1313	Tutorial_Results_CraftingPenalties0	카드 제작 시, 입자를 배치하는 방식에⏎따라 카드의 최종 스탯이 낮아지는⏎<b>페널티</b>가 발동할 수 있습니다.
+1314	Tutorial_Results_CraftingPenalties1	설계도마다 정해진 한도보다 많은 입자를⏎배치하면 <b>과부하 페널티</b>가 발동합니다.⏎⏎⏎한도를 초과해서 배치된 <b>입자 개수</b>에⏎따라 페널티가 추가됩니다.
+1315	Tutorial_Results_CraftingPenalties2	회색의 '빈 칸' 또는 색이 있는 '컬러존'에서⏎벗어나도록 입자를 배치하면⏎<b>범위 이탈</b> 페널티가 발동합니다.⏎⏎⏎빈 칸과 컬러존을 합쳐 안전 칸으로⏎하며, 안전 칸을 벗어난 입자 개수에⏎따라 페널티가 추가됩니다.⏎⏎입자 하나가 여러 안전 칸 밖에 걸쳐⏎있더라도, 그 입자로 인한 페널티는⏎1개뿐입니다.
+1316	Tutorial_Results_CraftingPenalties3	하나의 칸 위에 여러 개의 입자가 겹치도록⏎배치하면 <b>중복</b> 페널티가 발동합니다.⏎⏎⏎여러 개의 입자가 동시에 배치된⏎칸의 개수에 따라 페널티가⏎추가됩니다.⏎⏎하나의 칸 위에 입자가 몇 개 겹쳐 있어도,⏎그 칸으로 인한 페널티는 1개뿐입니다.
+1317	Tutorial_Results_CraftingPenalties4	다른 입자와 인접하지 않게 입자를⏎배치하면 <b>단절</b> 페널티가 발동합니다.⏎⏎⏎인접한 입자 무리를 '입자 집합'⏎이라 하며, 다른 입자 집합과 인접하지⏎않은 입자 집합이 생길 때마다 페널티가⏎추가됩니다.⏎⏎입자 집합이 하나뿐일 때는 페널티⏎대상으로 계산되지 않습니다.
+1318	Tutorial_Results_CraftingPenalties5	하나의 입자 집합을 어떤 안전 칸에도⏎닿지 않게 배치하면 <b>거짓 페널티</b>가⏎발동합니다.⏎⏎⏎이 페널티는 한 번에 무한대의 페널티를⏎추가합니다.
+1319	Tutorial_Results_CraftingPenalties6	페널티가 발동하면 그 개수에 따라⏎카드의 최종 스탯이 감소합니다.
+1320	Tutorial_Results_CraftingPenalties7	페널티는 각 캐릭터 스킬로 일부를⏎무효화할 수 있습니다.⏎스킬 습득 및 레벨업은 게임을 진행하면⏎가능해집니다.
+1321	Tutorial_NotifyCharacterSelect0	현재 <b>캐릭터 스킬</b>의 현황은 홈 화면의⏎캐릭터 선택에서 확인할 수 있습니다.⏎여기를 클릭하면 캐릭터 선택으로⏎이동합니다.
+1322	Tutorial_ExplorationMode2	발견을 효율적으로 진행하기 위해, <b>설계도⏎탐색 모드에서는 확정 시 카드가 제작되지⏎않습니다</b>.⏎다만 탐색 모드에서도 제작 가능한 카드의⏎공격력과 방어력이 1 이상이어야 한다는⏎조건은 동일합니다.
+1323	Tutorial_RecipeSelectCraftingSystem20	또한 <b>한 번의 제작에서 배치할 수 있는⏎입자의 한도</b>는 각 설계도마다 정해져⏎있습니다.⏎여기서 그 한도를 확인할 수 있습니다.
+1324	Tutorial_RecipeSelectCraftingSystem21	이 수치는 이 설계도 내 모든 컬러존을⏎채웠을 때 얻을 수 있는 기초 스탯의⏎합계입니다.
+1325	Tutorial_RecipeSelectCraftingSystem22	여기를 클릭하면 카드 인벤토리로⏎이동합니다.⏎제작한 카드는 이 화면에서 확인할 수⏎있습니다.
+1326	Tutorial_RecipeSelectCraftingSystem23	이것이 방금 제작한 카드입니다.
+1327	Tutorial_RecipeSelectCraftingSystem24	또한 설계도를 새로 얻으면, 동시에 그⏎설계도로 제작할 수 있는 카드도 1장⏎얻습니다.
+1328	Tutorial_RecipeSelectCraftingSystem25	카드는 같은 설계도로 몇 장이든 제작할⏎수 있습니다.⏎카드의 스탯은 제작할 때마다 고유하게⏎결정됩니다.
+1329	Tutorial_RecipeSelectCraftingSystem26	같은 이름의 카드는 로드아웃에 1장만⏎편성할 수 있습니다.⏎⏎그 밖에, 불필요한 카드는 이 화면에서⏎언제든지 삭제할 수 있습니다.
+1330	Tutorial_RecipeSelectCraftingSystem27	그 밖에, 소지한 입자는 여기를 클릭하면⏎확인할 수 있습니다.
+1331	Tutorial_MasteryChallengesTutorial_V2_4_1	챌린지 조건이 되는 스탯 목표 등은⏎위쪽에……
+1332	Tutorial_MasteryChallengesTutorial_V2_4_2	해당 챌린지를 달성했을 때의 보상은⏎아래쪽에 표시됩니다.⏎보상에 커서를 올리면 획득 가능한 스킬의⏎상세 정보를 확인할 수 있습니다.
+1333	Tutorial_MasteryChallengesTutorial_V2_7_1	페널티는 일부 캐릭터 스킬로 무효화할⏎수 있습니다.⏎그리고 이 설계도는 니아와 대응하므로,⏎니아의 캐릭터 스킬이 반영됩니다.
+1334	Tutorial_MasteryChallengesTutorial_V2_8_2	이걸로 이번에 선택한 챌린지의 스탯⏎목표를 만족하면서, 페널티가 0이라는⏎조건을 모두 달성했습니다.
+1335	Tutorial_DiscoveryV2_5_2	발견은 이후 제작의 선택지를 늘리는 것이⏎목적입니다. 그러므로 발견을 위한 제작에서는⏎카드 제작 조건만 만족하면, 페널티나 실제⏎스탯은 신경 쓰지 않아도 괜찮습니다.
+1336	Tutorial_DiscoveryV2_11	새로운 컬러존을 발견하면⏎힌트 정확도는 초기값으로 리셋됩니다.
+1337	Tutorial_DiscoveryV2_12	그리고 설계도 내 컬러존을 모두 찾았으므로,⏎이 <b>설계도의 발견</b>은 완료되었습니다!
+1338	Tutorial_Results_FailEncounter_DiveOverlay0_2	DIVE 상세에서는 시계열로, 곡 연주 중⏎당신과 상대의 HP 변화를 확인할 수⏎있습니다.⏎각 페이즈 경계에 있는 점에 커서를⏎올리면 상세한 수치를 확인할 수 있습니다.
+1339	Tutorial_Results_FailEncounter_DiveOverlay2	여기를 클릭하면 당신의 로드아웃과⏎상대의 로드아웃 표시를 전환할 수⏎있습니다.
+1340	Tutorial_RemembranceSplashReminder0	새로운 '리멤브런스'에 접근할 수⏎있게 되었습니다.⏎리멤브런스는 <b>뮤직 플레이</b>에서 도전할⏎수 있는, 반복 플레이 가능한 인카운터입니다.
+1341	Tutorial_RemembranceSplashReminder1	인카운터에서 승리하면 보상으로 카드 제작⏎소재가 되는 입자를 획득할 수 있습니다.⏎다양한 인카운터에 도전해서 강력한⏎입자를 손에 넣읍시다.
+1399	Key_1399	각종 정보
+1400	AssistMode	어시스트 모드
+1401	AssistModeUpper	어시스트 모드 활성화
+1402	Tooltip_NotAvailableAssistMode	어시스트 모드에서는 이용할 수 없습니다
+1403	SettingsExplain_AssistMode	일부 시스템을 비활성화합니다.
+1404	Modal_AssistModeReallyEnableTitle	어시스트 모드를 활성화하시겠습니까?
+1405	Modal_AssistModeReallyDisableTitle	어시스트 모드를 비활성화하시겠습니까?
+1406	Modal_EnableAssistMode	활성화
+1407	Modal_DisableAssistMode	비활성화
+1408	Modal_FullExperience	게임 풀 체험
+1409	Modal_AssistModeEnableDescription	『In Falsus』에는 인카운터를 통한 전투나⏎카드 제작, 캐릭터 육성 등 정교한 <b>퍼즐⏎요소가 있는 시스템</b>이 포함되어 있습니다.⏎이 시스템들은 『In Falsus』의 게임 경험을⏎최대화하도록 설계되어 있습니다.⏎⏎<b>어시스트 모드</b>를 통해 접근성 기능으로서⏎이러한 퍼즐 요소를 비활성화할 수 있습니다.⏎⏎어시스트 모드를 활성화하시겠습니까?⏎설정에서 언제든지 온/오프를 전환할 수⏎있습니다.
+1410	Modal_AssistModeReallyEnableDescription	『In Falsus』에는 인카운터를 통한 전투나⏎카드 제작, 캐릭터의 육성 등 정교한 <b>퍼즐⏎요소가 있는 시스템</b>이 포함되어 있습니다.⏎이 시스템들은 『In Falsus』의 게임 경험을⏎최대화하도록 설계되어 있습니다.⏎⏎<b>어시스트 모드</b>를 통해 접근성 기능으로서⏎이러한 퍼즐 요소를 비활성화할 수 있습니다.⏎⏎어시스트 모드를 활성화하시겠습니까?⏎설정에서 언제든지 온/오프를 전환할 수⏎있습니다.
+1411	Modal_AssistModeReallyDisableDescription	어시스트 모드를 비활성화하면, 건너뛴⏎분량의 퍼즐 요소가 자동으로 해금됩니다.⏎⏎다만 어시스트 모드에서 건너뛴 퍼즐 요소는⏎클리어 처리되지 않으며, 직접 클리어해야⏎합니다.⏎그러므로 시나리오를 계속 진행하려면⏎많은 퍼즐 요소를 다시 진행해야 할 수⏎있습니다.⏎⏎또한 어시스트 모드로 진행하는 동안,⏎퍼즐 요소가 있는 시스템에 대한 튜토리얼이⏎건너뛰어졌을 수 있습니다.⏎어시스트 모드를 비활성화한 후에는 각 화면⏎오른쪽 위의 튜토리얼 다시 보기 기능도⏎함께 확인해 주세요.⏎⏎⏎어시스트 모드는 설정에서 언제든지 온/오프를⏎전환할 수 있습니다.
+1499	SettingsSection_Information	각종 정보
+1500	SettingsName_ThirdPartyCredits	라이선스 표기
+1501	ThirdPartyCredits_Show	표시
+1502	StoryScene_ButtonTemporarilyUnavailable	현재 빨리 감기를 사용할 수 없습니다
+1503	Crafting_NoTraitSlotsUpper	특성 슬롯 없음
+1504	HandSelect_ToHandSelect	카드 제작으로
+1505	Recipe_NavigateToEncounterQuestionTitle	확인
+1506	Recipe_NavigateToEncounterQuestionDescription	인카운터로 돌아가시겠습니까?
+1507	Recipe_ToHub	홈 화면으로
+1508	Recipe_ToEncounter	인카운터로
+1509	CommandFailed_Upper	커맨드 실패
+1522	Recap_Upper	요약
+1523	Hub	홈 화면
+1524	CharacterSelect	캐릭터 화면
+1525	TutorialReplayTitle_MinDifficulty	뮤직 플레이: 난이도 MIN
+1526	TutorialReplayTitle_EvoDifficulty	뮤직 플레이: 난이도 EVO 이상
+1527	SongSelect	곡 선택
+1528	RemembranceSelect	리멤브런스
+1529	Crafting	카드 제작
+1530	Modal_ReplayTutorialDescription	{0} 튜토리얼을 다시 확인하시겠습니까?
+1531	TooManyPenalties_Upper	페널티 과다
+1532	Tooltip_UnableToCraftCardZeroStatsCheckPenalties	<b>공격력이 0</b>이거나 <b>방어력이 0인</b> 카드는⏎제작할 수 없습니다⏎(페널티로 인해 스탯이 감소했습니다)
+1540	Timeline_EndOfGameText	남은 시간 9년───
+1541	UnlockedInScenario	시나리오를 진행하면 해금
+1550	Commanded_Upper	커맨드됨
+1551	CannotDeleteLastCardPrompt_Title	카드를 삭제할 수 없습니다
+1552	PremasteryCompletedDescription	제작을 확정하면 {0}개의 <b>마스터리⏎챌린지를 완료</b>할 수 있습니다
+1553	PremasteryCompletedDescriptionPlural	제작을 확정하면 {0}개의 <b>마스터리⏎챌린지를 완료</b>할 수 있습니다
+1554	IntegrateToComplete	제작으로 완료 가능
+1556	ScenarioCompletedTitle	시나리오 클리어를 축하합니다!⏎뮤직 플레이에서는 더 큰 도전이⏎기다리고 있습니다
+1557	ScenarioCompletedDescription	이렇게, 기한이 있는 세계에서 살아가는⏎다섯 사람의 마지막 학창 시절이 막을⏎내렸습니다.⏎⏎게임 내 전 70곡이 모두 해금되었습니다.⏎『뮤직 플레이』로 가서 음악 게임의 완주에⏎도전해 봅시다!⏎⏎In Falsus의 세계와 콘텐츠의 추가 전개는⏎앞으로의 업데이트도 기대해 주세요.⏎⏎In Falsus를 플레이해 주셔서⏎감사합니다!
+1558	DiscoveryUpper	발견
+1559	PotenciesShownDescription	표시된 수치는 입자 출력의 상한입니다
+1560	ChallengeCannotCompleteTitle	현재 캐릭터 스킬 상황으로는⏎챌린지 조건을 달성할 수 없습니다
+1561	ChallengeCannotCompleteDescription	이 챌린지에 도전하기 전에 다른 챌린지를⏎클리어하거나 다른 설계도를 입수해야 합니다
+1562	AssistModeEnabled	어시스트 모드 활성화됨
+1563	RecipeWidget_MaxLimitUpper	소지 한도
+1564	AvailableTraitsCardCraftUpper	장착 가능한 특성
+1565	AccessRequirementsUpper	해금 조건
+1566	ChapterSelectUpper	장을 선택하세요
+1567	DifficultyRatingUpperSplit	난이도⏎레이팅
+1570	Modal_AudioDriftDetectedTitle	오디오 드리프트 감지됨
+1571	Modal_AudioDriftDetectedDescription	뮤직 플레이 중 곡과 노트 오브젝트(이하⏎노트) 사이에서 탈동기화 현상이 감지되었습니다.⏎즉 곡 도중에 음보다 노트가 먼저 떨어지고⏎있습니다.⏎이 현상이 계속되면 <b>오디오 버퍼 크기</b>⏎값을 늘리는 것을 추천합니다.⏎⏎또한 관련해서, 노트를 두드렸을 때의⏎효과음도 지연되어 재생될 수 있습니다.⏎그 경우 <b>퀵 설정</b>에서 오디오 오프셋⏎조정이 필요합니다.⏎⏎지금 <b>오디오 버퍼 크기</b>를 조정하시겠습니까?⏎참고로 조정은 <b>고급 오디오 설정</b>에서⏎언제든지 할 수 있습니다.
+1572	Modal_AudioDriftDetected_ApplyForMe	설정값 늘리기
+1573	Modal_AudioDriftDetected_DisabledApplyForMe	이미 오디오 버퍼 크기가 최댓값입니다.
+3700	SettingsHeader_NoteBehavior	노트 동작

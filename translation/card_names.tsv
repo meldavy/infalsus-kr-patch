@@ -1,0 +1,61 @@
+# Korean card names -- In Falsus
+# Format: <Id><TAB><IdStr><TAB><korean>. Id is the integer key and
+# IdStr the human-readable key (e.g. "1-1-a", "2-r-7") in
+# DynamicStringMapping.cardNameTypeMapping -- both informational, packing
+# matches by Id+IdStr together, never by Korean text.
+# Only rows this project translates are listed.
+1	1-1-a	타인을 찾는⏎따스한 눈빛
+2	1-1-i	냉엄한 조언자
+3	1-1-m	새벽 4시
+4	1-1-n	그 끝에서
+5	1-2-m	무질서의 지휘자
+6	1-2-n	일탈하는 자유
+7	2-1-a	반의 꽃
+9	2-1-m	여름의 끝자락
+10	2-1-n	새로운 친구
+11	2-1-s	혼탁한 바다
+12	2-2-a	내면의 의심
+13	2-2-i	티 없는 새벽
+14	2-2-s	아이온 레코더
+15	2b-1-a	거리를 가로질러
+16	2b-1-i	특별한 차림
+17	2b-1-m	일상에 새겨진 균열
+18	2b-1-n	총명한 벗
+19	2b-1-s	싹트지 않는 그늘
+22	zzz-tgs-mastered-1	니아: 현실로 이어지는 길
+23	zzz-tgs-mastered-2	메이: 새벽 4시
+24	zzz-tgs-mastered-3	아야메: 타인을 찾는⏎따스한 눈빛
+25	zzz-tgs-mastered-4	아이리스: 유대를 잃은 정원에서
+26	zzz-tgs-mastered-5	스토리: 나락을 알게 된 날
+33	3-1-i	필요한 힘
+34	3-1-m	잠깐의 안식
+35	3-1-n	현실로 이어지는 길
+36	3-1-s	이 천상 아래에서
+37	3-2-a	타고난 리더
+38	3-2-i	유대를 잃은 정원에서
+39	3-2-m	다정한 포옹
+40	3-2-n	하늘과 땅에⏎묶여서
+41	3-2-s	나락을 알게 된 날
+42	3-3-a	무채색으로 저물다
+53	mvp-1	니아: 현실로 이어지는 길
+54	mvp-2	메이: 새벽 4시
+55	mvp-3	아야메: 타인을 찾는⏎따스한 눈빛
+56	mvp-4	아이리스: 유대를 잃은 정원에서
+57	mvp-5	스토리: 나락을 알게 된 날
+58	4-1-a	누군가의 멸시
+59	4-1-m	숨어드는 그림자를 찾아
+60	4-1-s	언제나 당신의 곁에
+61	4-2-a	추악한 고백
+62	4-2-i	자존감의 대가
+63	4-2-m	진정한 색
+64	4-2-n	새로운 날, 새로운 결심
+65	4-2-s	혼돈의 왕좌
+66	4-3-a	고뇌와 증오
+67	4-3-i	그 힘은 불굴
+68	4-3-m	명령
+69	4-3-r	패배
+70	4-3-s	독보
+71	4b-1-n	졸업
+72	4-3-n	영웅
+73	demo-1-1-m	메이: 새벽 4시
+74	demo-1-1-n	니아: 현실로 이어지는 길
