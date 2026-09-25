@@ -56,7 +56,7 @@ everywhere unless the original deliberately shifts it.
 | 泰夢 | (the vast dream) | 태몽(泰夢) | **gloss required** — bare 태몽 reads as the everyday word for a pregnancy-premonition dream |
 | 失天賜 | (loss of the gift) | 실천사 | the catastrophe referred to throughout; also a swear-adjacent exclamation |
 | インギスアレイ | "Ingis Array" | 인기스 어레이 | the shopkeeper's typed-text "Word Box" display device (076) |
-| 心象風景 | mindscape | 심상 풍경 | Nia's and Story's name for the inner world |
+| 心象風景 + ruby マインドスケープ | Mindscape | 마인드스케이프 | the dive-space; **whenever the JP carries the ruby マインドスケープ → '마인드스케이프'** (quotes kept where JP has 『』). Nia coins the name in 017-025 (played later than 020 in-game); the un-rubied 『心象の風景』 in 020-039 (before the name exists) → '심상 세계'. Bare 心象 is NOT a term: content of a mind → 마음 (never 심상), 心象イメージ → 이미지 |
 | バインド | bind | 바인드 | the lie-tell collar; 首輪 colloquially → 목줄, 首色 → 목줄 색 (NOT 목 색) |
 | (bind colors) | — | — | red = anger/embarrassment (074); yellow (黄色) = joy (077); gray = neutral/at rest (077, shopkeeper's resting color); never lights at all = Freya, tied to her truth-only speech |
 | アイオーン・レコーダー | Aeon Recorder | 아이온 레코더 | anti-失天賜 black box; every city has one (053) |
