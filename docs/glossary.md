@@ -17,7 +17,7 @@ everywhere unless the original deliberately shifts it.
 | 『真実』 | "truth" | '진실' | quoted concept; keep the quote marks when JP has them |
 | 奴隷 | slave / 'slavery' | 노예 | |
 | 玉座 | throne / King's seat | 왕좌 | |
-| 鎮魂歌 | requiem | 레퀴엠 | |
+| 鎮魂歌 | requiem | 진혼곡 | prologue (001-001); 노래·음악을 가리키는 말이라 `진혼가`가 아니라 `진혼곡` |
 | 天使 | angel | 천사 | |
 | 翼 | wing(s) | 날개 | |
 | 思念 | (thoughts/beings) | 사념 | the falling "beings" in prologue |
