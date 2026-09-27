@@ -1,0 +1,75 @@
+# Korean trait names -- In Falsus
+# Format: <Id><TAB><IdStr><TAB><korean>. Id is the integer key and
+# IdStr the human-readable key (e.g. "1-1-a", "2-r-7") in
+# DynamicStringMapping.traitNameTypeMapping -- both informational, packing
+# matches by Id+IdStr together, never by Korean text.
+# Only rows this project translates are listed.
+2	damage-efficacy-activate-t1	개막 공격
+3	damage-efficacy-activate-t2	개막 공격 II
+4	damage-efficacy-activate-t3	개막 공격 III
+5	damage-efficacy-deactivate-t1	종막 공격
+6	damage-efficacy-deactivate-t2	종막 공격 II
+7	damage-efficacy-deactivate-t3	종막 공격 III
+8	damage-efficacy-enter-t1	진입 공격
+9	damage-efficacy-enter-t2	진입 공격 II
+10	damage-efficacy-enter-t3	진입 공격 III
+11	damage-efficacy-every-activate-t3	주기 공격 III
+12	damage-efficacy-every-deactivate-t3	반향 공격 III
+13	damage-efficacy-exit-t1	여파 공격
+14	damage-efficacy-exit-t2	여파 공격 II
+15	damage-efficacy-exit-t3	여파 공격 III
+16	denominator-all-other-active-t3	압박
+17	denominator-all-other-range-t3	광범위 압박
+18	denominator-fortitude-other-active-t3	취약 간파
+19	denominator-fortitude-other-range-t3	광범위 취약 간파
+20	denominator-power-other-active-t3	현혹
+21	denominator-power-other-range-t3	광범위 현혹
+22	heal-amount-activate-t1	개막 회복
+23	heal-amount-activate-t2	개막 회복 II
+24	heal-amount-activate-t3	개막 회복 III
+25	heal-amount-deactivate-t1	종막 회복
+26	heal-amount-deactivate-t2	종막 회복 II
+27	heal-amount-deactivate-t3	종막 회복 III
+28	heal-amount-enter-t1	진입 회복
+29	heal-amount-enter-t2	진입 회복 II
+30	heal-amount-enter-t3	진입 회복 III
+31	heal-amount-every-activate-t3	주기 회복 III
+32	heal-amount-every-deactivate-t3	반향 회복 III
+33	heal-amount-exit-t1	여파 회복
+34	heal-amount-exit-t2	여파 회복 II
+35	heal-amount-exit-t3	여파 회복 III
+36	percent-all-active-t3	내면 증폭 III
+37	percent-all-inactive-t3	외부 증폭 III
+38	percent-all-outrange-t3	범위 외 증폭 III
+39	percent-all-range-t3	광범위 내면 증폭 III
+40	percent-fortitude-active-t1	정신 강화
+41	percent-fortitude-active-t2	정신 강화 II
+42	percent-fortitude-active-t3	정신 강화 III
+43	percent-fortitude-range-t1	광범위 정신 강화
+44	percent-fortitude-range-t2	광범위 정신 강화 II
+45	percent-fortitude-range-t3	광범위 정신 강화 III
+46	percent-power-active-t1	집중 강화
+47	percent-power-active-t2	집중 강화 II
+48	percent-power-active-t3	집중 강화 III
+49	percent-power-range-t1	광범위 집중 강화
+50	percent-power-range-t2	광범위 집중 강화 II
+51	percent-power-range-t3	광범위 집중 강화 III
+52	unique-3-s-10-1	개막 완전 회복
+53	unique-3-s-10-2	정신 비호
+54	unique-3-s-11-1	광범위 정신 혼란
+55	unique-3-s-12-1	경계 작렬
+56	unique-3-s-12-2	광범위 경계 작렬
+63	damage-efficacy-border-t3	경계 공격 III
+64	heal-amount-border-t3	경계 회복 III
+65	unique-4-s-13-2	삼연 종막 작렬
+66	unique-4-s-13-1	광범위 색상 분리: 빨강
+67	unique-4-s-13-4	크리티컬 집중
+68	unique-4-s-13-3	불경
+69	demo-damage-efficacy-activate-t3	개막 공격++
+70	demo-heal-amount-activate-t3	개막 회복++
+71	demo-percent-power-active-t3	집중 강화++
+72	demo-percent-fortitude-active-t3	정신 강화++
+73	damage-efficacy-activate-t0	개막 공격 0
+74	heal-amount-activate-t0	개막 회복 0
+75	percent-power-active-t0	집중 강화 0
+76	percent-fortitude-range-t0	광범위 정신 강화 0

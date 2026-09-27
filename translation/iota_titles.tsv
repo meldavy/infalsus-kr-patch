@@ -1,0 +1,9 @@
+# Korean iota titles -- In Falsus
+# Format: <Id><TAB><IdStr><TAB><korean>. Id is the integer key and
+# IdStr the human-readable key (e.g. "1-1-a", "2-r-7") in
+# DynamicStringMapping.iotaTitleTypeMapping -- both informational, packing
+# matches by Id+IdStr together, never by Korean text.
+# Only rows this project translates are listed.
+# NOTE: the game's iotaTitleTypeMapping is empty for every locale (40 rows,
+# all blank) -- these are unused placeholders. The table is extracted and
+# packed so real titles can be translated if the game ever populates them.

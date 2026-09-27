@@ -1,0 +1,75 @@
+# Korean trait descriptions -- In Falsus
+# Format: <Id><TAB><IdStr><TAB><korean>. Id is the integer key and
+# IdStr the human-readable key (e.g. "1-1-a", "2-r-7") in
+# DynamicStringMapping.traitDescriptionTypeMapping -- both informational, packing
+# matches by Id+IdStr together, never by Korean text.
+# Only rows this project translates are listed.
+2	damage-efficacy-activate-t1	카드가 세트된 페이즈 시작 시:⏎공격력의 22%만큼 데미지를 준다
+3	damage-efficacy-activate-t2	카드가 세트된 페이즈 시작 시:⏎공격력의 27%만큼 데미지를 준다
+4	damage-efficacy-activate-t3	카드가 세트된 페이즈 시작 시:⏎공격력의 33%만큼 데미지를 준다
+5	damage-efficacy-deactivate-t1	카드가 세트된 페이즈 종료 시:⏎공격력의 22%만큼 데미지를 준다
+6	damage-efficacy-deactivate-t2	카드가 세트된 페이즈 종료 시:⏎공격력의 27%만큼 데미지를 준다
+7	damage-efficacy-deactivate-t3	카드가 세트된 페이즈 종료 시:⏎공격력의 33%만큼 데미지를 준다
+8	damage-efficacy-enter-t1	카드 범위 내 페이즈 시작 시:⏎공격력의 22%만큼 데미지를 준다
+9	damage-efficacy-enter-t2	카드 범위 내 페이즈 시작 시:⏎공격력의 27%만큼 데미지를 준다
+10	damage-efficacy-enter-t3	카드 범위 내 페이즈 시작 시:⏎공격력의 33%만큼 데미지를 준다
+11	damage-efficacy-every-activate-t3	카드 범위 내 페이즈가 시작할 때마다:⏎공격력의 17.6%만큼 데미지를 준다
+12	damage-efficacy-every-deactivate-t3	카드 범위 내 페이즈가 종료할 때마다:⏎공격력의 17.6%만큼 데미지를 준다
+13	damage-efficacy-exit-t1	카드 범위 내 페이즈 종료 시:⏎공격력의 22%만큼 데미지를 준다
+14	damage-efficacy-exit-t2	카드 범위 내 페이즈 종료 시:⏎공격력의 27%만큼 데미지를 준다
+15	damage-efficacy-exit-t3	카드 범위 내 페이즈 종료 시:⏎공격력의 33%만큼 데미지를 준다
+16	denominator-all-other-active-t3	카드가 세트된 페이즈 동안:⏎상대의 공격력과 방어력을 50% 감소
+17	denominator-all-other-range-t3	카드 범위 내 페이즈 동안:⏎상대의 공격력과 방어력을 27% 감소
+18	denominator-fortitude-other-active-t3	카드가 세트된 페이즈 동안:⏎상대의 방어력을 100% 감소
+19	denominator-fortitude-other-range-t3	카드 범위 내 페이즈 동안:⏎상대의 방어력을 53% 감소
+20	denominator-power-other-active-t3	카드가 세트된 페이즈 동안:⏎상대의 공격력을 100% 감소
+21	denominator-power-other-range-t3	카드 범위 내 페이즈 동안:⏎상대의 공격력을 53% 감소
+22	heal-amount-activate-t1	카드가 세트된 페이즈 시작 시:⏎최대 HP의 13%를 회복 (HP가 0일 때는 효과 없음)
+23	heal-amount-activate-t2	카드가 세트된 페이즈 시작 시:⏎최대 HP의 16%를 회복 (HP가 0일 때는 효과 없음)
+24	heal-amount-activate-t3	카드가 세트된 페이즈 시작 시:⏎최대 HP의 20%를 회복 (HP가 0일 때는 효과 없음)
+25	heal-amount-deactivate-t1	카드가 세트된 페이즈 종료 시:⏎최대 HP의 13%를 회복 (HP가 0일 때는 효과 없음)
+26	heal-amount-deactivate-t2	카드가 세트된 페이즈 종료 시:⏎최대 HP의 16%를 회복 (HP가 0일 때는 효과 없음)
+27	heal-amount-deactivate-t3	카드가 세트된 페이즈 종료 시:⏎최대 HP의 20%를 회복 (HP가 0일 때는 효과 없음)
+28	heal-amount-enter-t1	카드 범위 내 페이즈 시작 시:⏎최대 HP의 13%를 회복 (HP가 0일 때는 효과 없음)
+29	heal-amount-enter-t2	카드 범위 내 페이즈 시작 시:⏎최대 HP의 16%를 회복 (HP가 0일 때는 효과 없음)
+30	heal-amount-enter-t3	카드 범위 내 페이즈 시작 시:⏎최대 HP의 20%를 회복 (HP가 0일 때는 효과 없음)
+31	heal-amount-every-activate-t3	카드 범위 내 페이즈가 시작할 때마다:⏎최대 HP의 10.6%를 회복 (HP가 0일 때는 효과 없음)
+32	heal-amount-every-deactivate-t3	카드 범위 내 페이즈가 종료할 때마다:⏎최대 HP의 10.6%를 회복 (HP가 0일 때는 효과 없음)
+33	heal-amount-exit-t1	카드 범위 내 페이즈 종료 시:⏎최대 HP의 13%를 회복 (HP가 0일 때는 효과 없음)
+34	heal-amount-exit-t2	카드 범위 내 페이즈 종료 시:⏎최대 HP의 16%를 회복 (HP가 0일 때는 효과 없음)
+35	heal-amount-exit-t3	카드 범위 내 페이즈 종료 시:⏎최대 HP의 20%를 회복 (HP가 0일 때는 효과 없음)
+36	percent-all-active-t3	카드가 세트된 페이즈 동안:⏎총 공격력·방어력 +50%
+37	percent-all-inactive-t3	카드가 세트된 페이즈 이외에는:⏎총 공격력·방어력 +13%
+38	percent-all-outrange-t3	카드 범위 밖 페이즈 동안:⏎총 공격력·방어력 +14%
+39	percent-all-range-t3	카드 범위 내 페이즈 동안:⏎총 공격력·방어력 +27%
+40	percent-fortitude-active-t1	카드가 세트된 페이즈 동안:⏎총 방어력 +66%
+41	percent-fortitude-active-t2	카드가 세트된 페이즈 동안:⏎총 방어력 +80%
+42	percent-fortitude-active-t3	카드가 세트된 페이즈 동안:⏎총 방어력 +100%
+43	percent-fortitude-range-t1	카드 범위 내 페이즈 동안: 총 방어력 +35%
+44	percent-fortitude-range-t2	카드 범위 내 페이즈 동안: 총 방어력 +43%
+45	percent-fortitude-range-t3	카드 범위 내 페이즈 동안: 총 방어력 +53%
+46	percent-power-active-t1	카드가 세트된 페이즈 동안:⏎총 공격력 +66%
+47	percent-power-active-t2	카드가 세트된 페이즈 동안:⏎총 공격력 +80%
+48	percent-power-active-t3	카드가 세트된 페이즈 동안:⏎총 공격력 +100%
+49	percent-power-range-t1	카드 범위 내 페이즈 동안: 총 공격력 +35%
+50	percent-power-range-t2	카드 범위 내 페이즈 동안: 총 공격력 +43%
+51	percent-power-range-t3	카드 범위 내 페이즈 동안: 총 공격력 +53%
+52	unique-3-s-10-1	카드가 세트된 페이즈 시작 시:⏎최대 HP의 100%를 회복 (HP가 0일 때는 효과 없음)
+53	unique-3-s-10-2	카드 범위 내 페이즈 동안: 총 방어력 +999%
+54	unique-3-s-11-1	카드 범위 내 페이즈 동안:⏎상대의 공격력과 방어력을 53% 감소
+55	unique-3-s-12-1	카드가 세트된 페이즈 시작·종료 시:⏎공격력의 33%만큼 데미지를 준다
+56	unique-3-s-12-2	카드 범위 내 페이즈 시작·종료 시:⏎공격력의 33%만큼 데미지를 준다
+63	damage-efficacy-border-t3	카드 범위 내 페이즈 시작·종료 시:⏎공격력의 16.5%만큼 데미지를 준다
+64	heal-amount-border-t3	카드 범위 내 페이즈 시작·종료 시:⏎최대 HP의 10%를 회복 (HP가 0일 때는 효과 없음)
+65	unique-4-s-13-2	카드가 세트된 페이즈 종료 시:⏎공격력의 66%만큼 데미지를 3회 준다
+66	unique-4-s-13-1	카드 범위 내 페이즈 동안:⏎상대의 빨강 속성이 아닌 카드의 공격력을 0으로 만든다
+67	unique-4-s-13-4	카드가 세트된 페이즈 동안:⏎크리티컬 발생 시 데미지 +300%
+68	unique-4-s-13-3	카드가 세트된 페이즈 동안:⏎총 공격력 +300%, 자신의 방어력 100% 감소
+69	demo-damage-efficacy-activate-t3	카드가 세트된 페이즈 시작 시:⏎현재 공격력의 11%만큼 데미지를 준다
+70	demo-heal-amount-activate-t3	카드가 세트된 페이즈 시작 시:⏎최대 HP의 11%를 회복 (HP가 0일 때는 효과 없음)
+71	demo-percent-power-active-t3	카드가 세트된 페이즈 동안: 총 공격력 +66%
+72	demo-percent-fortitude-active-t3	카드가 세트된 페이즈 동안: 총 방어력 +66%
+73	damage-efficacy-activate-t0	카드가 세트된 페이즈 시작 시:⏎공격력의 20%만큼 데미지를 준다
+74	heal-amount-activate-t0	카드가 세트된 페이즈 시작 시:⏎최대 HP의 10%를 회복 (HP가 0일 때는 효과 없음)
+75	percent-power-active-t0	카드가 세트된 페이즈 동안:⏎총 공격력 +50%
+76	percent-fortitude-range-t0	카드 범위 내 페이즈 동안:⏎총 방어력 +35%

@@ -861,6 +861,38 @@ def cmd_pack_recipe_names(args, game):
     _cmd_pack_dyn_table(args, game, "recipeIdTypeMapping", "recipe_names.json", "recipe-name")
 
 
+def cmd_extract_trait_names(args, game):
+    _cmd_extract_dyn_table(game, "traitNameTypeMapping", "trait_names.json", "trait-name")
+
+
+def cmd_pack_trait_names(args, game):
+    _cmd_pack_dyn_table(args, game, "traitNameTypeMapping", "trait_names.json", "trait-name")
+
+
+def cmd_extract_trait_descriptions(args, game):
+    _cmd_extract_dyn_table(game, "traitDescriptionTypeMapping", "trait_descriptions.json", "trait-description")
+
+
+def cmd_pack_trait_descriptions(args, game):
+    _cmd_pack_dyn_table(args, game, "traitDescriptionTypeMapping", "trait_descriptions.json", "trait-description")
+
+
+def cmd_extract_iota_titles(args, game):
+    _cmd_extract_dyn_table(game, "iotaTitleTypeMapping", "iota_titles.json", "iota-title")
+
+
+def cmd_pack_iota_titles(args, game):
+    _cmd_pack_dyn_table(args, game, "iotaTitleTypeMapping", "iota_titles.json", "iota-title")
+
+
+def cmd_extract_iota_descriptions(args, game):
+    _cmd_extract_dyn_table(game, "iotaDescriptionTypeMapping", "iota_descriptions.json", "iota-description")
+
+
+def cmd_pack_iota_descriptions(args, game):
+    _cmd_pack_dyn_table(args, game, "iotaDescriptionTypeMapping", "iota_descriptions.json", "iota-description")
+
+
 # ---------------------------------------------------------------------------
 # Commands: UI strings (Str.StringsMapping, in infalsus_Data/resources.assets)
 # ---------------------------------------------------------------------------
@@ -1313,6 +1345,10 @@ def cmd_unpack(args, game):
     cmd_extract_card_names(args, game)
     cmd_extract_encounter_names(args, game)
     cmd_extract_recipe_names(args, game)
+    cmd_extract_trait_names(args, game)
+    cmd_extract_trait_descriptions(args, game)
+    cmd_extract_iota_titles(args, game)
+    cmd_extract_iota_descriptions(args, game)
     dll_dir = il2cpp_dll_dir(game)
     if os.path.isdir(dll_dir) and any(f.endswith(".dll") for f in os.listdir(dll_dir)):
         cmd_extract_ui_strings(args, game)
@@ -1324,7 +1360,9 @@ def cmd_unpack(args, game):
     log(
         f"  {counts['stories']} dialogue lines, {counts['names']} names, "
         f"{counts['ui_strings']} UI strings, {counts['card_names']} card names, "
-        f"{counts['encounter_names']} encounter names, {counts['recipe_names']} recipe names already translated"
+        f"{counts['encounter_names']} encounter names, {counts['recipe_names']} recipe names, "
+        f"{counts['trait_names']} trait names, {counts['trait_descriptions']} trait descriptions, "
+        f"{counts['iota_titles']} iota titles, {counts['iota_descriptions']} iota descriptions already translated"
     )
     log("unpack complete. Translate translation/ko/*.txt, translation/*.tsv, then run `repack`.")
 
@@ -1336,7 +1374,9 @@ def cmd_repack(args, game):
     log(
         f"  {counts['stories']} dialogue lines, {counts['names']} names, "
         f"{counts['ui_strings']} UI strings, {counts['card_names']} card names, "
-        f"{counts['encounter_names']} encounter names, {counts['recipe_names']} recipe names"
+        f"{counts['encounter_names']} encounter names, {counts['recipe_names']} recipe names, "
+        f"{counts['trait_names']} trait names, {counts['trait_descriptions']} trait descriptions, "
+        f"{counts['iota_titles']} iota titles, {counts['iota_descriptions']} iota descriptions"
     )
 
     log("=== repack 2/3: sanity check ===")
@@ -1352,6 +1392,10 @@ def cmd_repack(args, game):
     cmd_pack_card_names(args, game)
     cmd_pack_encounter_names(args, game)
     cmd_pack_recipe_names(args, game)
+    cmd_pack_trait_names(args, game)
+    cmd_pack_trait_descriptions(args, game)
+    cmd_pack_iota_titles(args, game)
+    cmd_pack_iota_descriptions(args, game)
     dll_dir = il2cpp_dll_dir(game)
     if os.path.isdir(dll_dir) and any(f.endswith(".dll") for f in os.listdir(dll_dir)):
         cmd_pack_ui_strings(args, game)
@@ -1426,6 +1470,30 @@ def main():
     sp.add_argument("--locale-map", default="Korean->English")
     sp.add_argument("--dry-run", action="store_true", help="validate only; do not write")
     sp.set_defaults(func=cmd_pack_recipe_names)
+
+    sub.add_parser("extract-trait-names", help="dump trait-skill name table to JSON").set_defaults(func=cmd_extract_trait_names)
+    sp = sub.add_parser("pack-trait-names", help="pack edited trait names back into the game")
+    sp.add_argument("--locale-map", default="Korean->English")
+    sp.add_argument("--dry-run", action="store_true", help="validate only; do not write")
+    sp.set_defaults(func=cmd_pack_trait_names)
+
+    sub.add_parser("extract-trait-descriptions", help="dump trait-skill description table to JSON").set_defaults(func=cmd_extract_trait_descriptions)
+    sp = sub.add_parser("pack-trait-descriptions", help="pack edited trait descriptions back into the game")
+    sp.add_argument("--locale-map", default="Korean->English")
+    sp.add_argument("--dry-run", action="store_true", help="validate only; do not write")
+    sp.set_defaults(func=cmd_pack_trait_descriptions)
+
+    sub.add_parser("extract-iota-titles", help="dump iota title table to JSON").set_defaults(func=cmd_extract_iota_titles)
+    sp = sub.add_parser("pack-iota-titles", help="pack edited iota titles back into the game")
+    sp.add_argument("--locale-map", default="Korean->English")
+    sp.add_argument("--dry-run", action="store_true", help="validate only; do not write")
+    sp.set_defaults(func=cmd_pack_iota_titles)
+
+    sub.add_parser("extract-iota-descriptions", help="dump iota description table to JSON").set_defaults(func=cmd_extract_iota_descriptions)
+    sp = sub.add_parser("pack-iota-descriptions", help="pack edited iota descriptions back into the game")
+    sp.add_argument("--locale-map", default="Korean->English")
+    sp.add_argument("--dry-run", action="store_true", help="validate only; do not write")
+    sp.set_defaults(func=cmd_pack_iota_descriptions)
 
     sub.add_parser("extract-ui-strings", help="dump Str.StringsMapping (UI chrome text) to JSON/TSV").set_defaults(func=cmd_extract_ui_strings)
     sp = sub.add_parser("pack-ui-strings", help="pack edited UI strings back into resources.assets")

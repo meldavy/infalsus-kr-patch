@@ -199,6 +199,14 @@ ENCOUNTER_NAMES_SRC = "translation/encounter_names.tsv"
 ENCOUNTER_NAMES_WORK = "work/names/encounter_names.json"
 RECIPE_NAMES_SRC = "translation/recipe_names.tsv"
 RECIPE_NAMES_WORK = "work/names/recipe_names.json"
+TRAIT_NAMES_SRC = "translation/trait_names.tsv"
+TRAIT_NAMES_WORK = "work/names/trait_names.json"
+TRAIT_DESCRIPTIONS_SRC = "translation/trait_descriptions.tsv"
+TRAIT_DESCRIPTIONS_WORK = "work/names/trait_descriptions.json"
+IOTA_TITLES_SRC = "translation/iota_titles.tsv"
+IOTA_TITLES_WORK = "work/names/iota_titles.json"
+IOTA_DESCRIPTIONS_SRC = "translation/iota_descriptions.tsv"
+IOTA_DESCRIPTIONS_WORK = "work/names/iota_descriptions.json"
 
 
 def read_card_names():
@@ -223,6 +231,38 @@ def read_recipe_names():
 
 def write_recipe_names(entries):
     _write_id_table(RECIPE_NAMES_SRC, _id_table_header("recipe names", "recipeIdTypeMapping"), entries)
+
+
+def read_trait_names():
+    return _read_id_table(TRAIT_NAMES_SRC)
+
+
+def write_trait_names(entries):
+    _write_id_table(TRAIT_NAMES_SRC, _id_table_header("trait names", "traitNameTypeMapping"), entries)
+
+
+def read_trait_descriptions():
+    return _read_id_table(TRAIT_DESCRIPTIONS_SRC)
+
+
+def write_trait_descriptions(entries):
+    _write_id_table(TRAIT_DESCRIPTIONS_SRC, _id_table_header("trait descriptions", "traitDescriptionTypeMapping"), entries)
+
+
+def read_iota_titles():
+    return _read_id_table(IOTA_TITLES_SRC)
+
+
+def write_iota_titles(entries):
+    _write_id_table(IOTA_TITLES_SRC, _id_table_header("iota titles", "iotaTitleTypeMapping"), entries)
+
+
+def read_iota_descriptions():
+    return _read_id_table(IOTA_DESCRIPTIONS_SRC)
+
+
+def write_iota_descriptions(entries):
+    _write_id_table(IOTA_DESCRIPTIONS_SRC, _id_table_header("iota descriptions", "iotaDescriptionTypeMapping"), entries)
 
 
 def export():
@@ -258,7 +298,37 @@ def export():
         rn = json.load(open(RECIPE_NAMES_WORK))
         write_recipe_names(rn["entries"])
         n_recipe = sum(1 for e in rn["entries"] if e.get("Korean", "").strip())
-    return {"stories": n, "ui_strings": n_ui, "card_names": n_cards, "encounter_names": n_enc, "recipe_names": n_recipe}
+    n_trait = 0
+    if os.path.exists(TRAIT_NAMES_WORK):
+        tn = json.load(open(TRAIT_NAMES_WORK))
+        write_trait_names(tn["entries"])
+        n_trait = sum(1 for e in tn["entries"] if e.get("Korean", "").strip())
+    n_trait_desc = 0
+    if os.path.exists(TRAIT_DESCRIPTIONS_WORK):
+        td = json.load(open(TRAIT_DESCRIPTIONS_WORK))
+        write_trait_descriptions(td["entries"])
+        n_trait_desc = sum(1 for e in td["entries"] if e.get("Korean", "").strip())
+    n_iota_title = 0
+    if os.path.exists(IOTA_TITLES_WORK):
+        it = json.load(open(IOTA_TITLES_WORK))
+        write_iota_titles(it["entries"])
+        n_iota_title = sum(1 for e in it["entries"] if e.get("Korean", "").strip())
+    n_iota_desc = 0
+    if os.path.exists(IOTA_DESCRIPTIONS_WORK):
+        idd = json.load(open(IOTA_DESCRIPTIONS_WORK))
+        write_iota_descriptions(idd["entries"])
+        n_iota_desc = sum(1 for e in idd["entries"] if e.get("Korean", "").strip())
+    return {
+        "stories": n,
+        "ui_strings": n_ui,
+        "card_names": n_cards,
+        "encounter_names": n_enc,
+        "recipe_names": n_recipe,
+        "trait_names": n_trait,
+        "trait_descriptions": n_trait_desc,
+        "iota_titles": n_iota_title,
+        "iota_descriptions": n_iota_desc,
+    }
 
 
 def sync():
@@ -323,7 +393,54 @@ def sync():
                 e["Korean"] = rn[(e["Id"], e["IdStr"])]
                 tot_recipe += 1
         json.dump(d, open(RECIPE_NAMES_WORK, "w"), ensure_ascii=False, indent=1)
-    return {"stories": tot, "names": tot_names, "ui_strings": tot_ui, "card_names": tot_cards, "encounter_names": tot_enc, "recipe_names": tot_recipe}
+    tn = read_trait_names()
+    tot_trait = 0
+    if tn and os.path.exists(TRAIT_NAMES_WORK):
+        d = json.load(open(TRAIT_NAMES_WORK))
+        for e in d["entries"]:
+            if tn.get((e["Id"], e["IdStr"])):
+                e["Korean"] = tn[(e["Id"], e["IdStr"])]
+                tot_trait += 1
+        json.dump(d, open(TRAIT_NAMES_WORK, "w"), ensure_ascii=False, indent=1)
+    td = read_trait_descriptions()
+    tot_trait_desc = 0
+    if td and os.path.exists(TRAIT_DESCRIPTIONS_WORK):
+        d = json.load(open(TRAIT_DESCRIPTIONS_WORK))
+        for e in d["entries"]:
+            if td.get((e["Id"], e["IdStr"])):
+                e["Korean"] = td[(e["Id"], e["IdStr"])]
+                tot_trait_desc += 1
+        json.dump(d, open(TRAIT_DESCRIPTIONS_WORK, "w"), ensure_ascii=False, indent=1)
+    it = read_iota_titles()
+    tot_iota_title = 0
+    if it and os.path.exists(IOTA_TITLES_WORK):
+        d = json.load(open(IOTA_TITLES_WORK))
+        for e in d["entries"]:
+            if it.get((e["Id"], e["IdStr"])):
+                e["Korean"] = it[(e["Id"], e["IdStr"])]
+                tot_iota_title += 1
+        json.dump(d, open(IOTA_TITLES_WORK, "w"), ensure_ascii=False, indent=1)
+    idd = read_iota_descriptions()
+    tot_iota_desc = 0
+    if idd and os.path.exists(IOTA_DESCRIPTIONS_WORK):
+        d = json.load(open(IOTA_DESCRIPTIONS_WORK))
+        for e in d["entries"]:
+            if idd.get((e["Id"], e["IdStr"])):
+                e["Korean"] = idd[(e["Id"], e["IdStr"])]
+                tot_iota_desc += 1
+        json.dump(d, open(IOTA_DESCRIPTIONS_WORK, "w"), ensure_ascii=False, indent=1)
+    return {
+        "stories": tot,
+        "names": tot_names,
+        "ui_strings": tot_ui,
+        "card_names": tot_cards,
+        "encounter_names": tot_enc,
+        "recipe_names": tot_recipe,
+        "trait_names": tot_trait,
+        "trait_descriptions": tot_trait_desc,
+        "iota_titles": tot_iota_title,
+        "iota_descriptions": tot_iota_desc,
+    }
 
 
 if __name__ == "__main__":
@@ -333,13 +450,17 @@ if __name__ == "__main__":
         print(
             f"exported {c['stories']} stories to {KO_DIR}/, names to {NAMES_SRC}, "
             f"{c['ui_strings']} UI strings to {UI_STRINGS_SRC}, {c['card_names']} card names to {CARD_NAMES_SRC}, "
-            f"{c['encounter_names']} encounter names to {ENCOUNTER_NAMES_SRC}, {c['recipe_names']} recipe names to {RECIPE_NAMES_SRC}"
+            f"{c['encounter_names']} encounter names to {ENCOUNTER_NAMES_SRC}, {c['recipe_names']} recipe names to {RECIPE_NAMES_SRC}, "
+            f"{c['trait_names']} trait names to {TRAIT_NAMES_SRC}, {c['trait_descriptions']} trait descriptions to {TRAIT_DESCRIPTIONS_SRC}, "
+            f"{c['iota_titles']} iota titles to {IOTA_TITLES_SRC}, {c['iota_descriptions']} iota descriptions to {IOTA_DESCRIPTIONS_SRC}"
         )
     elif cmd == "sync":
         c = sync()
         print(
             f"synced {c['stories']} Korean lines into {BY_STORY}/, {c['names']} names, {c['ui_strings']} UI strings, "
-            f"{c['card_names']} card names, {c['encounter_names']} encounter names, {c['recipe_names']} recipe names"
+            f"{c['card_names']} card names, {c['encounter_names']} encounter names, {c['recipe_names']} recipe names, "
+            f"{c['trait_names']} trait names, {c['trait_descriptions']} trait descriptions, "
+            f"{c['iota_titles']} iota titles, {c['iota_descriptions']} iota descriptions"
         )
     else:
         print(__doc__)

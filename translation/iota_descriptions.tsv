@@ -1,0 +1,10 @@
+# Korean iota descriptions -- In Falsus
+# Format: <Id><TAB><IdStr><TAB><korean>. Id is the integer key and
+# IdStr the human-readable key (e.g. "1-1-a", "2-r-7") in
+# DynamicStringMapping.iotaDescriptionTypeMapping -- both informational, packing
+# matches by Id+IdStr together, never by Korean text.
+# Only rows this project translates are listed.
+# NOTE: the game's iotaDescriptionTypeMapping holds only English dev
+# placeholders ("IOTA r-1-1 DESCRIPTION ") with no Japanese -- these are
+# unused. The table is extracted and packed so real descriptions can be
+# translated if the game ever populates them.

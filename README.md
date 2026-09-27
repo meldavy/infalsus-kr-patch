@@ -117,6 +117,20 @@ export INFALSUS_GAME_PATH="/mnt/d/SteamLibrary/steamapps/common/In Falsus"
 | `pack-translations`   | 출력       | 수정된 대사를 `patch/`로 패킹 |
 | `extract-names`       | 출력       | 캐릭터 이름 테이블을 `work/names/names.json`으로 덤프 |
 | `pack-names`          | 출력       | 수정된 이름을 `patch/`로 패킹 |
+| `extract-card-names`  | 출력       | 카드 이름 테이블을 `work/names/card_names.json`으로 덤프 |
+| `pack-card-names`     | 출력       | 수정된 카드 이름을 `patch/`로 패킹 |
+| `extract-encounter-names` | 출력    | 조우/Reflect 제목 테이블을 덤프 |
+| `pack-encounter-names` | 출력      | 수정된 조우/Reflect 제목을 패킹 |
+| `extract-recipe-names` | 출력      | 설계도(레시피) 이름 테이블을 덤프 |
+| `pack-recipe-names`   | 출력       | 수정된 설계도 이름을 패킹 |
+| `extract-trait-names` | 출력       | 특성 스킬 이름 테이블을 `work/names/trait_names.json`으로 덤프 |
+| `pack-trait-names`    | 출력       | 수정된 특성 이름을 패킹 |
+| `extract-trait-descriptions` | 출력 | 특성 스킬 설명 테이블을 `work/names/trait_descriptions.json`으로 덤프 |
+| `pack-trait-descriptions` | 출력   | 수정된 특성 설명을 패킹 |
+| `extract-iota-titles` | 출력       | 입자 제목 테이블을 덤프 (게임 데이터가 비어 있음, §4.4 참고) |
+| `pack-iota-titles`    | 출력       | 수정된 입자 제목을 패킹 |
+| `extract-iota-descriptions` | 출력 | 입자 설명 테이블을 덤프 (게임 데이터가 플레이스홀더, §4.4 참고) |
+| `pack-iota-descriptions` | 출력    | 수정된 입자 설명을 패킹 |
 | `extract-ui-strings`  | 출력       | UI 텍스트(`StringsMapping`)를 `work/ui_strings/`로 덤프 (`work/il2cpp_dlls/` 필요, §4.5 참고) |
 | `pack-ui-strings`     | 출력       | 수정된 UI 문자열을 `patch/infalsus_Data/resources.assets`로 패킹 |
 | `extract-fonts`       | 출력       | 내장 폰트를 `work/fonts/`로 추출 |
@@ -279,11 +293,26 @@ rawStoryNameTypeMapping: { Ids: [{Value: "Nia"}, ...],           # 원본 이름
 (`names.spp`에서) → `rawStoryNameTypeMapping`에서 원본 이름
 `"Nia"`를 조회 → 현재 로케일용 표시 이름(일본어의 경우 `ニア`).
 
-129개 한국어 필드가 전부 비어 있습니다. 같은 에셋에는
-`songIdTitleTypeMapping`, `songIdArtistTypeMapping`,
-`cardNameTypeMapping` 등도 들어 있는데, 이들은 **게임플레이 문자열이므로
-건드리지 않아야 합니다.** `pack-names`는 오직
-`rawStoryNameTypeMapping`만 수정합니다.
+129개 한국어 필드가 전부 비어 있습니다. 같은 에셋에는 여러 게임플레이
+문자열 테이블이 들어 있는데, 이 프로젝트는 그중 다음을 추출·번역합니다:
+`cardNameTypeMapping`(카드 이름), `recipeIdTypeMapping`(설계도 이름),
+`encounterIdTypeMapping`(조우/Reflect 제목), `traitNameTypeMapping`(특성
+스킬 이름), `traitDescriptionTypeMapping`(특성 스킬 설명),
+`iotaTitleTypeMapping`·`iotaDescriptionTypeMapping`(입자 제목·설명).
+`pack-*` 명령은 각자 자기 테이블만 수정하며, `pack-names`는 오직
+`rawStoryNameTypeMapping`만 건드립니다.
+
+`traitNameTypeMapping`/`traitDescriptionTypeMapping`은 카드에 장착하는
+특성 스킬(예: `Opening Surge` = 開幕攻撃, `Inner Concentration` =
+集中強化)의 이름과 툴팁 설명입니다. 게임 내 다른 스킬 문구와 용어를
+맞추기 위해 `translation/ui_strings.tsv`의 표기를 따릅니다(페이즈,
+공격력/방어력, 최대 HP, 데미지, 카드 범위 등).
+
+`iotaTitleTypeMapping`은 40행 전부가 비어 있고,
+`iotaDescriptionTypeMapping`은 `IOTA r-1-1 DESCRIPTION ` 같은 개발용
+영문 플레이스홀더만 들어 있습니다 — 둘 다 게임에서 쓰이지 않습니다.
+그래도 도구는 두 테이블을 추출·패킹하므로, 게임이 나중에 실제 값을
+채우면 다른 테이블과 같은 방식으로 번역할 수 있습니다.
 
 이 도구가 건드리지 않는 그 밖의 이름/문자열 테이블:
 
@@ -513,7 +542,9 @@ IL2CPP switch문을 패치해야 하는데, 이는 위험하다고 판단해 하
 # 1. 번역: tools/dump_jp.py로 읽고, tools/apply_ko.py로 씀
 #    원본 소스는 translation/ko/<NNN>.txt, translation/names.tsv,
 #    translation/ui_strings.tsv, translation/card_names.tsv,
-#    translation/encounter_names.tsv, translation/recipe_names.tsv
+#    translation/encounter_names.tsv, translation/recipe_names.tsv,
+#    translation/trait_names.tsv, translation/trait_descriptions.tsv,
+#    translation/iota_titles.tsv, translation/iota_descriptions.tsv
 
 # 2. 패킹 -- 동기화, 무결성 검사를 거친 뒤 patch/에 씀 (게임 폴더는
 #    절대 수정하지 않으며, 검사에 실패하면 repack이 아무것도 쓰지 않고 중단됨)
@@ -545,7 +576,11 @@ translation/                    # 우리의 결과물 -- 우리가 배포하는 
 ├── ui_strings.tsv               # 한국어 UI 텍스트, `<Key><TAB><KeyName><TAB><korean>`
 ├── card_names.tsv               # 카드 이름, `<Id><TAB><IdStr><TAB><korean>`
 ├── encounter_names.tsv          # 조우/Reflect 제목, `<Id><TAB><IdStr><TAB><korean>`
-└── recipe_names.tsv             # 설계도(레시피) 이름, `<Id><TAB><IdStr><TAB><korean>`
+├── recipe_names.tsv             # 설계도(레시피) 이름, `<Id><TAB><IdStr><TAB><korean>`
+├── trait_names.tsv              # 특성 스킬 이름, `<Id><TAB><IdStr><TAB><korean>`
+├── trait_descriptions.tsv       # 특성 스킬 설명, `<Id><TAB><IdStr><TAB><korean>`
+├── iota_titles.tsv              # 입자 제목 (게임 데이터 비어 있음)
+└── iota_descriptions.tsv        # 입자 설명 (게임 데이터 플레이스홀더)
 fonts/                          # 행간이 패치된 NanumBarunGothic + 라이선스 (§4.6)
 tools/                          # 추출 / 패킹 / QA 도구
 docs/                           # 작업 흐름, 스타일 가이드, 용어집, 캐릭터 정보
