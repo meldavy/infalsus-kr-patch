@@ -82,6 +82,15 @@ check here before improvising a new one.
 - speech: rough sarcastic 반말 to everyone, self = `나`; clips endings
   (`~냐`, `~거든`, `~는데?`); swears; mocking honorifics used sarcastically
   (`탐정 선생`)
+- **profanity range** (JP `アタシ`/`〜だ`/`〜ねえ` register; decided in 025):
+  when she talks about people she has contempt for or is angry at
+  (hackers, teachers, authorities, Freya behind her back), she may use
+  `그 새끼들`, `저 인간`, `놈`, `빌어먹을`, `열받다`, `젠장` — not the polite
+  `그 사람들`/`그놈들` (too weak for her voice; JP `ああいうやつら`,
+  `先公`, `あいつ`). Keep swearing aimed at third parties or at herself;
+  toward Lily, Aria, and friends she stays rough but not abusive (`꼬맹이`,
+  `이 자식`-level teasing at most). No sexual or discriminatory slurs. It
+  softens after the Aria arc (060) but never becomes polite
 - personality: cynical, prickly, quick-tempered, secretly anxious about
   money/friends; softens considerably after the Aria arc (060) without
   losing the rough register
@@ -724,7 +733,7 @@ check here before improvising a new one.
 ## Antagonist
 
 ### Io (Raptis) / イオ・ラプティス — 이오 라프티스 = 4.10.7.2 (M, crossdresses)
-- name plate reads "Cute Girl" (큐트한 아이) — that's how Nia/others perceive
+- name plate reads "Cute Girl" (귀여운 여자애) — that's how Nia/others perceive
   him; his own self-ID is 남자 (013-124), and 013-147 confirms 여장
   (crossdressing), not a gender identity
 - **the sole member** of hacker group 죽음과 여름 — all four "personas" (A/B/C/D)
