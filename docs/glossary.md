@@ -100,6 +100,7 @@ everywhere unless the original deliberately shifts it.
 | エイヴリー・ハウス | Avery House | 에이버리 하우스 | House's full name (131) |
 | テンダーハート | Tenderheart | 텐더하트 | in-world game series (129); characters 모모카/노지카/사츠키/카야 |
 | 健常 | able-bodied | '비장애인' | Ayame's self-description in the disability guilt spiral (036-066); keep the '...' special-quote framing |
+| 『負の思考』 | negative thoughts | '부정적 사고' | attacker's thought-injection Iris experiences inside the dive (039-091); keep the '...' quotes |
 | 推し | favorite / oshi | 최애 | fandom slang (129, recurs) |
 | 『知恵の真実』 | truth of wisdom | '지혜의 진실' | Freya's recurring motif (129); keep quotes |
 | 福音 | the Gospel | '복음' | lore, distinct from 은총 (129) |
