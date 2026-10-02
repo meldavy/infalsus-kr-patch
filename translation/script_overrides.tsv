@@ -1,0 +1,26 @@
+# Script behavior overrides -- In Falsus
+#
+# Engine commands we inject into the game's .sps scripts, re-applied
+# automatically after `extract-scripts` (and so after `unpack`), because
+# work/scripts/ is regenerated from the game and never committed.
+#
+# Format: <anchor_id><TAB>before<TAB><command>
+#   anchor_id  a story text id (e.g. 097-001). The script holding it is
+#              found by searching for its `id` directive, so this survives
+#              bundle/file renames across game builds.
+#   before     insert immediately above that `id` line (only mode supported)
+#   command    one engine command, verbatim. Multiple rows sharing an anchor
+#              are inserted in the order written here.
+#
+# This file deliberately contains NO original game text -- only story ids
+# (already public in translation/ko/*.txt) and commands we authored.
+#
+# 097-001..008 (the nightmare sequence) render their text as baked-in
+# `nightmare-N_en.png` artwork with the textbox never shown, so Korean
+# readers saw English there. Showing the textbox puts the translated line
+# on screen. The `delay` is required: `screen_textbox show` fades
+# asynchronously, and falling straight into the dialogue leaves the scene
+# mid-transition and hangs the chapter. A bare `wait` is NOT safe here --
+# this point still has `$repeat` animation loops running that never end.
+097-001	before	screen_textbox show 1.0
+097-001	before	delay 1.2

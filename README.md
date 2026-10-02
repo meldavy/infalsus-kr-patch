@@ -111,7 +111,8 @@ export INFALSUS_GAME_PATH="/mnt/d/SteamLibrary/steamapps/common/In Falsus"
 | `locate`              | 읽기      | 탐지된 게임 경로 출력 |
 | `index`               | 읽기      | 모든 AssetBundle을 한 번 스캔(`work/bundle_index.json`에 캐시, 재개 가능) |
 | `extract-scripts`     | 출력       | SAM 스크립트 파일 290개를 복호화해 `work/scripts/`로 |
-| `pack-scripts`        | 출력       | 수정된 스크립트를 다시 암호화해 `patch/`로 (선택 사항; EN-locale 방식에서는 필요 없음) |
+| `pack-scripts`        | 출력       | 수정된 스크립트를 다시 암호화해 `patch/`로 |
+| `apply-script-overrides` | 출력    | `translation/script_overrides.tsv`의 연출 명령을 `work/scripts/`에 재적용 (§4.2.1) |
 | `extract-translations`| 출력       | 대사 테이블을 `work/translations/`로 덤프 |
 | `extract-context`     | 출력       | 화자 정보를 스토리별 파일에 병합 |
 | `pack-translations`   | 출력       | 수정된 대사를 `patch/`로 패킹 |
@@ -238,6 +239,45 @@ s $Ay `"Friend! Good. You're here!"`
   존재합니다**(스크립트 id 17994개, 테이블 항목 18015개 — 테이블 항목
   중 21개는 사용되지 않음). 인라인 영어 텍스트는 어디까지나 폴백일
   뿐입니다.
+
+#### 4.2.1 스크립트 연출 오버라이드 (`translation/script_overrides.tsv`)
+
+일부 장면은 대사를 **텍스트가 아니라 이미지로** 보여 줍니다. 예를 들어
+097화(악몽 시퀀스)의 097-001~008은 `text/nightmare-N_en.png`로 구워진
+그림이고 대사창 자체가 표시되지 않으므로, 번역 테이블을 아무리 채워도
+화면에는 영어 그림이 그대로 남습니다(테이블 텍스트는 나레이션 로그에만
+나타납니다). 이럴 때 `screen_textbox show`를 끼워 넣어 번역된 대사를
+대사창으로 띄울 수 있습니다.
+
+`work/scripts/`는 게임에서 매번 다시 추출되는 gitignore 대상이라 직접
+수정하면 다음 `unpack`에서 사라지고, 원본 `.sps`는 저작권 때문에 커밋할
+수 없습니다. 그래서 수정 사항을 **명령 단위로** 이 파일에 적어 둡니다:
+
+```
+# Format: <anchor_id><TAB>before<TAB><command>
+097-001	before	screen_textbox show 1.0
+097-001	before	delay 1.2
+```
+
+- `anchor_id`는 스토리 텍스트 id이며(이미 `translation/ko/*.txt`에 공개된
+  값), 해당 `id` 지시문을 **검색해서** 스크립트를 찾으므로 빌드마다
+  파일 이름이 바뀌어도 그대로 동작합니다.
+- 이 파일에는 게임 원문이 한 글자도 들어가지 않습니다 — 스토리 id와
+  우리가 작성한 명령뿐입니다.
+- `unpack`이 `extract-scripts` 직후에 자동으로 재적용하며, 여러 번
+  실행해도 중복 삽입되지 않습니다. `repack`은 `pack-scripts`를 실행해
+  결과를 `patch/`로 내보냅니다.
+
+> **`screen_textbox show` 뒤에는 반드시 `delay`(또는 `wait`)를 붙여야
+> 합니다.** 페이드가 비동기로 진행되므로, 바로 대사로 넘어가면 장면이
+> 전환 중간에 멈춰 **챕터가 더 이상 진행되지 않습니다**. 다만 `$repeat`
+> 애니메이션 루프가 돌고 있는 지점에서는 `wait`가 끝나지 않을 수 있으니
+> `delay`를 쓰세요(코퍼스 365개 용례 중 약 94%가 `delay`/`wait`를
+> 동반합니다).
+
+> **배포 시 주의.** `pack-scripts`가 내보내는 `sam/<Guid>` 파일은 우리가
+> 끼워 넣은 명령뿐 아니라 **해당 스크립트 전문**을 담고 있습니다.
+> 오버라이드를 쓰는 패치를 배포할 때 이 점을 감안하세요.
 
 ### 4.3 대사 텍스트: `StoryTranslationDetails.asset`
 
@@ -580,7 +620,8 @@ translation/                    # 우리의 결과물 -- 우리가 배포하는 
 ├── trait_names.tsv              # 특성 스킬 이름, `<Id><TAB><IdStr><TAB><korean>`
 ├── trait_descriptions.tsv       # 특성 스킬 설명, `<Id><TAB><IdStr><TAB><korean>`
 ├── iota_titles.tsv              # 입자 제목 (게임 데이터 비어 있음)
-└── iota_descriptions.tsv        # 입자 설명 (게임 데이터 플레이스홀더)
+├── iota_descriptions.tsv        # 입자 설명 (게임 데이터 플레이스홀더)
+└── script_overrides.tsv         # 스크립트 연출 오버라이드 (§4.2.1)
 fonts/                          # 행간이 패치된 NanumBarunGothic + 라이선스 (§4.6)
 tools/                          # 추출 / 패킹 / QA 도구
 docs/                           # 작업 흐름, 스타일 가이드, 용어집, 캐릭터 정보
@@ -624,7 +665,9 @@ backups/                        # 이 도구가 덮어쓸 모든 파일의 원�
 - **`sam` 폴더는 모든 로케일이 공유합니다** — `.sps`의 인라인
   영어는 테이블 셀이 비어 있을 때 *모든* 로케일에 쓰이는 폴백
   텍스트입니다. 이유를 확실히 알지 못한다면 `.sps` 파일을 직접
-  수정하지 마세요; `pack-scripts`는 완결성을 위해 존재할 뿐입니다.
+  수정하지 마세요. 연출을 꼭 고쳐야 한다면 `work/scripts/`를 손으로
+  건드리는 대신 `translation/script_overrides.tsv`를 쓰세요(§4.2.1) —
+  그래야 `unpack` 후에도 유지됩니다.
 - **백업은 1회성입니다**: `backups/`는 항상 각 파일의 *최초로 관찰된*
   (원본) 사본을 담고 있습니다. `restore`는 패치가 적용된 게임을 원래
   상태로 되돌립니다.

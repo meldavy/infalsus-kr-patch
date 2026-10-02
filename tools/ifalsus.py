@@ -18,6 +18,8 @@ See README.md for full documentation of the game's data model.
 """
 
 import argparse
+import concurrent.futures
+import io
 import glob
 import json
 import os
@@ -159,6 +161,7 @@ def backup_file(game, src_path, relname):
 
 
 def atomic_write_bytes(path, data):
+    os.makedirs(os.path.dirname(path), exist_ok=True)
     tmp = path + ".tmp"
     with open(tmp, "wb") as f:
         f.write(data)
@@ -168,6 +171,35 @@ def atomic_write_bytes(path, data):
 # ---------------------------------------------------------------------------
 # Game discovery
 # ---------------------------------------------------------------------------
+
+
+def _index_bundle(path, with_monos):
+    """Index a single bundle. Module-level so a process pool can run it."""
+    rec = {"containers": []}
+    if with_monos:
+        rec["scripts"] = []     # [(name, path_id)] MonoScripts
+        rec["monos"] = []       # [(script_fileID, script_pathID, m_Name)]
+    try:
+        env = UnityPy.load(path)
+        if with_monos:
+            for obj in env.objects:
+                if obj.type.name == "MonoScript":
+                    try:
+                        rec["scripts"].append([obj.read().m_Name, obj.path_id])
+                    except Exception:
+                        pass
+                elif obj.type.name == "MonoBehaviour":
+                    try:
+                        d = obj.read()
+                        rec["monos"].append(
+                            [d.m_Script.m_FileID, d.m_Script.m_PathID, getattr(d, "m_Name", "") or ""]
+                        )
+                    except Exception:
+                        pass
+        rec["containers"] = sorted(env.container.keys())
+    except Exception as e:
+        rec["error"] = str(e)
+    return rec
 
 
 class Game:
@@ -250,11 +282,13 @@ class Game:
     def index_path(self):
         return os.path.join(self.workspace, "work", "bundle_index.json")
 
-    def build_index(self, force=False):
-        """One pass over all bundles, recording containers, MonoScripts,
-        inner serialized-file names, and MonoBehaviour m_Script/m_Name pairs.
-        Incremental: the cache is rewritten periodically and already-indexed
-        bundles are skipped on resume."""
+    def build_index(self, force=False, with_monos=False, workers=None):
+        """One pass over all bundles, recording addressable containers and,
+        when `with_monos` is set, MonoScript / MonoBehaviour m_Script pairs
+        (needed only by find_font_bundle). Incremental: the cache is written
+        periodically and already-indexed bundles are skipped on resume.
+        Bundles are read in parallel -- the game sits on a high-latency
+        mount, so this is latency-bound rather than CPU-bound."""
         if os.path.exists(self.index_path) and not force:
             return read_json(self.index_path)
         index = {} if force else (read_json(self.index_path) if os.path.exists(self.index_path) else {})
@@ -262,39 +296,25 @@ class Game:
         files = sorted(
             f for f in os.listdir(self.bundles_dir) if f.endswith(".bundle") and f not in index
         )
+        workers = workers or min(16, (os.cpu_count() or 4) * 2)
+        log(f"  {len(files)} bundles, {workers} parallel readers, monos={with_monos}")
         t0 = time.time()
-        for i, fn in enumerate(files):
-            rec = {
-                "containers": [],
-                "scripts": [],      # [(name, path_id)] MonoScripts
-                "cab_names": [],    # inner serialized file names
-                "monos": [],        # [(script_fileID, script_pathID, m_Name)]
+        done = 0
+        with concurrent.futures.ProcessPoolExecutor(max_workers=workers) as pool:
+            pending = {
+                pool.submit(_index_bundle, os.path.join(self.bundles_dir, fn), with_monos): fn
+                for fn in files
             }
-            try:
-                env = UnityPy.load(os.path.join(self.bundles_dir, fn))
-                for obj in env.objects:
-                    if obj.type.name == "MonoScript":
-                        try:
-                            rec["scripts"].append([obj.read().m_Name, obj.path_id])
-                        except Exception:
-                            pass
-                    elif obj.type.name == "MonoBehaviour":
-                        try:
-                            d = obj.read()
-                            rec["monos"].append(
-                                [d.m_Script.m_FileID, d.m_Script.m_PathID, getattr(d, "m_Name", "") or ""]
-                            )
-                        except Exception:
-                            pass
-                rec["containers"] = sorted(env.container.keys())
-                for sf in env.file.files.values() if hasattr(env.file, "files") else []:
-                    rec["cab_names"].append(sf.name)
-            except Exception as e:
-                rec["error"] = str(e)
-            index[fn] = rec
-            if (i + 1) % 25 == 0:
-                write_json(self.index_path, index)
-                log(f"  {i + 1}/{len(files)} ({time.time() - t0:.0f}s)")
+            for fut in concurrent.futures.as_completed(pending):
+                fn = pending[fut]
+                try:
+                    index[fn] = fut.result()
+                except Exception as e:
+                    index[fn] = {"containers": [], "error": str(e)}
+                done += 1
+                if done % 200 == 0:
+                    write_json(self.index_path, index)
+                    log(f"  {done}/{len(files)} ({time.time() - t0:.0f}s)")
         write_json(self.index_path, index)
         log(f"indexed {len(files)} bundles in {time.time() - t0:.0f}s -> {self.index_path}")
         return index
@@ -317,6 +337,9 @@ class Game:
         ScriptableObjects via MonoScript cross-references, then validate it
         by checking that its MonoBehaviours carry the font-family typetree."""
         index = index or self.load_index()
+        if not any("scripts" in rec for rec in index.values()):
+            log("bundle index has no MonoScript data; rescanning for it...")
+            index = self.build_index(force=True, with_monos=True)
         # 1. path_ids of the FastTextFontFamily / FastTextAsset MonoScripts
         script_pids = set()
         for fn, rec in index.items():
@@ -436,7 +459,7 @@ def cmd_locate(args, game):
 
 
 def cmd_index(args, game):
-    game.build_index(force=args.refresh)
+    game.build_index(force=args.refresh, with_monos=args.with_monos, workers=args.workers)
 
 
 # ---------------------------------------------------------------------------
@@ -474,6 +497,73 @@ def cmd_extract_scripts(args, game):
     log(f"extracted scripts -> {out_dir} (missing: {missing})")
 
 
+def load_script_overrides(game):
+    """Rows of (anchor_id, position, command) from translation/script_overrides.tsv."""
+    path = os.path.join(game.workspace, "translation", "script_overrides.tsv")
+    if not os.path.exists(path):
+        return []
+    rows = []
+    with io.open(path, encoding="utf-8") as f:
+        for n, line in enumerate(f, 1):
+            line = line.rstrip("\n")
+            if not line.strip() or line.lstrip().startswith("#"):
+                continue
+            parts = line.split("\t")
+            if len(parts) < 3:
+                raise SystemExit(f"error: {path}:{n}: expected 3 tab-separated fields")
+            anchor, pos, cmd = parts[0].strip(), parts[1].strip(), parts[2]
+            if pos != "before":
+                raise SystemExit(f"error: {path}:{n}: unsupported position {pos!r} (only 'before')")
+            rows.append((anchor, pos, cmd))
+    return rows
+
+
+def cmd_apply_script_overrides(args, game):
+    rows = load_script_overrides(game)
+    if not rows:
+        log("no script overrides to apply")
+        return
+    scripts_dir = os.path.join(game.workspace, "work", "scripts")
+    if not os.path.isdir(scripts_dir):
+        raise SystemExit("error: no extracted scripts; run `extract-scripts` first")
+
+    # anchor id -> script path, by locating its `id` directive
+    wanted = {a for a, _p, _c in rows}
+    located = {}
+    for root, _dirs, files in os.walk(scripts_dir):
+        for fn in files:
+            if not fn.lower().endswith(SCRIPT_EXTS):
+                continue
+            fp = os.path.join(root, fn)
+            text = io.open(fp, encoding="utf-8", errors="replace").read()
+            for anchor in wanted - set(located):
+                if f"\nid {anchor}\n" in text or text.startswith(f"id {anchor}\n"):
+                    located[anchor] = fp
+    missing = wanted - set(located)
+    if missing:
+        raise SystemExit(f"error: anchor ids not found in any script: {sorted(missing)}")
+
+    # group commands per anchor, preserving file order
+    per_anchor = {}
+    for anchor, _pos, cmd in rows:
+        per_anchor.setdefault(anchor, []).append(cmd)
+
+    applied = skipped = 0
+    for anchor, cmds in per_anchor.items():
+        fp = located[anchor]
+        lines = io.open(fp, encoding="utf-8").read().split("\n")
+        i = next(n for n, l in enumerate(lines) if l == f"id {anchor}")
+        prev = [l for l in lines[max(0, i - len(cmds) - 2):i] if l.strip()]
+        if prev[-len(cmds):] == cmds:
+            skipped += 1
+            continue
+        lines[i:i] = cmds + [""]
+        io.open(fp, "w", encoding="utf-8").write("\n".join(lines))
+        applied += 1
+        log(f"  {anchor}: inserted {len(cmds)} command(s) -> {os.path.relpath(fp, game.workspace)}")
+    log(f"script overrides: {applied} applied, {skipped} already present")
+
+
 def cmd_pack_scripts(args, game):
     mapping, _ = load_sam_mapping(game)
     scripts_dir = os.path.join(game.workspace, "work", "scripts")
@@ -487,10 +577,15 @@ def cmd_pack_scripts(args, game):
         src = os.path.join(scripts_dir, path)
         if not os.path.exists(src):
             continue
-        # only pack files whose content differs from the game's current copy
+        # Compare against the pristine copy -- the backup when we already have
+        # one, else the game's file. Comparing against the live game file would
+        # skip a script whose override is already installed, silently omitting
+        # it from a patch/ rebuilt on an already-patched install.
         game_src = os.path.join(game.sam_dir, guid)
-        if os.path.exists(game_src):
-            if sam_xor(open(game_src, "rb").read()) == open(src, "rb").read():
+        backup_src = os.path.join(game.workspace, "backups", "sam", guid)
+        ref = backup_src if os.path.exists(backup_src) else game_src
+        if os.path.exists(ref):
+            if sam_xor(open(ref, "rb").read()) == open(src, "rb").read():
                 continue
         if os.path.exists(game_src):
             backup_file(game, game_src, os.path.join("sam", guid))
@@ -1339,6 +1434,7 @@ def _ko_io():
 def cmd_unpack(args, game):
     log("=== unpack 1/2: extracting game text ===")
     cmd_extract_scripts(args, game)
+    cmd_apply_script_overrides(args, game)
     cmd_extract_translations(args, game)
     cmd_extract_context(args, game)
     cmd_extract_names(args, game)
@@ -1402,6 +1498,8 @@ def cmd_repack(args, game):
     else:
         log(f"skipping pack-ui-strings: {dll_dir} not set up (see README §4.5 for the one-time setup)")
 
+    cmd_pack_scripts(args, game)
+
     if args.dry_run:
         log("=== repack complete (dry run -- nothing written) ===")
     else:
@@ -1433,10 +1531,16 @@ def main():
     sub.add_parser("locate", help="show detected game paths").set_defaults(func=cmd_locate)
     sp = sub.add_parser("index", help="(re)build the bundle index cache")
     sp.add_argument("--refresh", action="store_true")
+    sp.add_argument("--with-monos", action="store_true",
+                    help="also record MonoScript/MonoBehaviour refs (needed by pack-fonts)")
+    sp.add_argument("--workers", type=int, default=None,
+                    help="parallel bundle readers (default: min(16, 2x cpus))")
     sp.set_defaults(func=cmd_index)
 
     sub.add_parser("extract-scripts", help="decrypt SAM script files to text").set_defaults(func=cmd_extract_scripts)
     sub.add_parser("pack-scripts", help="re-encrypt edited script text into the game").set_defaults(func=cmd_pack_scripts)
+    sub.add_parser("apply-script-overrides",
+                   help="re-apply translation/script_overrides.tsv to work/scripts").set_defaults(func=cmd_apply_script_overrides)
     sub.add_parser("extract-context", help="merge speaker info into per-story translation files").set_defaults(func=cmd_extract_context)
 
     sub.add_parser("extract-translations", help="dump StoryTranslationDetails to JSON/TSV").set_defaults(func=cmd_extract_translations)
