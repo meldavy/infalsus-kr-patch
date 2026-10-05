@@ -115,6 +115,73 @@ def is_valid_font(data: bytes) -> bool:
     return sniff_font_ext(data) != ".bin"
 
 
+def merge_missing_glyphs(replacement_path: str, original_path: str) -> bytes:
+    """Return `replacement_path`'s font bytes augmented with whatever glyph
+    `original_path` (the font actually being replaced, e.g.
+    Supreme-Regular.otf) has for a codepoint the replacement's own cmap is
+    missing.
+
+    A straight binary swap of an EN base font for e.g. NanumBarunGothic
+    means any character the replacement doesn't happen to cover renders as
+    a blank glyph -- in this project that showed up as a few accented Latin
+    letters used in character names (Story Étienne, Ōyagi, Agnès Sourd)
+    going blank (see GitHub issue #3), but the fix generalizes to any
+    replacement/original font pair: fill in whatever the replacement is
+    missing, from the font it's standing in for. Copies outlines + advance
+    widths via a decomposing pen so composite glyphs and CFF (cubic-curve)
+    source glyphs both convert cleanly to the replacement's TrueType
+    (quadratic) glyf table if it has one; every glyph the replacement
+    already has (and its own metrics) is left untouched. Returns the
+    replacement's bytes unchanged if it isn't missing anything.
+
+    The merged font is a one-off derivative of the game's own copyrighted
+    original and must never be written anywhere outside the AssetBundle
+    this produces -- never cache it to disk, and never let it land in a
+    committed directory.
+    """
+    from fontTools.ttLib import TTFont
+    from fontTools.pens.cu2quPen import Cu2QuPen
+    from fontTools.pens.recordingPen import DecomposingRecordingPen
+    from fontTools.pens.ttGlyphPen import TTGlyphPen
+
+    replacement = TTFont(replacement_path)
+    original = TTFont(original_path)
+    replacement_cmap = replacement.getBestCmap()
+    missing = {cp: gname for cp, gname in original.getBestCmap().items() if cp not in replacement_cmap}
+    if not missing:
+        return open(replacement_path, "rb").read()
+
+    src_glyphset = original.getGlyphSet()
+    is_cff = "CFF " in original
+    glyph_order = replacement.getGlyphOrder()
+    added = []
+    for cp, src_gname in missing.items():
+        new_name = f"orig_{src_gname}"
+        if new_name not in glyph_order:
+            # Decompose relative to the SOURCE glyph set first (so composite
+            # glyphs referencing the source font's own component glyphs --
+            # which the replacement font doesn't have -- get flattened to
+            # plain contours instead of dangling component references).
+            rec = DecomposingRecordingPen(src_glyphset)
+            src_glyphset[src_gname].draw(rec)
+            tt_pen = TTGlyphPen(None)
+            rec.replay(Cu2QuPen(tt_pen, max_err=1.0) if is_cff else tt_pen)
+            glyph_order.append(new_name)
+            replacement.setGlyphOrder(glyph_order)
+            replacement["glyf"][new_name] = tt_pen.glyph()
+            replacement["hmtx"][new_name] = original["hmtx"][src_gname]
+            added.append(new_name)
+        for table in replacement["cmap"].tables:
+            if table.isUnicode():
+                table.cmap[cp] = new_name
+    replacement["maxp"].numGlyphs = len(glyph_order)
+    log(f"    + merged {len(added)} glyph(s) missing from {os.path.basename(replacement_path)}, "
+        f"found in {os.path.basename(original_path)}")
+    buf = io.BytesIO()
+    replacement.save(buf)
+    return buf.getvalue()
+
+
 def read_json(path):
     with open(path, "r", encoding="utf-8") as f:
         return json.load(f)
@@ -1264,16 +1331,23 @@ def cmd_pack_fonts(args, game):
                 game.workspace, "work", "fonts", src
             ) + (".otf" if os.path.exists(os.path.join(game.workspace, "work", "fonts", src + ".otf")) else ".ttf")
     elif args.preset == "nanum":
-        nanum_dir = os.path.join(game.workspace, "tools", "fonts")
+        # fonts/ holds the committed, line-metric-patched NanumBarunGothic
+        # binaries this patch actually ships (README §4.6) -- NOT
+        # tools/fonts/, which is only fetch_fonts.sh's gitignored scratch
+        # copy of the pristine (unpatched) upstream release.
+        nanum_dir = os.path.join(game.workspace, "fonts")
         for ident, src in [
             ("Supreme-Regular", "NanumBarunGothic.ttf"),
             ("Supreme-Bold", "NanumBarunGothicBold.ttf"),
             ("Supreme-Medium", "NanumBarunGothicBold.ttf"),
             ("BaiJamjuree-Regular", "NanumBarunGothic.ttf"),
             ("BaiJamjuree-Bold", "NanumBarunGothicBold.ttf"),
-            ("BaiJamjuree-Light", "NanumBarunGothic.ttf"),
-            ("BaiJamjuree-Medium", "NanumBarunGothic.ttf"),
+            ("BaiJamjuree-Light", "NanumBarunGothicLight.ttf"),
+            ("BaiJamjuree-Medium", "NanumBarunGothicBold.ttf"),
             ("BaiJamjuree-SemiBold", "NanumBarunGothicBold.ttf"),
+            ("OT-PUDShinGoPr6N-Regular", "NanumBarunGothic.ttf"),
+            ("AP-OTF-UDShinGoPr6N-DeBold", "NanumBarunGothicBold.ttf"),
+            ("AP-OTF-UDShinGoPr6N-Light", "NanumBarunGothicLight.ttf"),
         ]:
             replacements[ident] = os.path.join(nanum_dir, src)
     elif args.preset == "none":
@@ -1285,12 +1359,24 @@ def cmd_pack_fonts(args, game):
         replacements[ident] = ttf
     if not replacements:
         raise SystemExit("error: nothing to replace; use --set or --preset")
+    # identifier -> extracted original font path (work/fonts/<Identifier><ext>,
+    # written by extract-fonts) -- whatever is replacing that identifier gets
+    # auto-filled with any glyph it's missing that the original had (see
+    # merge_missing_glyphs), regardless of which preset or --set produced it.
+    ident_to_orig = {
+        a["Identifier"]: os.path.join(game.workspace, "work", "fonts", a["Identifier"] + a["ext"])
+        for a in data["assets"]
+    }
     for ident, ttf_path in replacements.items():
         if ident not in ident_to_pid:
             raise SystemExit(f"error: unknown FastTextAsset identifier {ident!r}")
         if not os.path.exists(ttf_path):
             raise SystemExit(f"error: font file not found: {ttf_path}")
-        fdata = open(ttf_path, "rb").read()
+        orig_path = ident_to_orig.get(ident)
+        if orig_path and os.path.exists(orig_path) and os.path.realpath(orig_path) != os.path.realpath(ttf_path):
+            fdata = merge_missing_glyphs(ttf_path, orig_path)
+        else:
+            fdata = open(ttf_path, "rb").read()
         if not is_valid_font(fdata):
             raise SystemExit(f"error: {ttf_path} does not look like a TTF/OTF font")
         obj, tt = pid_to_obj[ident_to_pid[ident]]
@@ -1611,7 +1697,12 @@ def main():
     sub.add_parser("list-fonts", help="show font families and their per-locale sets").set_defaults(func=cmd_list_fonts)
     sp = sub.add_parser("pack-fonts", help="replace embedded font binaries")
     sp.add_argument("--set", action="append", metavar="Identifier=path.ttf")
-    sp.add_argument("--preset", choices=["none", "notokr", "nanum"], default="none")
+    sp.add_argument("--preset", choices=["none", "notokr", "nanum"], default="none",
+                     help="nanum: fonts/NanumBarunGothic*; notokr: the game's own "
+                          "embedded NotoSerifKR, no download needed. Either way, any "
+                          "glyph the replacement is missing gets auto-filled in from "
+                          "each identifier's extracted original font (requires "
+                          "fonttools, see requirements.txt) -- also applies to --set")
     sp.add_argument("--dry-run", action="store_true", help="validate only; do not write")
     sp.set_defaults(func=cmd_pack_fonts)
 
