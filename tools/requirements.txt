@@ -1,2 +1,3 @@
 UnityPy>=1.25
 TypeTreeGeneratorAPI>=0.0.10  # only needed for extract-ui-strings/pack-ui-strings (see README §4.5)
+fonttools>=4.60  # merge missing fallback glyphs into the patched Nanum fonts

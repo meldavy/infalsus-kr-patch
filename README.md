@@ -535,6 +535,25 @@ NanumBarunGothic은 자유로운 사용·수정·재배포를 허용하는 라�
 굵기 매핑은 Regular→Regular, Light→Light, Bold/Medium/SemiBold→Bold
 입니다(Nanum에는 Medium이나 SemiBold가 따로 없습니다).
 
+NanumBarunGothic에 없는 라틴 확장 글리프가 EN 로케일에서 공백으로
+표시되지 않게 하려면, 게임에서 추출한 로컬 폰트를 fallback으로 사용해
+누락 글리프를 먼저 병합할 수 있습니다. 생성물은 `work/` 아래에만
+생기며 저장소에 커밋하거나 배포하지 않습니다.
+
+```bash
+.venv/bin/python tools/ifalsus.py extract-fonts
+.venv/bin/python tools/merge_font_glyphs.py
+.venv/bin/python tools/ifalsus.py pack-fonts --preset nanum-merged
+```
+
+`merge_font_glyphs.py`는 보정된 Nanum 폰트의 한글과 세로 메트릭을
+유지하면서 fallback 폰트에만 있는 전체 코드포인트를 찾습니다. 해당
+글리프의 윤곽선, advance width, left side bearing을 복사하며 두 폰트의
+unitsPerEm이 다르면 같은 비율로 변환합니다. 기본 fallback은 게임에
+내장된 `vivoSans-Regular`/`vivoSans-DemiBold`이고, 필요하면
+`--fallback-regular`와 `--fallback-bold`로 다른 추출 폰트를 지정할 수
+있습니다.
+
 `pack-fonts --preset notokr`는 다운로드 없이 쓸 수 있는 대안으로 남겨
 두었으며, 게임에 이미 내장된 `NotoSerifKR` 바이트를 그대로 씁니다.
 

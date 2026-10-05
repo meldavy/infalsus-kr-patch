@@ -1263,17 +1263,29 @@ def cmd_pack_fonts(args, game):
             replacements[ident] = os.path.join(
                 game.workspace, "work", "fonts", src
             ) + (".otf" if os.path.exists(os.path.join(game.workspace, "work", "fonts", src + ".otf")) else ".ttf")
-    elif args.preset == "nanum":
-        nanum_dir = os.path.join(game.workspace, "tools", "fonts")
+    elif args.preset in ("nanum", "nanum-merged"):
+        if args.preset == "nanum-merged":
+            nanum_dir = os.path.join(game.workspace, "work", "merged_fonts")
+            regular = "NanumLatin-Regular.ttf"
+            bold = "NanumLatin-Bold.ttf"
+            light = "NanumLatin-Light.ttf"
+        else:
+            nanum_dir = os.path.join(game.workspace, "fonts")
+            regular = "NanumBarunGothic.ttf"
+            bold = "NanumBarunGothicBold.ttf"
+            light = "NanumBarunGothicLight.ttf"
         for ident, src in [
-            ("Supreme-Regular", "NanumBarunGothic.ttf"),
-            ("Supreme-Bold", "NanumBarunGothicBold.ttf"),
-            ("Supreme-Medium", "NanumBarunGothicBold.ttf"),
-            ("BaiJamjuree-Regular", "NanumBarunGothic.ttf"),
-            ("BaiJamjuree-Bold", "NanumBarunGothicBold.ttf"),
-            ("BaiJamjuree-Light", "NanumBarunGothic.ttf"),
-            ("BaiJamjuree-Medium", "NanumBarunGothic.ttf"),
-            ("BaiJamjuree-SemiBold", "NanumBarunGothicBold.ttf"),
+            ("Supreme-Regular", regular),
+            ("Supreme-Bold", bold),
+            ("Supreme-Medium", bold),
+            ("BaiJamjuree-Regular", regular),
+            ("BaiJamjuree-Bold", bold),
+            ("BaiJamjuree-Light", light),
+            ("BaiJamjuree-Medium", bold),
+            ("BaiJamjuree-SemiBold", bold),
+            ("OT-PUDShinGoPr6N-Regular", regular),
+            ("AP-OTF-UDShinGoPr6N-DeBold", bold),
+            ("AP-OTF-UDShinGoPr6N-Light", light),
         ]:
             replacements[ident] = os.path.join(nanum_dir, src)
     elif args.preset == "none":
@@ -1611,7 +1623,7 @@ def main():
     sub.add_parser("list-fonts", help="show font families and their per-locale sets").set_defaults(func=cmd_list_fonts)
     sp = sub.add_parser("pack-fonts", help="replace embedded font binaries")
     sp.add_argument("--set", action="append", metavar="Identifier=path.ttf")
-    sp.add_argument("--preset", choices=["none", "notokr", "nanum"], default="none")
+    sp.add_argument("--preset", choices=["none", "notokr", "nanum", "nanum-merged"], default="none")
     sp.add_argument("--dry-run", action="store_true", help="validate only; do not write")
     sp.set_defaults(func=cmd_pack_fonts)
 
