@@ -911,7 +911,7 @@ def cmd_pack_names(args, game):
 # different, simpler shape: `Ids: [int, ...]` with a parallel `IdStr: [str,
 # ...]` giving each entry a human-readable key (e.g. "1-1-a", "2-r-7"). These
 # were previously left untouched as "gameplay strings"; extract/pack for two
-# of them (cards, encounters) are wired up below on request. Add another
+# of them (cards, encounters, encounter opponents, ...) are wired up below on request. Add another
 # table by reusing these two helpers with a new `table_key`/label.
 
 
@@ -1013,6 +1013,14 @@ def cmd_extract_encounter_names(args, game):
 
 def cmd_pack_encounter_names(args, game):
     _cmd_pack_dyn_table(args, game, "encounterIdTypeMapping", "encounter_names.json", "encounter-name")
+
+
+def cmd_extract_encounter_opponent_names(args, game):
+    _cmd_extract_dyn_table(game, "encounterOpponentNameTypeMapping", "encounter_opponent_names.json", "encounter-opponent-name")
+
+
+def cmd_pack_encounter_opponent_names(args, game):
+    _cmd_pack_dyn_table(args, game, "encounterOpponentNameTypeMapping", "encounter_opponent_names.json", "encounter-opponent-name")
 
 
 def cmd_extract_recipe_names(args, game):
@@ -1526,6 +1534,7 @@ def cmd_unpack(args, game):
     cmd_extract_names(args, game)
     cmd_extract_card_names(args, game)
     cmd_extract_encounter_names(args, game)
+    cmd_extract_encounter_opponent_names(args, game)
     cmd_extract_recipe_names(args, game)
     cmd_extract_trait_names(args, game)
     cmd_extract_trait_descriptions(args, game)
@@ -1542,7 +1551,8 @@ def cmd_unpack(args, game):
     log(
         f"  {counts['stories']} dialogue lines, {counts['names']} names, "
         f"{counts['ui_strings']} UI strings, {counts['card_names']} card names, "
-        f"{counts['encounter_names']} encounter names, {counts['recipe_names']} recipe names, "
+        f"{counts['encounter_names']} encounter names, {counts['encounter_opponent_names']} encounter opponent names, "
+        f"{counts['recipe_names']} recipe names, "
         f"{counts['trait_names']} trait names, {counts['trait_descriptions']} trait descriptions, "
         f"{counts['iota_titles']} iota titles, {counts['iota_descriptions']} iota descriptions already translated"
     )
@@ -1556,7 +1566,8 @@ def cmd_repack(args, game):
     log(
         f"  {counts['stories']} dialogue lines, {counts['names']} names, "
         f"{counts['ui_strings']} UI strings, {counts['card_names']} card names, "
-        f"{counts['encounter_names']} encounter names, {counts['recipe_names']} recipe names, "
+        f"{counts['encounter_names']} encounter names, {counts['encounter_opponent_names']} encounter opponent names, "
+        f"{counts['recipe_names']} recipe names, "
         f"{counts['trait_names']} trait names, {counts['trait_descriptions']} trait descriptions, "
         f"{counts['iota_titles']} iota titles, {counts['iota_descriptions']} iota descriptions"
     )
@@ -1573,6 +1584,7 @@ def cmd_repack(args, game):
     cmd_pack_names(args, game)
     cmd_pack_card_names(args, game)
     cmd_pack_encounter_names(args, game)
+    cmd_pack_encounter_opponent_names(args, game)
     cmd_pack_recipe_names(args, game)
     cmd_pack_trait_names(args, game)
     cmd_pack_trait_descriptions(args, game)
@@ -1654,6 +1666,12 @@ def main():
     sp.add_argument("--locale-map", default="Korean->English")
     sp.add_argument("--dry-run", action="store_true", help="validate only; do not write")
     sp.set_defaults(func=cmd_pack_encounter_names)
+
+    sub.add_parser("extract-encounter-opponent-names", help="dump encounter opponent-name table to JSON").set_defaults(func=cmd_extract_encounter_opponent_names)
+    sp = sub.add_parser("pack-encounter-opponent-names", help="pack edited encounter opponent names back into the game")
+    sp.add_argument("--locale-map", default="Korean->English")
+    sp.add_argument("--dry-run", action="store_true", help="validate only; do not write")
+    sp.set_defaults(func=cmd_pack_encounter_opponent_names)
 
     sub.add_parser("extract-recipe-names", help="dump recipe/card-name table to JSON").set_defaults(func=cmd_extract_recipe_names)
     sp = sub.add_parser("pack-recipe-names", help="pack edited recipe names back into the game")

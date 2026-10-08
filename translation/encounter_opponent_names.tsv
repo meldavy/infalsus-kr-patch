@@ -1,0 +1,86 @@
+# Korean encounter opponent names -- In Falsus
+# Format: <Id><TAB><IdStr><TAB><korean>. Id is the integer key and
+# IdStr the human-readable key (e.g. "1-1-a", "2-r-7") in
+# DynamicStringMapping.encounterOpponentNameTypeMapping -- both informational, packing
+# matches by Id+IdStr together, never by Korean text.
+# Only rows this project translates are listed.
+1	1-r-2	니아
+2	1-r-3	아야메
+3	1-r-4	아이리스
+4	1-r-5	이오
+5	1-r-6	스토리
+6	1-s-10	스토리
+7	1-s-2	경관
+8	1-s-3	아야메
+9	1-s-4	메이
+10	1-s-5	학생
+11	1-s-6	메이
+12	1-s-7	행인
+13	1-s-8	???
+14	1-s-9	이오
+15	2-r-1	아이리스
+16	2-r-2	메이
+17	2-r-3	골동품점 주인
+18	2-r-4	니아
+19	2-r-5	아리아
+20	2-r-6	아리아
+21	2-r-7	스토리
+22	2-s-1	메이
+23	2-s-2	니아
+24	2-s-3	토코
+25	2-s-4	골동품점 주인
+26	2-s-5	아이리스
+27	2-s-6	아리아
+28	2-s-7	아리아
+29	2b-r-1	아야메
+30	2b-r-2	메이
+31	2b-s-1	아이리스
+32	2b-s-2	아야메
+33	2b-s-3	아야메
+34	2b-s-4	메이
+35	2b-s-5	니아
+36	2b-s-6	악당
+52	3-r-1	스토리
+53	3-r-2	메이
+54	3-r-3	아야메
+55	3-r-4	학생
+59	3-s-10	키츠
+60	3-s-11	키츠
+61	3-s-12	키츠
+62	3-s-4	메이
+63	3-s-5	학생
+64	3-s-6	학생
+65	3-s-7	하우스
+66	3-s-8	아이리스
+67	3-s-9	아이리스
+68	demo-r-1	행인
+69	demo-r-2	행인
+70	demo-r-3	행인
+72		불량배
+75	1-s-1	니아
+78	4-r-1	스토리
+79	4-r-2	니아
+80	4-r-3	아야메
+81	4-r-4	아이리스
+82	4-r-5	스토리
+83	4-r-6	프레이야
+84	4-r-7	린
+85	4-r-8	니아
+87	4-s-10	레인
+88	4-s-11	펠
+89	4-s-12	펠
+91	4-s-2	니아
+92	4-s-3	스토리
+93	4-s-4	이오
+94	4-s-5	???
+95	4-s-6	프레이야
+96	4-s-7	린
+97	4-s-8	레인
+98	4-s-9	아리아
+99	4-s-1	펠
+100	4-s-13	펠
+101	3-r-10	아이리스
+102	3-r-11	아이리스
+103	3-r-12	키츠
+104	3-r-9	하우스
+105	4-r-9	펠

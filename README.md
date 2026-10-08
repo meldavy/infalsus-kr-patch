@@ -336,7 +336,8 @@ rawStoryNameTypeMapping: { Ids: [{Value: "Nia"}, ...],           # 원본 이름
 129개 한국어 필드가 전부 비어 있습니다. 같은 에셋에는 여러 게임플레이
 문자열 테이블이 들어 있는데, 이 프로젝트는 그중 다음을 추출·번역합니다:
 `cardNameTypeMapping`(카드 이름), `recipeIdTypeMapping`(설계도 이름),
-`encounterIdTypeMapping`(조우/Reflect 제목), `traitNameTypeMapping`(특성
+`encounterIdTypeMapping`(조우/Reflect 제목),
+`encounterOpponentNameTypeMapping`(조우 상대 이름), `traitNameTypeMapping`(특성
 스킬 이름), `traitDescriptionTypeMapping`(특성 스킬 설명),
 `iotaTitleTypeMapping`·`iotaDescriptionTypeMapping`(입자 제목·설명).
 `pack-*` 명령은 각자 자기 테이블만 수정하며, `pack-names`는 오직
