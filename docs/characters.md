@@ -57,8 +57,8 @@ check here before improvising a new one.
   sharp enough to identify the "missing hacker" as male by deduction
   earlier; ties into "quick-tempered, secretly anxious" self-image above
 - 075 (dive into her own suppressed memory): confirms via flashback the
-  exact line she said to cut Aria off, "이제 오지 마. 네 얼굴, 더는 보고 싶지
-  않아." — direct quote, must stay byte-identical if it recurs; also
+  exact line she said to cut Aria off, "이제 오지 마. 다시는 네 얼굴 보기
+  싫어." — direct quote, must stay byte-identical if it recurs; also
   confirms Dad addresses her as "아이리스" (by name, not a pet name)
 - 086 (home, with Lily): Iris deflects Lily's questions about school, then
   shuts down the moment Aria comes up — flatly "아리아한테 부탁 같은 건 못 해."
@@ -376,8 +376,8 @@ check here before improvising a new one.
   mechanic gets more rules later
 - 075: inside the dive, Story's own identity briefly destabilizes — she
   starts speaking/thinking in Iris's plain-form 반말 register instead of
-  her usual 존댓말 (075-038, "야, 아이리스, 너도 내가 네가 된 것처럼
-  느껴져?") before pulling back to 존댓말 once she regains control
+  her usual 존댓말 (075-038, "있잖아, 아이리스. 너도 느껴져? 내가 네가
+  된 것 같은 거.") before pulling back to 존댓말 once she regains control
   (075-056 on). **This is a deliberate one-scene register break sourced
   from the JP itself** (which drops ですます for だ mid-line), not a
   mistake — don't "fix" it back to 존댓말 if re-editing this chapter, and
