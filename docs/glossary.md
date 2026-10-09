@@ -39,7 +39,7 @@ everywhere unless the original deliberately shifts it.
 | Anywave | Anywave | 애니웨이브 | video app Iris watches botany content on (046) |
 | オールヴェルド | Allverld | 올베르도 | the city/region Io and Mireille are from |
 | コーヴス | Corvus | 코우브스 | the seal stamped on government papers |
-| コエイヴス・カイル | Coeivus Kyle | 코에부스 카일 | place name |
+| コエイヴス・カイル | Coeivus Kyle | 코에이부스 카일 | place name (spelling settled by reviewed 022/026) |
 | 天淵市 | (city) | 아마치 시 | the city the school arc is set in |
 | ベルヴェデーレ | Belvedere | 벨베데레 거리 | street Io flees toward (012) |
 | ベック高校 | Beck High | 벡 고등학교 | Iris's school; abbreviated 벡고 |
@@ -147,7 +147,7 @@ everywhere unless the original deliberately shifts it.
 | エイプリル | April | 에이프릴 | calmer companion in the same memory (145) |
 | サム / Sam | Sam | 샘 | the alias young Keats went by in that memory (145); his "real name" is Keats |
 | サーシャ／カイル／ミシェル | Sasha / Kyle / Michele | 사샤 / 카일 / 미셸 | Story's childhood friends (157) |
-| 『コエイヴス・インフェルナム』 | Coaevus Infernum | '코에부스 인페르나움' | the hell Nia glimpses in Keats's memory (145-133); keep quotes |
+| 『コエイヴス・インフェルナム』 | Coaevus Infernum | '코에이부스 인페르나움' | the hell Nia glimpses in Keats's memory (145-133); keep quotes |
 | 定人／バインド色（段階） | Bind stage colors | 바인드 n단계, 초록/오렌지/빨강 | colors can show *stages*: orange 2단계 = agitation (151-025), 초록 3단계 = fear (150-004); keep 오렌지/초록 |
 | 国家反逆罪 | treason | 국가반역죄 | Story's suspected charge (034-123, 034-186) |
 | 『サムサ』 | "Samsa" | '삼사' | in-world novelist (034-128); keep the quotes |
