@@ -143,7 +143,7 @@ check here before improvising a new one.
   is now spoken-of-in-the-past, so keep her register unchanged but warm
 - 063: hostile to Ayame at the garage ("우리는 친구가 아니야", threatens her
   looks); delivers the account of Iris's 唯我論 (유아론) and her own "꽤
-  병들었다" state. Calls her father **아빠** (063-021); Ayame dives into her
+  망가졌었지" state. Calls her father **아빠** (063-021); Ayame dives into her
   rage (a red world) at the chapter's end
 
 ### Ayame / あやめ — 아야메 (F)
@@ -208,13 +208,13 @@ check here before improvising a new one.
   존댓말 to Freya, warm/casual elsewhere; ends deciding to sit alone a while
 - 062: Story video-calls her before the Aria meeting and offloads her whole
   backstory to her; Ayame receives the "잃었을 때 중요한 건" line and
-  resolves not to forget it ("네 말, 잊지 않을게.……오늘만이 아니야"). This is
+  resolves not to forget it ("네 말 꼭 기억할게, 스토리.……오늘만이 아니야"). This is
   what she later passes on to console Nia — keep the echo consistent
 - 063: confronts Aria alone at the Beck garage (Story's request) and, when
   Aria stays hostile, dives into her to change her mood — the same
   improvised ability as 077, used deliberately for the first time. Her
-  argument to Aria: "아이리스는……누구를 위해서라도 싸울 수 있어. 그게
-  진실이야" (063-042)
+  argument to Aria: "아이리스는……누구를 위해서든 싸울 수 있는 애야.
+  그게 진실이야" (063-042)
 - first appears: story 005
 
 ### Mei (Alder) / メイ — 메이 알더 (F)
