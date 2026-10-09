@@ -357,10 +357,11 @@ check here before improvising a new one.
 - typed text is polite 존댓말 (`~입니다/합니다`); narration is soft and
   thoughtful; when she does speak aloud the register stays 존댓말
 - adopted; exchange student from 베리키아, living apart from her adoptive
-  mother **미레유** in the dorms; her birth parents are "마음이 상냥하다고
-  도무지 말할 수 없는 사람들" (062); most of her old friends are dead, one
+  mother **미레유** in the dorms; her birth parents are "절대 다정한 사람들은
+  아니에요" (062-063); most of her old friends are dead, one
   loss handled alone with no one to lean on — the formative fact behind her
-  "누군가를 잃었을 때 중요한 건, 아직 함께 있어 주는 사람에게 기대는 것" (062)
+  "누군가를 잃었을 때 중요한 건…… 아직 곁에 있어 주는 사람에게 기대는 거예요"
+  (062-053~054; 064-045에서 아야메가 인용 — 064 작업 시 이 문구에 맞출 것)
 - has a prior arrest for hacking a government database back home (040);
   currently jailed on suspicion of being part of 죽음과 여름, actually
   innocent — the central mystery of stories 009–066
