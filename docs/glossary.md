@@ -154,6 +154,8 @@ everywhere unless the original deliberately shifts it.
 | 天淵市警 | Amachi City Police | 아마치 시 경찰 | 市警 = 시 경찰 (034-135); 詩經 오독 피하려 띄어 씀 |
 | 『半実』 | half-truth | '반쪽 진실' | contrast to '진실'; Freya's motif (040-047, 167-016); keep quotes |
 | 唯我論 | solipsism | 유아론 | Aria's term for how Iris lives (063-031+); 認識論 → 인식론 |
+| 世界統一政府 | United World Government | 세계통일정부 | the government; established 044 (8×+ in corpus). 『』 quotes when JP has them |
+| 南方 | Nanpou | 남방 | in-world game series Mei & Nia bond over (044, 052, 080); 10作目 → 10편, 3面 → 3스테이지, 道中BGM → 이동 중 BGM, サントラ → OST |
 
 ## Style conventions
 
