@@ -146,7 +146,10 @@ check here before improvising a new one.
   망가졌었지" state. Calls her father **아빠** (063-021); Ayame dives into her
   rage (a red world) at the chapter's end
 
-### Ayame / あやめ — 아야메 (F)
+### Ayame (Takatsuki) / あやめ — 아야메 타카쓰키 (F)
+- surname 高槻 → 타카쓰키, revealed when House demands her name (131,
+  「高槻あやめです」); self-intro order kept surname-first ("타카쓰키
+  아야메입니다"), matching JP formal self-introduction convention
 - high-school girl at 아마치 학원; art student, wants to focus on her own
   work; parents are a sore subject (don't tell them about AARC)
 - polite 존댓말 (`~です/ます`) with adults/strangers she must respect; soft

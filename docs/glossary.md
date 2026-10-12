@@ -95,6 +95,7 @@ everywhere unless the original deliberately shifts it.
 | 氷の女王様 | ice queen | 얼음 여왕 | Story's teasing epithet for Mei (120-052) |
 | 天淵造形美術高等専門学院 | Amachi Institute of Art and Design | 아마치 조형미술고등전문학원 | Ayame's school full name (123); short form 아마치 학원 |
 | エサン | Éssant | 에산 | Mireille's homeland; where she's from (123-015) |
+| 高槻 | Takatsuki | 타카쓰키 | Ayame's surname, revealed to House (131) |
 | シュラウド | Shroud | 슈라우드 | already used since 056/070; formalize the rendering |
 | エイヴ | Aev | 에이브 | the gods who gave Binds (136+); distinct from 에이버리 하우스 (エイヴリー・ハウス) |
 | エイヴリー・ハウス | Avery House | 에이버리 하우스 | House's full name (131) |
@@ -112,7 +113,7 @@ everywhere unless the original deliberately shifts it.
 | レジーナ・サンプソン | Regina Sampson | 레지나 샘슨 | newscaster (137) |
 | マイケル・キーツ | Michael Keats | 마이클 키츠 | full name of 키츠 (137+) |
 | 昼行灯 | lazybones | 게으름뱅이 | (131) |
-| カルトまがい | cult-like | 사이비 컨트 | (131) |
+| カルトまがい | cult-like | 사이비 컬트 | (131); fixed typo (was 컨트) |
 | インナーカラー | inner color | 이너 컬러 | hair-dye style (125) |
 | フラグメント／パルス | Fragment / pulse | 조각 / 펄스 | established 054, reused 130 |
 | 『裏の街』 | the Other City | '뒤의 거리' | residual world where trapped souls go (163+); keep quotes only when JP has 『』 |
