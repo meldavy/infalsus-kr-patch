@@ -537,6 +537,18 @@ check here before improvising a new one.
   아버지/어머니 distance and snaps at the shallow check-ins ("나, 로봇이 아니야")
 - first appears: story 098 (flashback), 104 (phone call)
 
+### Thug / ゴロツキ — (unnamed, M)
+- plainclothes man who, with a second man, tails and corners Story and
+  Ayame near Ayame's school (133); the second/front man is revealed to be
+  the police officer who arrested Story the day she joined AARC
+- speech register: stiff, condescending faux-formal authority — uses `君`
+  (formal-distant "you"), plain declarative endings (だ/だが); reluctant
+  officialdom as a veneer for the threat ("こんなこと、言いたくはないが");
+  cites a vague rumor about Story/Ayame "overstepping their place" and
+  their "company" (交友関係) as grounds for concern. Korean register: cold
+  formal-but-menacing, addresses them as 너/너희, ends in `~다`/`~군`
+- first appears: story 133
+
 ### Shopkeeper / 店主 — (unnamed, M)
 - elderly, curmudgeonly antique-shop owner; mute or refuses to speak —
   communicates via a "Word Box" device (インギスアレイ → 인기스 어레이) that
