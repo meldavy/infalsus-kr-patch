@@ -713,10 +713,10 @@
 838	Tutorial_RecipeSelectCraftingSystem4	여기를 클릭하면 카드 제작이 시작됩니다.
 839	Tutorial_RecipeSelectCraftingSystem5	제작 중인 카드의 스탯은 여기에 표시됩니다.⏎<b>모든 카드는 공격력과 방어력 0에서 시작합니다.</b>
 840	Tutorial_RecipeSelectCraftingSystem6	스탯은 설계도 내 색이 있는 칸의 무리, 컬러존을⏎채우면 상승합니다.⏎⏎컬러존에 커서를 올리면, 그 컬러존을 채웠을 때⏎카드에 부여되는 <b>기초 스탯</b>을 확인할 수⏎있습니다.
-841	Tutorial_RecipeSelectCraftingSystem7	컬러존을 채우려면 같은 색의 <b>입자</b>를⏎그 위에 배치합니다. 실제로 해 봅시다.⏎가이드대로 입자를 놓아 두 개의 컬러존을⏎채워 보세요.
+841	Tutorial_RecipeSelectCraftingSystem7	컬러존을 채우려면 같은 색의 <b>입자</b>를 그 위에 배치합니다.⏎⏎실제로 해 봅시다.⏎가이드대로 입자를 놓아 두 개의 컬러존을 채워 보세요.
 842	Tutorial_RecipeSelectCraftingSystem8	컬러존이 채워지면서⏎카드에 <b>기초 스탯</b>이 부여되었습니다.
 843	Tutorial_RecipeSelectCraftingSystem9	그리고 카드의 최종적인 강함은 기초 스탯에⏎배율이 곱해진 <b>최종 스탯</b>으로 정해집니다.
-844	Tutorial_RecipeSelectCraftingSystem10	설계도에 놓은 입자로 산출되는⏎<b>평균 출력</b> 값이 <b>최종 스탯</b>에 주로⏎영향을 줍니다.
+844	Tutorial_RecipeSelectCraftingSystem10	설계도에 놓은 입자로 산출되는⏎<b>평균 출력</b> 값이 <b>최종 스탯</b>에 주로 영향을 줍니다.
 845	Tutorial_RecipeSelectCraftingSystem11	입자는 저마다 다른 <b>출력</b>을 가지고 있으며,⏎이는 카드의 <b>최종 스탯</b>에 영향을 줍니다.⏎⏎각 입자 아래에 표시된 수치는, 소지한 같은 종류의⏎입자 중 가장 높은 출력을 가진 것입니다.
 846	Tutorial_RecipeSelectCraftingSystem12	가장 높은 출력값 이외의 입자를 사용하고 싶을 때는⏎이렇게 목록에서 선택할 수도 있습니다.
 847	Tutorial_RecipeSelectCraftingSystem13	<b>캐릭터마다 색상 등 사용 가능한 입자 종류가⏎정해져 있습니다.</b>⏎게임 진행에 따라 캐릭터가 사용할 수 있는 입자⏎종류는 점점 늘어납니다.
@@ -843,7 +843,7 @@
 969	NoEncounterSelectedResultsUpper	리멤브런스 미연결
 970	FreePlayDescription	인카운터가 비활성화되어 입자를 획득하지⏎않습니다.⏎곡 점수는 평소처럼 기록됩니다.
 971	Tutorial_DropResults2_Demo	입자를 사용해 카드를 강화하고, 어려운⏎리멤브런스에 맞서 봅시다.⏎데모판 튜토리얼은 여기까지입니다.
-972	Tutorial_RecipeSelectCraftingSystem15	그럼 카드 제작을 확정합시다.⏎⏎여기를 클릭하면 제작할 카드의⏎최종 확인 화면으로 이동합니다.
+972	Tutorial_RecipeSelectCraftingSystem15	그럼 카드 제작을 확정합시다.⏎⏎여기를 클릭하면 제작할 카드의 최종 확인 화면으로 이동합니다.
 973	Tutorial_RecipeSelectCraftingSystem16	여기를 클릭하면 제작할 카드가 확정되고,⏎이번에 설계한 강함의 카드를 얻습니다.
 974	SelectMultiple	다중⏎선택
 976	Crafting_ProgressScenarioUnlockDescription	이 기능은 시나리오를 진행하면 해금됩니다
@@ -889,18 +889,18 @@
 1032	UnformedHex_Description	이 칸에 입자를 배치하고 제작·탐색하면⏎내용이 드러납니다
 1034	ScreenshotDescription	스크린샷이 클립보드에 복사되었습니다
 1035	ReflectUpper	리플렉트
-1045	Tutorial_NotifyMasteryUnlocked0	<b>카드 제작</b>에서 설계도의 마스터리 챌린지가⏎해금되었습니다.⏎'<b>설계도</b>' 버튼을 클릭해서 시도해 봅시다.
+1045	Tutorial_NotifyMasteryUnlocked0	<b>카드 제작</b>에서 설계도의 마스터리 챌린지가 해금되었습니다.⏎'<b>설계도</b>' 버튼을 클릭해서 시도해 봅시다.
 1046	Tutorial_MasteryChallengesTutorial_V2_0	각 설계도에서 마스터리 챌린지에⏎도전할 수 있게 되었습니다.
-1047	Tutorial_MasteryChallengesTutorial_V2_1	각 챌린지를 달성하면 보상으로 캐릭터의⏎스킬을 획득·강화할 수 있습니다.⏎실제로 챌린지에 도전해 봅시다.
+1047	Tutorial_MasteryChallengesTutorial_V2_1	각 챌린지를 달성하면 보상으로 캐릭터의 스킬을 획득·강화할 수 있습니다.⏎⏎실제로 챌린지에 도전해 봅시다.
 1048	Tutorial_MasteryChallengesTutorial_V2_2	여기를 클릭해서 카드 제작을 시작합시다.
-1049	Tutorial_MasteryChallengesTutorial_V2_3	마스터리 챌린지는 이 버튼으로⏎접근할 수 있습니다.
-1050	Tutorial_MasteryChallengesTutorial_V2_4	마스터리 챌린지에서는 한 번의 카드 제작으로⏎특정 스탯 목표 등을 노리게 됩니다.⏎각 설계도에는 여러 개의 챌린지가 있으며,⏎각 챌린지 내용과 보상이 여기에 나열됩니다.
-1051	Tutorial_MasteryChallengesTutorial_V2_5	이번에는 이 챌린지에 도전해 봅시다.⏎챌린지 오른쪽 위의 '고정 표시'를 클릭하면⏎제작 중에도 이번 챌린지 조건인 스탯 목표를⏎고정 표시할 수 있습니다.
+1049	Tutorial_MasteryChallengesTutorial_V2_3	마스터리 챌린지는 이 버튼으로 접근할 수 있습니다.
+1050	Tutorial_MasteryChallengesTutorial_V2_4	마스터리 챌린지에서는 한 번의 카드 제작으로 특정 스탯 목표 등을 노리게 됩니다.⏎각 설계도에는 여러 개의 챌린지가 있으며, 각 챌린지 내용과 보상이 여기에 나열됩니다.
+1051	Tutorial_MasteryChallengesTutorial_V2_5	이번에는 이 챌린지에 도전해 봅시다.⏎챌린지 오른쪽 위의 '고정 표시'를 클릭하면⏎제작 중에도 이번 챌린지 조건인 스탯 목표를 고정 표시할 수 있습니다.
 1052	Tutorial_MasteryChallengesTutorial_V2_6	이 챌린지의 달성 조건은⏎일정 이상의 <b>기초 공격력</b>을 얻는 것입니다.⏎⏎일단 가이드와 같이 입자를 배치해 봅시다.
 1053	Tutorial_MasteryChallengesTutorial_V2_7	이걸로 기초 공격력 목표를 달성했습니다.⏎⏎하지만 하나 더, 챌린지 달성에는 제작 시⏎총 페널티가 0이어야 합니다.
 1054	Tutorial_MasteryChallengesTutorial_V2_8	하지만 지금 니아는 입자를 인접시키지 않고 배치했을 때⏎발생하는 <b>단절</b> 페널티를 무효화하는 스킬을 가지고 있지⏎않습니다. 그러니 컬러존을 채우면서 모든 입자가⏎인접하도록, 마지막 입자를 다시 놓아 봅시다.
-1055	Tutorial_MasteryChallengesTutorial_V2_9	그리고 챌린지 조건을 만족한 카드를⏎제작하면 보상을 획득할 수 있습니다.
-1056	Tutorial_MasteryChallengesTutorial_V2_10	그럼 설계한 카드를 확정하고⏎보상을 받읍시다.
+1055	Tutorial_MasteryChallengesTutorial_V2_9	그리고 챌린지 조건을 만족한 카드를 제작하면 ⏎보상을 획득할 수 있습니다.
+1056	Tutorial_MasteryChallengesTutorial_V2_10	그럼 설계한 카드를 확정하고 보상을 받읍시다.
 1057	Tutorial_MasteryChallengesTutorial_V2_11	이번에 니아가 습득한 스킬은, 한 번의 제작에서⏎동시에 사용할 수 있는 입자 개수를 늘려 줍니다.⏎이처럼 캐릭터의 스킬은 카드 제작 시⏎선택지를 넓혀 줄 수 있습니다.
 1059	Tutorial_RecipeSelectCraftingSystem5_2	소지한 입자는 화면 아래쪽 목록에서⏎선택할 수 있습니다.
 1060	Story_IntroVideo_ShroudSkyDenseDay	낮·슈라우드 밀집형
@@ -920,15 +920,15 @@
 1074	IncludeTypeChanges	색상 변경 가능 포함
 1075	KnownTypeChangesUpper	변경 가능한 색상
 1080	Tutorial_DiscoveryV2_0	설계도의 <b>발견</b>이 해금되었습니다.
-1081	Tutorial_DiscoveryV2_1	<b>발견</b>은 각 설계도의 레이아웃을 확장해⏎나가는 요소입니다. 실제로 해 봅시다.
+1081	Tutorial_DiscoveryV2_1	<b>발견</b>은 각 설계도의 레이아웃을 확장해 나가는 요소입니다. 실제로 해 봅시다.
 1082	Tutorial_DiscoveryV2_2	여기를 클릭해서 카드 제작을 시작합니다.
-1083	Tutorial_DiscoveryV2_3	발견에서는 설계도 내 미탐색 칸──'안개'에⏎숨겨진 컬러존을 찾는 것이 목표입니다.⏎그리고 안개의 가장자리에는 <b>하이라이트</b>가⏎표시됩니다.⏎이는 미발견 컬러존이 있는 방향에 대한⏎힌트입니다.
-1084	Tutorial_DiscoveryV2_4	하지만 발견 초반에는 이 하이라이트의⏎신빙성이 낮고, 부정확한 경우가 더 많습니다.⏎하이라이트의 정확도는 힌트 정확도로⏎여기에 표시됩니다.
-1085	Tutorial_DiscoveryV2_5	안개는 그 위에 입자를 배치하고⏎카드 제작을 확정하면 탐색할 수⏎있습니다.⏎⏎실제로 가이드대로 입자를 놓아 봅시다.
-1086	Tutorial_DiscoveryV2_6	그럼 카드 제작을 마치고 탐색한 칸을⏎확인해 봅시다.
+1083	Tutorial_DiscoveryV2_3	발견에서는 설계도 내 미탐색 칸──'안개'에⏎숨겨진 컬러존을 찾는 것이 목표입니다.⏎그리고 안개의 가장자리에는 <b>하이라이트</b>가 표시됩니다.⏎이는 미발견 컬러존이 있는 방향에 대한 힌트입니다.
+1084	Tutorial_DiscoveryV2_4	하지만 발견 초반에는 이 하이라이트의 신빙성이 낮고,⏎ 부정확한 경우가 더 많습니다.⏎하이라이트의 정확도는 힌트 정확도로⏎여기에 표시됩니다.
+1085	Tutorial_DiscoveryV2_5	안개는 그 위에 입자를 배치하고 카드 제작을 확정하면 탐색할 수⏎있습니다.⏎⏎실제로 가이드대로 입자를 놓아 봅시다.
+1086	Tutorial_DiscoveryV2_6	그럼 카드 제작을 마치고 탐색한 칸을 확인해 봅시다.
 1087	Tutorial_DiscoveryV2_7	여기를 클릭해서 카드 제작을 확정합니다.
 1088	Tutorial_DiscoveryV2_8	제작 시 배치한 입자가 미발견 컬러존에⏎닿아 있었기 때문에, 해당 컬러존과 주변⏎안전 칸이 발견되었습니다.⏎⏎다음 제작부터는 이 일대가 처음부터⏎안전 칸으로 취급됩니다.
-1089	Tutorial_NotifyDiscoveryUnlocked0	<b>발견</b>이 <b>카드 제작</b>에서⏎해금되었습니다.⏎'<b>설계도</b>' 버튼을 클릭해서 시도해 봅시다.
+1089	Tutorial_NotifyDiscoveryUnlocked0	<b>발견</b>이 <b>카드 제작</b>에서 해금되었습니다.⏎'<b>설계도</b>' 버튼을 클릭해서 시도해 봅시다.
 1090	MinorSplashBanner_MasteryChallengeCompleteTitle	마스터리 챌린지 달성
 1091	MinorSplashBanner_NewSkillUnlockedBody	새 스킬 해금
 1092	MinorSplashBanner_DifficultyUnlockedTitle	난이도 해금
@@ -981,8 +981,8 @@
 1182	Tutorial_LoadoutV2_2	각 카드를 장착해서 얻은 <b>총 공격력</b>과⏎<b>총 방어력</b>이 여기에 표시됩니다.⏎이 두 가지가 인카운터에서 당신의 주요⏎스탯이 됩니다.
 1183	Tutorial_LoadoutV2_3	인카운터에서는 상대도 카드를 장착하며,⏎위쪽에는 상대의 스탯이 표시됩니다.⏎당신의 스탯이 상대의 스탯을 웃돌고, 게임⏎중 정확하게 노트를 연주하는 것이 인카운터에서⏎승리하기 위한 핵심입니다.
 1184	Tutorial_LoadoutV2_4	현재 당신은 2장의 카드만 보유하고⏎있지만, 시나리오를 진행하면 더 많은 카드가⏎해금됩니다.
-1185	Tutorial_DiscoveryV2_9	힌트 정확도는 안개를 탐색할 때마다⏎상승하며, 퍼센트가 높을수록 하이라이트가⏎정확해져 컬러존이 숨겨진 방향이⏎좁혀집니다.
-1186	Tutorial_DiscoveryV2_10	이 '하이라이트'를 활용해서, 그 방향에⏎숨겨진 컬러존을 찾아냅시다.
+1185	Tutorial_DiscoveryV2_9	힌트 정확도는 안개를 탐색할 때마다 상승하며,⏎퍼센트가 높을수록 하이라이트가 정확해져⏎컬러존이 숨겨진 방향이 좁혀집니다.
+1186	Tutorial_DiscoveryV2_10	이 '하이라이트'를 활용해서,⏎그 방향에 숨겨진 컬러존을 찾아냅시다.
 1187	Tutorial_LoadoutV2_Part2_0	상대의 카드에는 세트된 페이즈 부근에서⏎스탯 등에 큰 영향을 주는 효과가 있는⏎'특성'이 붙어 있는 경우도 있습니다.⏎커서를 올리면 그 효과를 확인할 수 있습니다.
 1188	Tutorial_Results_FailEncounterConflict	로드아웃 구성이 충분하지 않아 커넥트⏎인카운터에서 패배했습니다.⏎이 인카운터를 클리어하려면 더 강력한⏎카드를 새로 제작해야 할 수도 있습니다.
 1189	Tutorial_Results_FailEncounterMeditation	로드아웃 구성이 충분하지 않아 리플렉트⏎인카운터에서 패배했습니다.⏎이 인카운터를 클리어하려면 더 강력한⏎카드를 새로 제작해야 할 수도 있습니다.
@@ -990,8 +990,8 @@
 1191	Tutorial_Results_FailEncounter_DiveOverlay1	각 페이즈를 클릭하면 해당 페이즈에서의⏎데미지 등 상세 내용을 확인할 수 있습니다.⏎카드에 특성이 부여되어 있었다면, 그 특성에⏎의한 스탯 변화도 확인할 수 있습니다.
 1192	Tutorial_Results_FailEncounterMissHp	인카운터에서 승리하려면 곡이 끝날 때⏎<b>미스 게이지</b>가 0 이상이어야 합니다.
 1193	Tutorial_RecipeSelectCraftingSystem17	카드 제작의 소재가 되는 입자는⏎각각 다른 형상과 색상을 가지고 있습니다.⏎형상이 큰 입자일수록 하나로 여러 칸을⏎채울 수 있습니다.⏎⏎각 캐릭터는 처음에는 한정된 종류의⏎입자만 사용할 수 있습니다.
-1194	Tutorial_RecipeSelectCraftingSystem18	여기가 카드 제작 전 최종 확인 화면입니다.⏎이후 게임이 진행되면, 이 화면에서 카드에⏎'특성'을 부여할 수도 있게 됩니다.
-1195	Tutorial_RecipeSelectCraftingSystem19	그 밖에 선택 화면에서는 설계도별 정보를⏎확인할 수 있습니다.⏎⏎예를 들어 이 미리보기에서는, 제작을⏎시작하기 전에 컬러존 등 설계도의⏎레이아웃을 확인할 수 있습니다.
+1194	Tutorial_RecipeSelectCraftingSystem18	여기가 카드 제작 전 최종 확인 화면입니다.⏎이후 게임이 진행되면, 이 화면에서 카드에 '특성'을 부여할 수도 있게 됩니다.
+1195	Tutorial_RecipeSelectCraftingSystem19	그 밖에 선택 화면에서는 설계도별 정보를 확인할 수 있습니다.⏎⏎예를 들어 이 미리보기에서는, 제작을 시작하기 전에 컬러존 등 설계도의 레이아웃을 확인할 수 있습니다.
 1250	Tutorial_DropResults0_1	<b>입자</b>는 카드 제작 소재가 되는⏎아이템으로, 다양한 형상과 색상을 가지고⏎있습니다.⏎⏎또한 입자 하나하나는 각기 다른 출력값을⏎가지고 있으며, 제작 시 사용하는 입자의⏎출력 크기가 카드의 스탯을 좌우합니다.
 1251	MasteryUpper	마스터리
 1252	Challenges	챌린지
@@ -1024,19 +1024,19 @@
 1320	Tutorial_Results_CraftingPenalties7	페널티는 각 캐릭터 스킬로 일부를⏎무효화할 수 있습니다.⏎스킬 습득 및 레벨업은 게임을 진행하면⏎가능해집니다.
 1321	Tutorial_NotifyCharacterSelect0	현재 <b>캐릭터 스킬</b>의 현황은 홈 화면의⏎캐릭터 선택에서 확인할 수 있습니다.⏎여기를 클릭하면 캐릭터 선택으로⏎이동합니다.
 1322	Tutorial_ExplorationMode2	발견을 효율적으로 진행하기 위해, <b>설계도⏎탐색 모드에서는 확정 시 카드가 제작되지⏎않습니다</b>.⏎다만 탐색 모드에서도 제작 가능한 카드의⏎공격력과 방어력이 1 이상이어야 한다는⏎조건은 동일합니다.
-1323	Tutorial_RecipeSelectCraftingSystem20	또한 <b>한 번의 제작에서 배치할 수 있는⏎입자의 한도</b>는 각 설계도마다 정해져⏎있습니다.⏎여기서 그 한도를 확인할 수 있습니다.
-1324	Tutorial_RecipeSelectCraftingSystem21	이 수치는 이 설계도 내 모든 컬러존을⏎채웠을 때 얻을 수 있는 기초 스탯의⏎합계입니다.
-1325	Tutorial_RecipeSelectCraftingSystem22	여기를 클릭하면 카드 인벤토리로⏎이동합니다.⏎제작한 카드는 이 화면에서 확인할 수⏎있습니다.
+1323	Tutorial_RecipeSelectCraftingSystem20	또한 <b>한 번의 제작에서 배치할 수 있는 입자의 한도</b>는⏎각 설계도마다 정해져 있습니다.⏎여기서 그 한도를 확인할 수 있습니다.
+1324	Tutorial_RecipeSelectCraftingSystem21	이 수치는 이 설계도 내 모든 컬러존을 채웠을 때 얻을 수 있는 기초 스탯의 합계입니다.
+1325	Tutorial_RecipeSelectCraftingSystem22	여기를 클릭하면 카드 인벤토리로 이동합니다.⏎제작한 카드는 이 화면에서 확인할 수 있습니다.
 1326	Tutorial_RecipeSelectCraftingSystem23	이것이 방금 제작한 카드입니다.
-1327	Tutorial_RecipeSelectCraftingSystem24	또한 설계도를 새로 얻으면, 동시에 그⏎설계도로 제작할 수 있는 카드도 1장⏎얻습니다.
-1328	Tutorial_RecipeSelectCraftingSystem25	카드는 같은 설계도로 몇 장이든 제작할⏎수 있습니다.⏎카드의 스탯은 제작할 때마다 고유하게⏎결정됩니다.
+1327	Tutorial_RecipeSelectCraftingSystem24	또한 설계도를 새로 얻으면,⏎동시에 그 설계도로 제작할 수 있는 카드도⏎1장 얻습니다.
+1328	Tutorial_RecipeSelectCraftingSystem25	카드는 같은 설계도로 몇 장이든 제작할 수 있습니다.⏎카드의 스탯은 제작할 때마다 고유하게 결정됩니다.
 1329	Tutorial_RecipeSelectCraftingSystem26	같은 이름의 카드는 로드아웃에 1장만⏎편성할 수 있습니다.⏎⏎그 밖에, 불필요한 카드는 이 화면에서⏎언제든지 삭제할 수 있습니다.
 1330	Tutorial_RecipeSelectCraftingSystem27	그 밖에, 소지한 입자는 여기를 클릭하면⏎확인할 수 있습니다.
-1331	Tutorial_MasteryChallengesTutorial_V2_4_1	챌린지 조건이 되는 스탯 목표 등은⏎위쪽에……
-1332	Tutorial_MasteryChallengesTutorial_V2_4_2	해당 챌린지를 달성했을 때의 보상은⏎아래쪽에 표시됩니다.⏎보상에 커서를 올리면 획득 가능한 스킬의⏎상세 정보를 확인할 수 있습니다.
-1333	Tutorial_MasteryChallengesTutorial_V2_7_1	페널티는 일부 캐릭터 스킬로 무효화할⏎수 있습니다.⏎그리고 이 설계도는 니아와 대응하므로,⏎니아의 캐릭터 스킬이 반영됩니다.
-1334	Tutorial_MasteryChallengesTutorial_V2_8_2	이걸로 이번에 선택한 챌린지의 스탯⏎목표를 만족하면서, 페널티가 0이라는⏎조건을 모두 달성했습니다.
-1335	Tutorial_DiscoveryV2_5_2	발견은 이후 제작의 선택지를 늘리는 것이⏎목적입니다. 그러므로 발견을 위한 제작에서는⏎카드 제작 조건만 만족하면, 페널티나 실제⏎스탯은 신경 쓰지 않아도 괜찮습니다.
+1331	Tutorial_MasteryChallengesTutorial_V2_4_1	챌린지 조건이 되는 스탯 목표 등은 위쪽에……
+1332	Tutorial_MasteryChallengesTutorial_V2_4_2	해당 챌린지를 달성했을 때의 보상은 아래쪽에 표시됩니다.⏎보상에 커서를 올리면 획득 가능한 스킬의 상세 정보를⏎확인할 수 있습니다.
+1333	Tutorial_MasteryChallengesTutorial_V2_7_1	페널티는 일부 캐릭터 스킬로 무효화할 수 있습니다.⏎그리고 이 설계도는 니아와 대응하므로,⏎니아의 캐릭터 스킬이 반영됩니다.
+1334	Tutorial_MasteryChallengesTutorial_V2_8_2	이걸로 이번에 선택한 챌린지의 스탯 목표를 만족하면서,⏎페널티가 0이라는 조건을 모두 달성했습니다.
+1335	Tutorial_DiscoveryV2_5_2	발견은 이후 제작의 선택지를 늘리는 것이 목적입니다.⏎그러므로 발견을 위한 제작에서는 카드 제작 조건만 만족하면,⏎페널티나 실제 스탯은 신경 쓰지 않아도 괜찮습니다.
 1336	Tutorial_DiscoveryV2_11	새로운 컬러존을 발견하면⏎힌트 정확도는 초기값으로 리셋됩니다.
 1337	Tutorial_DiscoveryV2_12	그리고 설계도 내 컬러존을 모두 찾았으므로,⏎이 <b>설계도의 발견</b>은 완료되었습니다!
 1338	Tutorial_Results_FailEncounter_DiveOverlay0_2	DIVE 상세에서는 시계열로, 곡 연주 중⏎당신과 상대의 HP 변화를 확인할 수⏎있습니다.⏎각 페이즈 경계에 있는 점에 커서를⏎올리면 상세한 수치를 확인할 수 있습니다.
@@ -1053,9 +1053,9 @@
 1406	Modal_EnableAssistMode	활성화
 1407	Modal_DisableAssistMode	비활성화
 1408	Modal_FullExperience	게임 풀 체험
-1409	Modal_AssistModeEnableDescription	『In Falsus』에는 인카운터를 통한 전투나⏎카드 제작, 캐릭터 육성 등 정교한 <b>퍼즐⏎요소가 있는 시스템</b>이 포함되어 있습니다.⏎이 시스템들은 『In Falsus』의 게임 경험을⏎최대화하도록 설계되어 있습니다.⏎⏎<b>어시스트 모드</b>를 통해 접근성 기능으로서⏎이러한 퍼즐 요소를 비활성화할 수 있습니다.⏎⏎어시스트 모드를 활성화하시겠습니까?⏎설정에서 언제든지 온/오프를 전환할 수⏎있습니다.
-1410	Modal_AssistModeReallyEnableDescription	『In Falsus』에는 인카운터를 통한 전투나⏎카드 제작, 캐릭터의 육성 등 정교한 <b>퍼즐⏎요소가 있는 시스템</b>이 포함되어 있습니다.⏎이 시스템들은 『In Falsus』의 게임 경험을⏎최대화하도록 설계되어 있습니다.⏎⏎<b>어시스트 모드</b>를 통해 접근성 기능으로서⏎이러한 퍼즐 요소를 비활성화할 수 있습니다.⏎⏎어시스트 모드를 활성화하시겠습니까?⏎설정에서 언제든지 온/오프를 전환할 수⏎있습니다.
-1411	Modal_AssistModeReallyDisableDescription	어시스트 모드를 비활성화하면, 건너뛴⏎분량의 퍼즐 요소가 자동으로 해금됩니다.⏎⏎다만 어시스트 모드에서 건너뛴 퍼즐 요소는⏎클리어 처리되지 않으며, 직접 클리어해야⏎합니다.⏎그러므로 시나리오를 계속 진행하려면⏎많은 퍼즐 요소를 다시 진행해야 할 수⏎있습니다.⏎⏎또한 어시스트 모드로 진행하는 동안,⏎퍼즐 요소가 있는 시스템에 대한 튜토리얼이⏎건너뛰어졌을 수 있습니다.⏎어시스트 모드를 비활성화한 후에는 각 화면⏎오른쪽 위의 튜토리얼 다시 보기 기능도⏎함께 확인해 주세요.⏎⏎⏎어시스트 모드는 설정에서 언제든지 온/오프를⏎전환할 수 있습니다.
+1409	Modal_AssistModeEnableDescription	『In Falsus』에는 인카운터를 통한 전투나 카드 제작, 캐릭터 육성 등 정교한 <b>퍼즐요소가 있는 시스템</b>이 포함되어 있습니다.⏎이 시스템들은 『In Falsus』의 게임 경험을 최대화하도록 설계되어 있습니다.⏎⏎<b>어시스트 모드</b>를 통해 접근성 기능으로서 이러한 퍼즐 요소를 비활성화할 수 있습니다.⏎⏎어시스트 모드를 활성화하시겠습니까?⏎설정에서 언제든지 온/오프를 전환할 수 있습니다.
+1410	Modal_AssistModeReallyEnableDescription	어시스트 모드를 활성화하면 다음 요소를 이용할 수 없게 됩니다.⏎⏎<b>카드 제작·인카운터 전투·캐릭터 강화</b>⏎⏎어시스트 모드는 언제든 끌 수 있습니다.⏎다만 모드가 켜져 있는 동안 건너뛴 진행 분량에 대해서는⏎카드와 캐릭터를 직접 강화해야 합니다.⏎⏎정말 어시스트 모드를 활성화하시겠습니까?
+1411	Modal_AssistModeReallyDisableDescription	어시스트 모드를 비활성화하면, 건너뛴 분량의 퍼즐 요소가 자동으로 해금됩니다.⏎⏎다만 어시스트 모드에서 건너뛴 퍼즐 요소는 클리어 처리되지 않으며, 직접 클리어해야 합니다.⏎그러므로 시나리오를 계속 진행하려면 많은 퍼즐 요소를 다시 진행해야 할 수 있습니다.⏎⏎또한 어시스트 모드로 진행하는 동안, 퍼즐 요소가 있는 시스템에 대한 튜토리얼이 건너뛰어졌을 수 있습니다.⏎어시스트 모드를 비활성화한 후에는 각 화면 오른쪽 위의 튜토리얼 다시 보기 기능도 함께 확인해 주세요.⏎⏎⏎어시스트 모드는 설정에서 언제든지 온/오프를 전환할 수 있습니다.
 1499	SettingsSection_Information	각종 정보
 1500	SettingsName_ThirdPartyCredits	라이선스 표기
 1501	ThirdPartyCredits_Show	표시
