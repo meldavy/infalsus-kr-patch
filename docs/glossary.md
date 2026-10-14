@@ -151,6 +151,7 @@ everywhere unless the original deliberately shifts it.
 | 『コエイヴス・インフェルナム』 | Coaevus Infernum | '코에이부스 인페르나움' | the hell Nia glimpses in Keats's memory (145-133); keep quotes |
 | 定人／バインド色（段階） | Bind stage colors | 바인드 n단계, 초록/오렌지/빨강 | colors can show *stages*: orange 2단계 = agitation (151-025), 초록 3단계 = fear (150-004); keep 오렌지/초록 |
 | 国家反逆罪 | treason | 국가반역죄 | Story's suspected charge (034-123, 034-186) |
+| 常凪 | tokonagi | 토코나기 | the "curse"/gift Fell names and bestows on Nia at 177's climax (177-049); phonetic transliteration, kanji has no standard Sino-Korean reading |
 | 『サムサ』 | "Samsa" | '삼사' | in-world novelist (034-128); keep the quotes |
 | 天淵市警 | Amachi City Police | 아마치 시 경찰 | 市警 = 시 경찰 (034-135); 詩經 오독 피하려 띄어 씀 |
 | 『半実』 | half-truth | '반쪽 진실' | contrast to '진실'; Freya's motif (040-047, 167-016); keep quotes |
