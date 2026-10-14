@@ -1067,6 +1067,8 @@
 1507	Recipe_ToHub	홈 화면으로
 1508	Recipe_ToEncounter	인카운터로
 1509	CommandFailed_Upper	커맨드 실패
+1520	PhotosensitivityTitle	광과민성 발작 주의
+1521	PhotosensitivityDescription	극히 일부 이용자는 비디오 게임에 등장할 수 있는 점멸광이나 특정 무늬 같은 시각적 자극에 노출되면 발작을 일으킬 수 있습니다.⏎발작이나 간질 병력이 없는 사람도 게임 플레이 중 미처 진단되지 않은 증상으로 인해 이러한 '광과민성 간질 발작'을 겪을 수 있습니다.⏎⏎이러한 증상이 나타나면 즉시 플레이를 중단하고 반드시 의사와 상담하시기 바랍니다.
 1522	Recap_Upper	요약
 1523	Hub	홈 화면
 1524	CharacterSelect	캐릭터 화면

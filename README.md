@@ -459,6 +459,18 @@ Unity 6000.3.9f1 / il2cpp 메타데이터 v39 빌드에서 실패합니다
   로케일마다 하나씩: 일본어, 한국어, 중국어 번체, 중국어 간체 —
   **한국어는 이미 `NotoSerifKR-Regular`/`NotoSerifKR-Bold`로 완전히
   연결되어 있습니다**).
+- **`infalsus_Data/sharedassets0.assets`에도 EN 기본 폰트 중 일부의
+  별도 사본이 박혀 있습니다**(`Supreme-Regular`/`Bold`/`Medium`,
+  `OT-PUDShinGoPr6N-Regular`, `AP-OTF-UDShinGoPr6N-DeBold` — 2026-10-14
+  확인, GitHub issue #8). Addressables 번들이 다 로드되기 전에 그려지는
+  화면(광과민성 경고, 그리고 그 직후 뜨는 스토리 첫 대사로 추정)이 이
+  사본을 참조하는 것으로 보입니다. `find_font_bundle`은 Addressables
+  번들 디렉터리만 뒤지므로 이 사본은 따로 패치해야 하며,
+  `pack-fonts`는 이제 위 번들 패치에 이어 자동으로 이 파일도
+  검사해서 같은 식별자가 있으면 같이 교체합니다(IL2CPP typetree
+  generator가 필요 — §4.5 설정이 없으면 경고만 찍고 건너뜁니다).
+  `sharedassets0.assets`는 Addressables 시스템 밖에 있어서 `resources.assets`와
+  마찬가지로 임베디드 typetree가 없습니다.
 
 EN-locale 접근 방식과 관련 있는 패밀리들:
 

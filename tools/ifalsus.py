@@ -71,6 +71,18 @@ UI_STRINGS_SCRIPT_NAME = "StringsMapping"
 UI_STRINGS_FIELDS = ["English", "Japanese", "Korean", "TraditionalChinese", "SimplifiedChinese"]
 UNITY_ENGINE_VERSION = "6000.3.9f1"  # this game's build; see README §4.7
 
+# sharedassets0.assets carries its OWN separate copies of some EN-default
+# FastTextAsset font binaries (Supreme-Regular/Bold/Medium,
+# OT-PUDShinGoPr6N-Regular, AP-OTF-UDShinGoPr6N-DeBold -- confirmed by
+# identifier, 2026-10-14), used by whatever scene renders before the
+# Addressables bundles finish loading (the photosensitivity warning, and
+# likely the very first story line shown right after it). `find_font_bundle`
+# only searches the Addressables bundle dir, so these never got patched by
+# `pack-fonts` -- any Korean text shown during that early window rendered in
+# the stock EN font with no Hangul glyphs (tofu). Outside the Addressables
+# system like resources.assets, so it needs the IL2CPP typetree generator too.
+SHAREDASSETS_FONT_FILE = "sharedassets0.assets"
+
 GAME_DATA_DIRNAME = "infalsus_Data"
 
 # Candidate Steam library roots for auto-detection (WSL/Windows/macOS/Linux).
@@ -1110,16 +1122,25 @@ def load_il2cpp_generator(game):
     return gen
 
 
-def load_ui_strings_env(game):
-    """Load resources.assets (+ its sibling globalgamemanagers.assets, needed
-    to resolve the MonoScript PPtr) with the IL2CPP typetree generator
-    attached, and return (env, obj) for the StringsMapping MonoBehaviour."""
-    gen = load_il2cpp_generator(game)
-    path = os.path.join(game.data_dir, UI_STRINGS_DATA_FILE)
+def load_il2cpp_data_file_env(game, data_file, gen=None):
+    """Load a main IL2CPP data file (resources.assets, sharedassets0.assets --
+    anything outside the Addressables bundle system) with the IL2CPP typetree
+    generator attached, so its MonoBehaviours can be read/written. `gen` can
+    be passed in to reuse one already built (it's shared, read-only state)."""
+    gen = gen or load_il2cpp_generator(game)
+    path = os.path.join(game.data_dir, data_file)
     if not os.path.exists(path):
         raise SystemExit(f"error: {path} not found")
     env = UnityPy.load(path)
     env.typetree_generator = gen
+    return env
+
+
+def load_ui_strings_env(game):
+    """Load resources.assets (+ its sibling globalgamemanagers.assets, needed
+    to resolve the MonoScript PPtr) with the IL2CPP typetree generator
+    attached, and return (env, obj) for the StringsMapping MonoBehaviour."""
+    env = load_il2cpp_data_file_env(game, UI_STRINGS_DATA_FILE)
     obj = None
     for o in env.objects:
         if o.type.name == "MonoBehaviour" and o.path_id == UI_STRINGS_PATH_ID:
@@ -1392,6 +1413,68 @@ def cmd_pack_fonts(args, game):
         obj.save_typetree(tt)
         log(f"  replaced {ident} <- {ttf_path} ({len(fdata)} bytes)")
     commit_or_dry(args, game, fn, "fonts", env)
+    _patch_sharedassets_fonts(args, game, replacements)
+
+
+def _patch_sharedassets_fonts(args, game, replacements):
+    """sharedassets0.assets holds its own separate copies of some EN-default
+    FastTextAsset font binaries, used by whatever scene renders before the
+    Addressables bundles finish loading (see SHAREDASSETS_FONT_FILE above).
+    Patch whichever of `replacements`' identifiers turn up there too, same
+    as the main font bundle -- skipped (with a warning, not a hard failure)
+    if the IL2CPP DummyDLLs aren't set up, since that's an optional one-time
+    step and pre-existing `pack-fonts` usage shouldn't start failing over it."""
+    try:
+        gen = load_il2cpp_generator(game)
+    except SystemExit as e:
+        log(f"  skipping {SHAREDASSETS_FONT_FILE} font check: {e}")
+        return
+    env = load_il2cpp_data_file_env(game, SHAREDASSETS_FONT_FILE, gen=gen)
+    hits = []
+    for obj in env.objects:
+        if obj.type.name != "MonoBehaviour":
+            continue
+        try:
+            tt = obj.read_typetree()
+        except Exception:
+            continue
+        ident = tt.get("Identifier")
+        if ident in replacements:
+            hits.append((obj, tt, ident))
+    if not hits:
+        log(f"  {SHAREDASSETS_FONT_FILE}: no matching FastTextAsset identifiers found, nothing to do")
+        return
+    changed = 0
+    for obj, tt, ident in hits:
+        ttf_path = replacements[ident]
+        orig_bytes = bytes(tt.get("RawBytes") or [])
+        orig_ext = sniff_font_ext(orig_bytes)
+        if is_valid_font(orig_bytes):
+            with tempfile.NamedTemporaryFile(suffix=orig_ext, delete=False) as tf:
+                tf.write(orig_bytes)
+                orig_tmp = tf.name
+            try:
+                fdata = merge_missing_glyphs(ttf_path, orig_tmp)
+            finally:
+                os.unlink(orig_tmp)
+        else:
+            fdata = open(ttf_path, "rb").read()
+        if not is_valid_font(fdata):
+            raise SystemExit(f"error: {ttf_path} does not look like a TTF/OTF font")
+        tt["RawBytes"] = list(fdata)
+        obj.save_typetree(tt)
+        log(f"  [{SHAREDASSETS_FONT_FILE}] replaced {ident} <- {ttf_path} ({len(fdata)} bytes)")
+        changed += 1
+    if getattr(args, "dry_run", False):
+        log(f"[dry-run] would pack {changed} font(s) into {SHAREDASSETS_FONT_FILE}")
+        return
+    game_path = os.path.join(game.data_dir, SHAREDASSETS_FONT_FILE)
+    if os.path.exists(game_path):
+        backup_file(game, game_path, os.path.join("data", SHAREDASSETS_FONT_FILE))
+    data_bytes = env.file.save()
+    out_path = os.path.join(game.patch_dir, GAME_DATA_DIRNAME, SHAREDASSETS_FONT_FILE)
+    atomic_write_bytes(out_path, data_bytes)
+    log(f"packed {changed} font(s) -> {out_path}")
 
 
 # ---------------------------------------------------------------------------
