@@ -10,7 +10,7 @@ everywhere unless the original deliberately shifts it.
 | JP original | EN (shipped) | KO (authoritative) | notes |
 |---|---|---|---|
 | 『AARC』(アーク) | AARC | AARC | keep Latin; JP puns with 方舟(ark); KO pun works with 아크 |
-| 方舟 (ark) | ark | 방주 | used in the AARC wordplay |
+| 方舟 (ark) | ark | 방주 | used in the AARC wordplay. When JP ruby-glosses it as アーク (`<ruby>方舟<rt>アーク</rt></ruby>` / `<ruby>箱舟<rt>アーク</rt></ruby>`), render as `<ruby>방주<rt>아크</rt></ruby>` to keep the AARC pun visible in KO too (issue #7, 2026-10-14) |
 | RMI | RMI | RMI | in-world unexplained phenomenon; never translate |
 | ヴェルド | Verld (currency) | 베르도 | fictional currency; 4万ヴェルド → 4만 베르도 |
 | ダイブ | Dive | 다이브 | gameplay term |
@@ -29,12 +29,13 @@ everywhere unless the original deliberately shifts it.
 | 顧問 | advisor | 담당자 | club advisor (고문=拷問 동음 회피) |
 | 探偵 | detective | 탐정 | Iris's mocking name for Freya |
 | 死と夏 | Death and Summer | 죽음과 여름 | recurring speaker label; Io's hacker persona |
+| 4.10.7.2 (ruby 死と夏) | 4.10.7.2 | `<ruby>4.10.7.2<rt>죽음과 여름</rt></ruby>` | JP goroawase (number wordplay): 4=し, 10=とお/と, 7=な/しち, 2=つ/に → しとなつ → 死と夏. Whenever JP ruby-glosses the number itself (009/011/012/015/022/023/026/034-170/036/037/094-004/115/217), keep the ruby in KO so the reader gets the same number↔meaning link JP readers do (issue #8, 2026-10-14). Where JP leaves it bare (034-120 spells 死と夏 out in full already; 094-034/035, incl. the in-story "is this wordplay?" line) leave KO bare too — do not spoil 094-035's reveal by glossing it |
 | パームテック / パムテ | Pomn Tech | 폼테크 | Io's hidden mini computer; one word, no space |
 | 業端 | (work terminal) | 업무 폰 | Mei's second, work-only phone |
 | Ulom | Ulom | 울롬 | car marque |
 | コネクトマップ | Connect Map | 커넥트 맵 | in-world maps app |
 | Connect | Connect | 커넥트 | the friend-network app everyone uses (contacts) |
-| Dis-Connect | Dis-Connect | 디스커넥트 | the messaging app Story types through |
+| Dis-Connect | Dis-Connect | 디스코네 | the messaging app Story types through; renders as `<ruby>Dis-Connect<rt>디스코네</rt></ruby>` on first/title mentions, bare 디스코네 elsewhere (was 디스커넥트 before issue #7, 2026-10-14) |
 | スパイラル | Spiral | 스파이럴 | another chat app (Mei & Nia exchange handles, 042) |
 | Anywave | Anywave | 애니웨이브 | video app Iris watches botany content on (046) |
 | オールヴェルド | Allverld | 올베르도 | the city/region Io and Mireille are from |
@@ -76,7 +77,7 @@ everywhere unless the original deliberately shifts it.
 | ノール | Nor | 노르 | what House calls Fell (103-057); Nia is baffled — leave as-is |
 | メモリー | Memory | 메모리 | Mei's childhood stage-name/nickname from her parents (098) |
 | ヴェリキア | Velikia | 베리키아 | Story's homeland, across the ocean from 올베르도 (090) |
-| 無口（ミュート） | Mute | 말을 하지 않는 사람 / 말 없는 사람 | in-world term for mutes (Story); corpus renders it descriptively — no single KO noun |
+| 無口（ミュート） | Mute | `<ruby>뮤트<rt>무언</rt></ruby>` | in-world term for mutes (Story, Tsuru, etc.); was rendered descriptively with no fixed noun ("말을 하지 않는 사람" etc.) until issue #7 (2026-10-14) — now a fixed ruby term everywhere the JP has 無口(ミュート), names.tsv's `Mute` row included. Inflect the particle on 뮤트 (vowel-final: 뮤트가/는/를/라서/인/일/냐 — never a consonant-final particle) |
 | 『儚闇』 | the Dark | '덧없는 어둠' | named dive-space between/around mindscapes (096-011, recurs 176/178/189); keep quotes |
 | 『共通空間』 | Shared Space | '공통 공간' | named dive-space; time runs faster than outside (096-011) |
 | 困る（『困って』） | bother / be troubled | 곤란(해하다) | Story's motif — people were "곤란" by her; Mireille rejects the word (090). Keep the quote marks where JP has 『』 |
