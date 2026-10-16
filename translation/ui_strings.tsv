@@ -696,13 +696,13 @@
 821	Tutorial_ColorAdvantage0	<b>색상 상성</b>이 발동했습니다.
 822	Tutorial_ColorAdvantage1	상성상 유리한 카드는 <b>공격력과 방어력이⏎상승합니다</b>. 이 상승분은 로드아웃 전체의⏎공격력과 방어력에도 반영됩니다.
 823	Tutorial_ColorAdvantage2	오른쪽 위의 색상 상성표를 클릭하면⏎자세한 상성을 확인할 수 있습니다.
-824	Tutorial_Remembrance0	<b>리멤브런스</b>가 해금되었습니다.⏎리멤브런스는 뮤직 플레이에서 도전할 수 있는⏎인카운터입니다.⏎⏎여기를 클릭해서 리멤브런스를 선택해 봅시다.
+824	Tutorial_Remembrance0	<b>리멤브런스</b>가 해금되었습니다.⏎리멤브런스는 뮤직 플레이에서 도전할 수 있는 인카운터입니다.⏎여기를 클릭해서 리멤브런스를 선택해 봅시다.
 825	Tutorial_Remembrance1	해금된 리멤브런스는 목록으로 여기에 표시됩니다.⏎이번에는 맨 위의 리멤브런스가 선택됩니다.
 826	Tutorial_Remembrance2	리멤브런스는 각각 특정 캐릭터와 연결되어 있으며,⏎해당 캐릭터의 스킬이 그 인카운터에서 발동합니다.
 827	Tutorial_Remembrance3	리멤브런스를 클리어하면 보상으로 <b>'입자'</b>를⏎획득합니다.⏎이는 <b>카드 제작 시 소재로 사용하는 아이템</b>입니다.⏎자세한 내용은 카드 제작 튜토리얼에서도 확인할⏎수 있습니다.
 828	Tutorial_Remembrance4	각 리멤브런스마다 획득할 수 있는 입자 종류가⏎다릅니다. 또한 게임 후반의 리멤브런스일수록⏎더 강력한 입자를 얻을 수 있습니다.⏎다양한 종류의 입자를 모으기 위해, 새로운⏎리멤브런스를 해금하면 획득 가능한 입자를⏎확인하는 것을 추천합니다.
-829	Tutorial_Remembrance5	시나리오 내 인카운터와 달리, <b>리멤브런스는⏎HP가 0이 되어도 곡이 중단되지 않습니다</b>.⏎인카운터의 성패는 입자 획득 여부에만 영향을⏎줍니다. 더 좋은 보상을 위해 높은 성적을⏎노려 보세요.
-830	Tutorial_Remembrance6	그럼 선택한 리멤브런스를 위해⏎로드아웃을 편성해 봅시다.
+829	Tutorial_Remembrance5	시나리오 내 인카운터와 달리, <b>리멤브런스는 HP가 0이 되어도 곡이 중단되지 않습니다</b>.⏎인카운터의 성패는 입자 획득 여부에만 영향을 줍니다. 더 좋은 보상을 위해 높은 성적을 노려 보세요.
+830	Tutorial_Remembrance6	그럼 선택한 리멤브런스를 위해 로드아웃을 편성해 봅시다.
 831	Tutorial_RemembranceOutOfIota0	<b>보유한 입자를 모두 사용했습니다.</b>
 832	Tutorial_RemembranceOutOfIota1	입자는 <b>뮤직 플레이에서 도전할 수 있는⏎'리멤브런스'</b>로 얻을 수 있습니다.⏎지금 이동하시겠습니까?
 833	Tutorial_RemembranceOutOfIota2	리멤브런스 튜토리얼은 이후 뮤직 플레이에서⏎확인할 수 있습니다.
@@ -711,7 +711,7 @@
 836	Tutorial_RecipeSelectCraftingSystem2	하나의 설계도로 같은 카드를 몇 장이든 만들 수⏎있지만, <b>로드아웃에는 같은 이름의 카드를 2장⏎이상 동시에 편성할 수 없습니다</b>.
 837	Tutorial_RecipeSelectCraftingSystem3	각 설계도는 특정 캐릭터와 연결되어 있으며,⏎<b>설계도에 대응하는 캐릭터의 스킬만이</b> 제작 중⏎적용됩니다. 스킬에는 제작 중 제한을 완화하는⏎효과 등이 있습니다.
 838	Tutorial_RecipeSelectCraftingSystem4	여기를 클릭하면 카드 제작이 시작됩니다.
-839	Tutorial_RecipeSelectCraftingSystem5	제작 중인 카드의 스탯은 여기에 표시됩니다.⏎<b>모든 카드는 공격력과 방어력 0에서 시작합니다.</b>
+839	Tutorial_RecipeSelectCraftingSystem5	완성될 카드의 공격력과 방어력은 여기에 표시됩니다.⏎제작을 시작할 때는 두 스탯 모두 0이며,⏎제작을 완료하려면 <b>공격력과 방어력이 모두 1 이상</b>이어야 합니다.
 840	Tutorial_RecipeSelectCraftingSystem6	스탯은 설계도 내 색이 있는 칸의 무리, 컬러존을⏎채우면 상승합니다.⏎⏎컬러존에 커서를 올리면, 그 컬러존을 채웠을 때⏎카드에 부여되는 <b>기초 스탯</b>을 확인할 수⏎있습니다.
 841	Tutorial_RecipeSelectCraftingSystem7	컬러존을 채우려면 같은 색의 <b>입자</b>를 그 위에 배치합니다.⏎⏎실제로 해 봅시다.⏎가이드대로 입자를 놓아 두 개의 컬러존을 채워 보세요.
 842	Tutorial_RecipeSelectCraftingSystem8	컬러존이 채워지면서⏎카드에 <b>기초 스탯</b>이 부여되었습니다.
@@ -728,7 +728,7 @@
 853	Tutorial_DiscoveryPart1_4	하이라이트의 정확도는 <b>직감 정확도</b>로⏎여기에 표시됩니다.⏎직감 정확도는 안개를 걷을 때마다 증가하며,⏎새로운 구역을 발견하면 초기화됩니다.
 854	Tutorial_DiscoveryPart1_5	여기에는 이 설계도의 발견 진행도가⏎표시됩니다. 설계도를 모두 발견하면⏎<b>캐릭터 스킬</b>을 얻을 수 있는 '마스터리⏎챌린지'에 도전할 수 있습니다.
 855	Tutorial_DiscoveryPart2_0	이 설계도의 가장자리에서 <b>미확정 구역</b>을⏎감지했습니다.
-856	Tutorial_DiscoveryPart2_1	미확정 구역을 발견하려면, <b>카드 제작 시 입자가⏎그 미확정 구역에 배치되어 있어야</b> 합니다.⏎<b>어느 한 칸과라도 겹쳐 있으면 그 구역 전체가⏎드러납니다</b>. 안개에 가려진 칸이라도 마찬가지⏎입니다.
+856	Tutorial_DiscoveryPart2_1	미확정 구역을 발견하려면, <b>카드 제작 시 입자가 그⏎미확정 구역에 배치되어 있어야</b> 합니다. <b>어느 한⏎칸과라도 겹쳐 있으면 그 구역 전체가 드러납니다</b>.⏎안개에 가려진 칸이라도 마찬가지입니다.
 857	Tutorial_DiscoveryPart2_2	미확정 구역은 발견되기 전까지는 위험 칸으로⏎취급되어 <b>관련된 모든 페널티가 발동합니다</b>.⏎모든 카드는 제작 시 <b>공격력과 방어력이⏎1 이상</b> 필요하다는 점을 잊지 마세요.
 858	Tutorial_MasteryChallengesTutorial0	<b>마스터리 챌린지</b>를 통해 새로운 캐릭터⏎스킬을 얻을 수 있게 되었습니다.
 859	Tutorial_MasteryChallengesTutorial1	설계도를 모두 발견하면 그 설계도의⏎마스터리 챌린지가 해금됩니다.
@@ -746,7 +746,7 @@
 871	Tutorial_CraftingColorChange0	컬러존 중에는 카드에 <b>색상 변경</b>을⏎부여하는 효과를 가진 것도 있습니다.
 872	Tutorial_CraftingColorChange1	<b>색상 변경</b>이 부여되면, 최종 확인 시⏎카드의 색상을 변경할 수 있습니다.⏎<b>색상 상성</b>에 따른 유리함을 노릴 때⏎유용할 것입니다.
 873	Tutorial_CraftingRange0	방금 채운 것처럼, 컬러존 중에는 카드의 <b>카드 범위</b>를⏎넓히는 효과를 가진 것도 있습니다. 카드 범위는⏎특성 스킬의 효과가 발동하는 페이즈에 영향을⏎주는 특수 스탯입니다.
-874	Tutorial_CraftingRange1	<b>카드 범위의 칸은 인카운터에서의 페이즈를⏎나타냅니다.</b>⏎왼쪽으로 뻗은 칸은 그 카드 특성의 발동을⏎칸 수만큼 페이즈 앞당기고, 오른쪽으로 뻗은⏎칸은 그 카드 특성의 종료를 칸 수만큼⏎페이즈 늦춥니다.
+874	Tutorial_CraftingRange1	<b>카드 범위의 칸은 인카운터에서의 페이즈를 나타냅니다.</b>⏎왼쪽으로 뻗은 칸은 그 카드 특성의 발동을 칸 수만큼 페이즈 앞당기고,⏎오른쪽으로 뻗은 칸은 그 카드 특성의 종료를 칸 수만큼 페이즈 늦춥니다.
 875	Tutorial_ScenarioEncounterFail0	시나리오 인카운터에서 패배했습니다.⏎이야기를 계속 읽으려면 이 인카운터를⏎클리어해야 합니다.
 876	Tutorial_ScenarioEncounterFail_FirstSongs0	인카운터는 카드의 강함뿐만 아니라 리듬 게임⏎퍼포먼스에도 좌우됩니다. 인카운터를 클리어하기⏎어렵다면, 곡의 난이도를 조절하는 것도⏎하나의 방법일 수 있습니다.
 877	Tutorial_ScenarioEncounterFail_NeedMoreCards0	편성 전체의 <b>공격력</b>과 <b>방어력</b>을⏎확인해 보세요.⏎자신의 공격력·방어력이 상대의 공격력·방어력을⏎웃돌면 인카운터 승리에 가까워집니다.⏎⏎빈 슬롯에 카드를 최대한 배치하는 것이⏎스탯을 확보하는 가장 효과적인 방법입니다.
@@ -789,7 +789,7 @@
 914	Tutorial_Timeline0	<b>타임라인</b>에 오신 것을 환영합니다. 여기서⏎각 이야기를 따라갈 수 있습니다.⏎또한 이미 읽은 장면도 다시 읽을 수 있습니다.
 915	Tutorial_Timeline1	각 캐릭터의 시점으로 그려지는 시나리오를 통해⏎《In Falsus》 세계의 진실을 파헤쳐 봅시다.
 916	Tutorial_DropResults0	인카운터를 클리어해서 <b>입자</b>를⏎획득했습니다.
-917	Tutorial_DropResults1	입자는 <b>뮤직 플레이</b> 내에서 도전할 수 있는⏎인카운터, '리멤브런스'에서도 획득할 수⏎있으며, 시나리오 인카운터를 처음 클리어할⏎때도 획득할 수 있습니다.
+917	Tutorial_DropResults1	입자는 <b>뮤직 플레이</b> 내에서 도전할 수 있는 인카운터, '리멤브런스'에서도 획득할 수 있으며,⏎시나리오 인카운터를 처음 클리어할 때도 획득할 수 있습니다.
 918	FinalizeCard	카드 최종 확인
 919	AvailableTraitsUpper	특성 후보
 920	SwitchColorUpper	색상 변경
@@ -841,7 +841,7 @@
 967	BaseFortitude_Upper	기초 방어력
 968	Hub_Upper	홈
 969	NoEncounterSelectedResultsUpper	리멤브런스 미연결
-970	FreePlayDescription	인카운터가 비활성화되어 입자를 획득하지⏎않습니다.⏎곡 점수는 평소처럼 기록됩니다.
+970	FreePlayDescription	인카운터가 비활성화되어 입자를 획득하지 않습니다.⏎곡 점수는 평소처럼 기록됩니다.
 971	Tutorial_DropResults2_Demo	입자를 사용해 카드를 강화하고, 어려운⏎리멤브런스에 맞서 봅시다.⏎데모판 튜토리얼은 여기까지입니다.
 972	Tutorial_RecipeSelectCraftingSystem15	그럼 카드 제작을 확정합시다.⏎⏎여기를 클릭하면 제작할 카드의 최종 확인 화면으로 이동합니다.
 973	Tutorial_RecipeSelectCraftingSystem16	여기를 클릭하면 제작할 카드가 확정되고,⏎이번에 설계한 강함의 카드를 얻습니다.
@@ -927,7 +927,7 @@
 1085	Tutorial_DiscoveryV2_5	안개는 그 위에 입자를 배치하고 카드 제작을 확정하면 탐색할 수⏎있습니다.⏎⏎실제로 가이드대로 입자를 놓아 봅시다.
 1086	Tutorial_DiscoveryV2_6	그럼 카드 제작을 마치고 탐색한 칸을 확인해 봅시다.
 1087	Tutorial_DiscoveryV2_7	여기를 클릭해서 카드 제작을 확정합니다.
-1088	Tutorial_DiscoveryV2_8	제작 시 배치한 입자가 미발견 컬러존에⏎닿아 있었기 때문에, 해당 컬러존과 주변⏎안전 칸이 발견되었습니다.⏎⏎다음 제작부터는 이 일대가 처음부터⏎안전 칸으로 취급됩니다.
+1088	Tutorial_DiscoveryV2_8	제작 시 배치한 입자가 미발견 컬러존에 닿아 있었기 때문에,⏎<b>해당 컬러존과 주변 안전 칸</b>이 발견되었습니다.⏎⏎다음 제작부터는 이 일대가 처음부터 안전 칸으로 취급됩니다.
 1089	Tutorial_NotifyDiscoveryUnlocked0	<b>발견</b>이 <b>카드 제작</b>에서 해금되었습니다.⏎'<b>설계도</b>' 버튼을 클릭해서 시도해 봅시다.
 1090	MinorSplashBanner_MasteryChallengeCompleteTitle	마스터리 챌린지 달성
 1091	MinorSplashBanner_NewSkillUnlockedBody	새 스킬 해금
@@ -1030,7 +1030,7 @@
 1326	Tutorial_RecipeSelectCraftingSystem23	이것이 방금 제작한 카드입니다.
 1327	Tutorial_RecipeSelectCraftingSystem24	또한 설계도를 새로 얻으면,⏎동시에 그 설계도로 제작할 수 있는 카드도⏎1장 얻습니다.
 1328	Tutorial_RecipeSelectCraftingSystem25	카드는 같은 설계도로 몇 장이든 제작할 수 있습니다.⏎카드의 스탯은 제작할 때마다 고유하게 결정됩니다.
-1329	Tutorial_RecipeSelectCraftingSystem26	같은 이름의 카드는 로드아웃에 1장만⏎편성할 수 있습니다.⏎⏎그 밖에, 불필요한 카드는 이 화면에서⏎언제든지 삭제할 수 있습니다.
+1329	Tutorial_RecipeSelectCraftingSystem26	같은 이름의 카드는 로드아웃에 1장만 편성할 수 있습니다.⏎⏎그 밖에, 불필요한 카드는 이 화면에서 언제든지 삭제할 수 있습니다.
 1330	Tutorial_RecipeSelectCraftingSystem27	그 밖에, 소지한 입자는 여기를 클릭하면⏎확인할 수 있습니다.
 1331	Tutorial_MasteryChallengesTutorial_V2_4_1	챌린지 조건이 되는 스탯 목표 등은 위쪽에……
 1332	Tutorial_MasteryChallengesTutorial_V2_4_2	해당 챌린지를 달성했을 때의 보상은 아래쪽에 표시됩니다.⏎보상에 커서를 올리면 획득 가능한 스킬의 상세 정보를⏎확인할 수 있습니다.
@@ -1088,7 +1088,7 @@
 1553	PremasteryCompletedDescriptionPlural	제작을 확정하면 {0}개의 <b>마스터리⏎챌린지를 완료</b>할 수 있습니다
 1554	IntegrateToComplete	제작으로 완료 가능
 1556	ScenarioCompletedTitle	시나리오 클리어를 축하합니다!⏎뮤직 플레이에서는 더 큰 도전이⏎기다리고 있습니다
-1557	ScenarioCompletedDescription	이렇게, 기한이 있는 세계에서 살아가는⏎다섯 사람의 마지막 학창 시절이 막을⏎내렸습니다.⏎⏎게임 내 전 70곡이 모두 해금되었습니다.⏎『뮤직 플레이』로 가서 음악 게임의 완주에⏎도전해 봅시다!⏎⏎In Falsus의 세계와 콘텐츠의 추가 전개는⏎앞으로의 업데이트도 기대해 주세요.⏎⏎In Falsus를 플레이해 주셔서⏎감사합니다!
+1557	ScenarioCompletedDescription	이렇게, 기한이 있는 세계에서 살아가는 다섯 사람의 마지막 학창 시절이 막을 내렸습니다.⏎⏎게임 내 전 70곡이 모두 해금되었습니다.⏎『뮤직 플레이』로 가서 리듬 게임을 더 깊이 즐기고 실력을 갈고닦아 보세요!⏎⏎In Falsus의 세계와 콘텐츠가 더욱 확장될 앞으로의 업데이트도 기대해 주세요.⏎⏎In Falsus를 플레이해 주셔서 감사합니다!
 1558	DiscoveryUpper	발견
 1559	PotenciesShownDescription	표시된 수치는 입자 출력의 상한입니다
 1560	ChallengeCannotCompleteTitle	현재 캐릭터 스킬 상황으로는⏎챌린지 조건을 달성할 수 없습니다
