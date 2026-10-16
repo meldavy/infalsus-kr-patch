@@ -53,9 +53,9 @@
 54	Reflect	리플렉트
 55	opponent	상대
 56	Remembrance	리멤브런스
-57	Connected	커넥트 성공
-58	ConnectFailed	커넥트 실패
-59	Collapsed	붕괴
+57	Connected	CONNECTED
+58	ConnectFailed	CONNECT FAILED
+59	Collapsed	COLLAPSED
 60	ReflectionComplete	리플렉트 완료
 61	ReflectionFailed	리플렉트 실패
 62	Loadout	로드아웃
@@ -311,7 +311,7 @@
 373	BestBattleScore_Upper	인카운터 최고 점수
 374	OppositionsCards_Upper	상대 카드
 375	Drops_Upper	획득
-376	Connected_Upper	커넥트 성공
+376	Connected_Upper	CONNECTED
 377	MaxPotency_Upper	최대 출력
 379	Modal_SongUnlockedTitle	곡 해금
 380	Modal_SongsUnlockedTitle	곡 해금
@@ -645,13 +645,13 @@
 762	Tutorial_SongSelectUltDescription	난이도 ULT(ULTIMATE) 이상에서는 레인이 어두워지지⏎않고 가운데 4개 레인이 항상 모두 활성 상태입니다.⏎⏎가운데 4개의 키를 세 손가락으로 좌우로 옮겨가며⏎노트를 연주하는 것을 추천합니다.
 763	Tutorial_SongSelectFbdTitle	난이도 FBD
 764	Tutorial_SongSelectFbdDescription	FBD(FORBIDDEN) 난이도에서는 아래쪽 레인에⏎여러 레인에 걸친 와이드 노트가 등장합니다.⏎⏎<b>아무 키나 하나만</b> 눌러도 연주할 수 있습니다.⏎걸쳐 있는 레인 중 어느 키를 눌러도 상관없습니다.
-765	ConnectFailed_Upper	커넥트 실패
+765	ConnectFailed_Upper	CONNECT FAILED
 771	SpeedUpper	속도
 772	Level_lvl	Lv.
 773	QuitToTitleScreen	타이틀 화면으로
 774	Settings_RefreshRate_Uncapped	무제한
 776	SettingsExplain_Vsync	수직 동기화(VSync) 켜기/끄기를⏎전환합니다.
-779	Centered_Upper	중앙
+779	Centered_Upper	CENTERED
 780	TierAscendingUpper	TIER (오름차순)
 781	TierDescendingUpper	TIER (내림차순)
 782	ColorAscendingUpper	색상별 (오름차순)
@@ -1066,7 +1066,7 @@
 1506	Recipe_NavigateToEncounterQuestionDescription	인카운터로 돌아가시겠습니까?
 1507	Recipe_ToHub	홈 화면으로
 1508	Recipe_ToEncounter	인카운터로
-1509	CommandFailed_Upper	커맨드 실패
+1509	CommandFailed_Upper	COMMAND FAILED
 1520	PhotosensitivityTitle	광과민성 발작 주의
 1521	PhotosensitivityDescription	극히 일부 이용자는 비디오 게임에 등장할 수 있는 점멸광이나 특정 무늬 같은 시각적 자극에 노출되면 발작을 일으킬 수 있습니다.⏎발작이나 간질 병력이 없는 사람도 게임 플레이 중 미처 진단되지 않은 증상으로 인해 이러한 '광과민성 간질 발작'을 겪을 수 있습니다.⏎⏎이러한 증상이 나타나면 즉시 플레이를 중단하고 반드시 의사와 상담하시기 바랍니다.
 1522	Recap_Upper	요약
@@ -1082,7 +1082,7 @@
 1532	Tooltip_UnableToCraftCardZeroStatsCheckPenalties	<b>공격력이 0</b>이거나 <b>방어력이 0인</b> 카드는⏎제작할 수 없습니다⏎(페널티로 인해 스탯이 감소했습니다)
 1540	Timeline_EndOfGameText	남은 시간 9년───
 1541	UnlockedInScenario	시나리오를 진행하면 해금
-1550	Commanded_Upper	커맨드됨
+1550	Commanded_Upper	COMMANDED
 1551	CannotDeleteLastCardPrompt_Title	카드를 삭제할 수 없습니다
 1552	PremasteryCompletedDescription	제작을 확정하면 {0}개의 <b>마스터리⏎챌린지를 완료</b>할 수 있습니다
 1553	PremasteryCompletedDescriptionPlural	제작을 확정하면 {0}개의 <b>마스터리⏎챌린지를 완료</b>할 수 있습니다
