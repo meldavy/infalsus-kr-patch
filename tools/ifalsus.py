@@ -31,6 +31,7 @@ import time
 
 try:
     import UnityPy
+    from PIL import Image  # UnityPy dependency
 except ImportError:
     print("error: UnityPy is required. Install with: pip install UnityPy", file=sys.stderr)
     sys.exit(1)
@@ -84,6 +85,10 @@ UNITY_ENGINE_VERSION = "6000.3.9f1"  # this game's build; see README §4.7
 SHAREDASSETS_FONT_FILE = "sharedassets0.assets"
 
 GAME_DATA_DIRNAME = "infalsus_Data"
+
+# Addressables prefix of the per-locale baked-text story textures
+# (title cards, nightmare/memory sequences, ...). See `pack-textures`.
+TEXT_TEXTURE_PREFIX = "Assets/BuildSpecificAssets/release/sp-story/assets/text/"
 
 # Candidate Steam library roots for auto-detection (WSL/Windows/macOS/Linux).
 GAME_SEARCH_GLOBS = [
@@ -1482,6 +1487,86 @@ def _patch_sharedassets_fonts(args, game, replacements):
 # ---------------------------------------------------------------------------
 
 
+# ---------------------------------------------------------------------------
+# Commands: baked-text textures (sp-story/assets/text/*_en.png)
+# ---------------------------------------------------------------------------
+#
+# Some story beats show their text as a picture instead of a dialogue line
+# (chapter title cards, the 097 nightmare sequence, the memory montage, the
+# opening/ending lines). Each is a per-locale BC7 Texture2D in its own
+# Addressables bundle; with no Korean locale the EN copy is what the game
+# shows. `extract-textures` dumps every EN copy to work/textures/ as a
+# reference/template, and `pack-textures` swaps in any same-named PNG found
+# in translation/textures/. A texture without a Korean PNG is left alone.
+
+
+def text_texture_addresses(index):
+    """{filename: (bundle_fn, address)} for every EN baked-text texture."""
+    out = {}
+    for fn, rec in index.items():
+        for c in rec.get("containers", []):
+            if c.startswith(TEXT_TEXTURE_PREFIX) and c.endswith("_en.png"):
+                out[c[len(TEXT_TEXTURE_PREFIX):]] = (fn, c)
+    return out
+
+
+def load_text_texture(game, bundle_fn, address, prefer_patch=False, pristine=False):
+    """`pristine=True` reads the backed-up original when there is one, so
+    extracting from an install that already has the patch copied over still
+    yields the English textures."""
+    path = game.bundle_source_path(bundle_fn, prefer_patch=prefer_patch)
+    backup = os.path.join(game.workspace, "backups", "bundles", bundle_fn)
+    if pristine and os.path.exists(backup):
+        path = backup
+    env = UnityPy.load(path)
+    obj = dict(env.container.items()).get(address)
+    if obj is None or obj.type.name != "Texture2D":
+        raise SystemExit(f"error: {address} in {bundle_fn} is not a Texture2D")
+    return env, obj
+
+
+def ko_texture_files(game):
+    src_dir = os.path.join(game.workspace, "translation", "textures")
+    if not os.path.isdir(src_dir):
+        return src_dir, []
+    return src_dir, sorted(f for f in os.listdir(src_dir) if f.endswith(".png"))
+
+
+def cmd_extract_textures(args, game):
+    addrs = text_texture_addresses(game.load_index())
+    out_dir = os.path.join(game.workspace, "work", "textures")
+    os.makedirs(out_dir, exist_ok=True)
+    for name, (fn, address) in sorted(addrs.items()):
+        _env, obj = load_text_texture(game, fn, address, pristine=True)
+        obj.read().image.save(os.path.join(out_dir, name))
+    log(f"extracted {len(addrs)} text textures -> {out_dir}")
+
+
+def cmd_pack_textures(args, game):
+    src_dir, files = ko_texture_files(game)
+    if not files:
+        log(f"pack-textures: no PNGs in {src_dir}; nothing to pack")
+        return
+    addrs = text_texture_addresses(game.load_index())
+    unknown = [f for f in files if f not in addrs]
+    if unknown:
+        raise SystemExit(f"error: no game texture named {unknown} (expected e.g. memory_1_en.png; see work/textures/)")
+    for name in files:
+        fn, address = addrs[name]
+        env, obj = load_text_texture(game, fn, address, prefer_patch=True)
+        tex = obj.read()
+        img = Image.open(os.path.join(src_dir, name)).convert("RGBA")
+        if img.size != (tex.m_Width, tex.m_Height):
+            raise SystemExit(
+                f"error: {name} is {img.size[0]}x{img.size[1]}, "
+                f"game texture is {tex.m_Width}x{tex.m_Height}"
+            )
+        tex.set_image(img)  # re-encodes in the original format (BC7)
+        tex.save()
+        commit_or_dry(args, game, fn, f"texture {name}", env)
+    log(f"{'validated' if getattr(args, 'dry_run', False) else 'packed'} {len(files)} text textures")
+
+
 def cmd_verify(args, game):
     if not run_verify(game):
         sys.exit(1)
@@ -1566,6 +1651,23 @@ def run_verify(game):
         print(f"fonts: {len(data['assets'])}, invalid: {bad}")
         if bad:
             ok = False
+    # 5. Korean text textures: each names a game texture, same size
+    src_dir, files = ko_texture_files(game)
+    if files:
+        addrs = text_texture_addresses(game.load_index())
+        bad = []
+        for name in files:
+            if name not in addrs:
+                bad.append(f"{name} (no such game texture)")
+                continue
+            orig = os.path.join(game.workspace, "work", "textures", name)
+            if os.path.exists(orig):
+                a, b = Image.open(os.path.join(src_dir, name)).size, Image.open(orig).size
+                if a != b:
+                    bad.append(f"{name} ({a[0]}x{a[1]}, game {b[0]}x{b[1]})")
+        print(f"text textures: {len(files)}/{len(addrs)} translated, bad: {bad}")
+        if bad:
+            ok = False
     print("VERIFY:", "OK" if ok else "PROBLEMS FOUND")
     return ok
 
@@ -1623,6 +1725,7 @@ def cmd_unpack(args, game):
     cmd_extract_trait_descriptions(args, game)
     cmd_extract_iota_titles(args, game)
     cmd_extract_iota_descriptions(args, game)
+    cmd_extract_textures(args, game)
     dll_dir = il2cpp_dll_dir(game)
     if os.path.isdir(dll_dir) and any(f.endswith(".dll") for f in os.listdir(dll_dir)):
         cmd_extract_ui_strings(args, game)
@@ -1673,6 +1776,7 @@ def cmd_repack(args, game):
     cmd_pack_trait_descriptions(args, game)
     cmd_pack_iota_titles(args, game)
     cmd_pack_iota_descriptions(args, game)
+    cmd_pack_textures(args, game)
     dll_dir = il2cpp_dll_dir(game)
     if os.path.isdir(dll_dir) and any(f.endswith(".dll") for f in os.listdir(dll_dir)):
         cmd_pack_ui_strings(args, game)
@@ -1701,7 +1805,7 @@ def main():
     sub = p.add_subparsers(dest="cmd", required=True)
 
     sub.add_parser("unpack", help="one-command extract: every extract-* step + sync translation/ into work/").set_defaults(func=cmd_unpack)
-    sp = sub.add_parser("repack", help="one-command pack: sync + sanity check + every pack-* step (text tables; fonts are separate)")
+    sp = sub.add_parser("repack", help="one-command pack: sync + sanity check + every pack-* step (text tables + textures; fonts are separate)")
     sp.add_argument("--locale-map", default="Korean->English",
                     help="source->target field, applied to every table, e.g. Korean->English (default)")
     sp.add_argument("--allow-partial", action="store_true", help="pack even if some ids/keys are missing from work/")
@@ -1785,6 +1889,11 @@ def main():
     sp.add_argument("--locale-map", default="Korean->English")
     sp.add_argument("--dry-run", action="store_true", help="validate only; do not write")
     sp.set_defaults(func=cmd_pack_iota_descriptions)
+
+    sub.add_parser("extract-textures", help="dump baked-text story textures (EN) to work/textures/").set_defaults(func=cmd_extract_textures)
+    sp = sub.add_parser("pack-textures", help="pack translation/textures/*.png over the matching story textures")
+    sp.add_argument("--dry-run", action="store_true", help="validate only; do not write")
+    sp.set_defaults(func=cmd_pack_textures)
 
     sub.add_parser("extract-ui-strings", help="dump Str.StringsMapping (UI chrome text) to JSON/TSV").set_defaults(func=cmd_extract_ui_strings)
     sp = sub.add_parser("pack-ui-strings", help="pack edited UI strings back into resources.assets")

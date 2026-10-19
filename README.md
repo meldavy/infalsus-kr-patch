@@ -111,7 +111,7 @@ export INFALSUS_GAME_PATH="/mnt/d/SteamLibrary/steamapps/common/In Falsus"
 | 명령어               | 방향 | 하는 일 |
 |-----------------------|-----------|--------------|
 | `unpack`               | 출력       | 아래 모든 `extract-*` 단계를 실행한 뒤 `translation/`을 `work/`로 동기화 |
-| `repack`               | 출력       | 동기화 → `verify` → 아래 텍스트 `pack-*` 단계를 모두 실행 |
+| `repack`               | 출력       | 동기화 → `verify` → 아래 텍스트·텍스처 `pack-*` 단계를 모두 실행 |
 | `locate`              | 읽기      | 탐지된 게임 경로 출력 |
 | `index`               | 읽기      | 모든 AssetBundle을 한 번 스캔(`work/bundle_index.json`에 캐시, 재개 가능) |
 | `extract-scripts`     | 출력       | SAM 스크립트 파일 290개를 복호화해 `work/scripts/`로 |
@@ -136,12 +136,14 @@ export INFALSUS_GAME_PATH="/mnt/d/SteamLibrary/steamapps/common/In Falsus"
 | `pack-iota-titles`    | 출력       | 수정된 입자 제목을 패킹 |
 | `extract-iota-descriptions` | 출력 | 입자 설명 테이블을 덤프 (게임 데이터가 플레이스홀더, §4.4 참고) |
 | `pack-iota-descriptions` | 출력    | 수정된 입자 설명을 패킹 |
+| `extract-textures`    | 출력       | 글자가 그림으로 박힌 스토리 텍스처(EN) 46장을 `work/textures/`로 추출 (§4.8) |
+| `pack-textures`       | 출력       | `translation/textures/*.png`를 같은 이름의 게임 텍스처에 덮어써 `patch/`로 |
 | `extract-ui-strings`  | 출력       | UI 텍스트(`StringsMapping`)를 `work/ui_strings/`로 덤프 (`work/il2cpp_dlls/` 필요, §4.5 참고) |
 | `pack-ui-strings`     | 출력       | 수정된 UI 문자열을 `patch/infalsus_Data/resources.assets`로 패킹 |
 | `extract-fonts`       | 출력       | 내장 폰트를 `work/fonts/`로 추출 |
 | `list-fonts`          | 읽기      | 폰트 패밀리와 로케일별 폰트 세트 표시 |
 | `pack-fonts`          | 출력       | 내장 폰트 바이너리를 교체 → `patch/` |
-| `verify`              | 읽기      | 무결성 검사(커버리지, 개수, 폰트 유효성) |
+| `verify`              | 읽기      | 무결성 검사(커버리지, 개수, 폰트 유효성, 텍스처 이름·크기) |
 | `restore`             | 입력       | `backups/`에서 모든 원본 파일 복원 |
 
 번역자용 보조 스크립트:
@@ -361,10 +363,8 @@ rawStoryNameTypeMapping: { Ids: [{Value: "Nia"}, ...],           # 원본 이름
 
 이 도구가 건드리지 않는 그 밖의 이름/문자열 테이블:
 
-- **스토리 타이틀 카드**: 로케일별 PNG
-  `sp-story/assets/text/<name>_<jp|en|hans|hant>.png` — 텍스트가 아닌
-  이미지입니다. 한국어 버전이 아예 없어서 EN 로케일에서는 영어 이미지로
-  폴백됩니다. 이 프로젝트의 범위 밖입니다.
+- **스토리 텍스트 이미지**(타이틀 카드 등)는 테이블이 아니라 텍스처라서
+  별도로 다룹니다 — §4.8 참고.
 
 ### 4.5 UI 문자열: `StringsMapping` (`infalsus_Data/resources.assets`)
 
@@ -586,6 +586,34 @@ IL2CPP switch문을 패치해야 하는데, 이는 위험하다고 판단해 하
 않습니다. EN-locale-carry 방식은 **네이티브 패치가 전혀 필요
 없습니다.**
 
+### 4.8 글자가 그림인 스토리 텍스처 (`translation/textures/`)
+
+일부 연출은 대사를 대사창이 아니라 **그림**으로 보여 줍니다: 장 타이틀
+카드(`title_*`, `arc_*`, `eoa_text_*`), 097화 악몽 시퀀스(`nightmare-*`),
+기억 몽타주(`memory_*`), 037화(`first_lie_*`), 오프닝/엔딩 문장
+(`End_*`), RMI 카운트다운(`RMI_*`). 모두
+`Assets/BuildSpecificAssets/release/sp-story/assets/text/<name>_<jp|en|hans|hant>.png`
+주소의 BC7 Texture2D이며, 한국어 로케일이 없으므로 게임은 EN 사본을
+씁니다.
+
+- `extract-textures`(`unpack`에 포함)가 EN 사본 46장을 원래 이름 그대로
+  `work/textures/`에 PNG로 뽑습니다. 해상도·위치 참고용 템플릿입니다.
+  `backups/`에 원본이 있으면 그쪽에서 읽으므로, 패치를 이미 덮어쓴
+  설치본에서도 영어 원본이 나옵니다.
+- 한글판은 **같은 파일 이름, 같은 해상도**로 `translation/textures/`에
+  넣습니다(예: `memory_1_en.png`). 투명 배경 RGBA PNG.
+- `pack-textures`(`repack`에 포함)가 이름이 맞는 텍스처만 BC7로 다시
+  인코딩해 교체합니다. 한글판이 없는 텍스처는 건드리지 않습니다.
+  이름이 게임에 없거나 해상도가 다르면 `verify`/`pack-textures`가
+  실패합니다.
+- 번들 파일 이름은 빌드마다 바뀌지만 주소 기준으로 찾으므로 영향이
+  없습니다. (외부 텍스처 덤프 도구가 붙이는
+  `<번들해시>_<path_id>_texture.png` 이름은 빌드 의존적이니 위 이름으로
+  바꿔서 넣을 것.)
+- 그림 속 문장은 해당 대사 줄(예: `097-001`~`008`,
+  `075-043`~`053`)의 `translation/ko` 번역과 일치시켜야 합니다. 대사를
+  고치면 그림도 다시 만들어야 합니다.
+
 ## 5. 번역 작업 흐름
 
 이미 진행된 번역이 따르고 있는 용어·캐릭터 말투 결정은
@@ -638,7 +666,8 @@ translation/                    # 우리의 결과물 -- 우리가 배포하는 
 ├── trait_descriptions.tsv       # 특성 스킬 설명, `<Id><TAB><IdStr><TAB><korean>`
 ├── iota_titles.tsv              # 입자 제목 (게임 데이터 비어 있음)
 ├── iota_descriptions.tsv        # 입자 설명 (게임 데이터 플레이스홀더)
-└── script_overrides.tsv         # 스크립트 연출 오버라이드 (§4.2.1)
+├── script_overrides.tsv         # 스크립트 연출 오버라이드 (§4.2.1)
+└── textures/<name>_en.png       # 글자가 그림인 스토리 텍스처의 한글판 (§4.8)
 fonts/                          # 행간이 패치된 NanumBarunGothic + 라이선스 (§4.6)
 tools/                          # 추출 / 패킹 / QA 도구
 docs/                           # 작업 흐름, 스타일 가이드, 용어집, 캐릭터 정보
@@ -656,6 +685,7 @@ work/                           # 추출된, 도구가 다루는 데이터
 ├── names/names.json             # 전체 캐릭터 이름 테이블
 ├── ui_strings/ui_strings.json   # 모든 UI 문자열의 JP/EN/CN + 우리 한국어
 ├── il2cpp_dlls/                  # Cpp2IL DummyDLL, UI 문자열 읽기/쓰기에 필요
+├── textures/                    # 원본 EN 스토리 텍스처 PNG (§4.8)
 └── fonts/                       # 추출된 TTF/OTF + fonts.json
 patch/                          # 패킹 결과물; 게임 디렉터리 구조를 그대로 반영
 backups/                        # 이 도구가 덮어쓸 모든 파일의 원본
@@ -677,8 +707,9 @@ backups/                        # 이 도구가 덮어쓸 모든 파일의 원�
   패치로만 고칠 수 있습니다(이 프로젝트 범위 밖).
 - **설정 드롭다운에 한국어가 없음**: EN-locale 방식에서는 게임이
   계속 영어로 실행되므로 바꿀 것이 없습니다.
-- **타이틀 카드는 이미지입니다** — 챕터 타이틀 PNG는 영어 그대로
-  남습니다.
+- **글자가 그림인 텍스처** — `translation/textures/`에 한글판이 없는
+  것은 영어 그대로 남습니다(§4.8). 원본의 옅은 그림자 효과는 한글판에
+  직접 그려 넣어야 합니다.
 - **`sam` 폴더는 모든 로케일이 공유합니다** — `.sps`의 인라인
   영어는 테이블 셀이 비어 있을 때 *모든* 로케일에 쓰이는 폴백
   텍스트입니다. 이유를 확실히 알지 못한다면 `.sps` 파일을 직접
