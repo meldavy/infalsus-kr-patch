@@ -11,7 +11,7 @@ everywhere unless the original deliberately shifts it.
 |---|---|---|---|
 | 『AARC』(アーク) | AARC | AARC | keep Latin; JP puns with 方舟(ark); KO pun works with 아크 |
 | 方舟 (ark) | ark | 방주 | used in the AARC wordplay. When JP ruby-glosses it as アーク (`<ruby>方舟<rt>アーク</rt></ruby>` / `<ruby>箱舟<rt>アーク</rt></ruby>`), render as `<ruby>방주<rt>아크</rt></ruby>` to keep the AARC pun visible in KO too (issue #7, 2026-10-14) |
-| RMI | RMI | RMI | in-world unexplained phenomenon; never translate |
+| RMI | RMI | RMI | in-world unexplained phenomenon; keep "RMI" in dialogue. Full name (Regnant Multiversal Index / 多元統御標) appears only in the RMI_mainline texture: 다중우주 통제 지표, with RMI as ruby. Adopted from issue #12 |
 | ヴェルド | Verld (currency) | 베르도 | fictional currency; 4万ヴェルド → 4만 베르도 |
 | ダイブ | Dive | 다이브 | gameplay term |
 | 『真実』 | "truth" | '진실' | quoted concept; keep the quote marks when JP has them |
