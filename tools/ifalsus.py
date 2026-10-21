@@ -194,6 +194,9 @@ def merge_missing_glyphs(replacement_path: str, original_path: str) -> bytes:
     replacement["maxp"].numGlyphs = len(glyph_order)
     log(f"    + merged {len(added)} glyph(s) missing from {os.path.basename(replacement_path)}, "
         f"found in {os.path.basename(original_path)}")
+    # Keep the replacement's own head.modified instead of stamping "now", so
+    # the same inputs always produce byte-identical output.
+    replacement.recalcTimestamp = False
     buf = io.BytesIO()
     replacement.save(buf)
     return buf.getvalue()
@@ -1127,13 +1130,25 @@ def load_il2cpp_generator(game):
     return gen
 
 
-def load_il2cpp_data_file_env(game, data_file, gen=None):
+def load_il2cpp_data_file_env(game, data_file, gen=None, pristine=False):
     """Load a main IL2CPP data file (resources.assets, sharedassets0.assets --
     anything outside the Addressables bundle system) with the IL2CPP typetree
     generator attached, so its MonoBehaviours can be read/written. `gen` can
     be passed in to reuse one already built (it's shared, read-only state)."""
     gen = gen or load_il2cpp_generator(game)
     path = os.path.join(game.data_dir, data_file)
+    backup = os.path.join(game.workspace, "backups", "data", data_file)
+    if pristine and os.path.exists(backup):
+        # Read the backed-up original's bytes, but resolve its external
+        # references (globalgamemanagers.assets etc.) against the game's
+        # data dir -- backups/data/ doesn't hold those siblings, and without
+        # them no MonoBehaviour in the file can be read.
+        env = UnityPy.Environment(path=game.data_dir)
+        with open(backup, "rb") as f:
+            env.load_file(f.read(), name=data_file)
+        env.file = next(iter(env.files.values()))
+        env.typetree_generator = gen
+        return env
     if not os.path.exists(path):
         raise SystemExit(f"error: {path} not found")
     env = UnityPy.load(path)
@@ -1261,11 +1276,20 @@ def cmd_pack_ui_strings(args, game):
 # ---------------------------------------------------------------------------
 
 
+def pristine_bundle_path(game, bundle_fn):
+    """The backed-up original of `bundle_fn` when there is one, else the live
+    game copy. Font steps must start from the unpatched fonts: reading an
+    already-patched bundle would merge glyphs into fonts that were merged
+    before (orig_orig_* glyph names)."""
+    backup = os.path.join(game.workspace, "backups", "bundles", bundle_fn)
+    return backup if os.path.exists(backup) else os.path.join(game.bundles_dir, bundle_fn)
+
+
 def cmd_extract_fonts(args, game):
     index = game.load_index()
     fn = game.find_font_bundle(index)
     log(f"font bundle: {fn}")
-    env = UnityPy.load(os.path.join(game.bundles_dir, fn))
+    env = UnityPy.load(pristine_bundle_path(game, fn))
     families = {}
     assets = {}
     os.makedirs(os.path.join(game.workspace, "work", "fonts"), exist_ok=True)
@@ -1335,7 +1359,7 @@ def cmd_pack_fonts(args, game):
     data = read_json(fonts_json)
     index = game.load_index()
     fn = game.find_font_bundle(index)
-    env = UnityPy.load(os.path.join(game.bundles_dir, fn))
+    env = UnityPy.load(pristine_bundle_path(game, fn))
     pid_to_obj = {}
     ident_to_pid = {}
     for obj in env.objects:
@@ -1434,7 +1458,7 @@ def _patch_sharedassets_fonts(args, game, replacements):
     except SystemExit as e:
         log(f"  skipping {SHAREDASSETS_FONT_FILE} font check: {e}")
         return
-    env = load_il2cpp_data_file_env(game, SHAREDASSETS_FONT_FILE, gen=gen)
+    env = load_il2cpp_data_file_env(game, SHAREDASSETS_FONT_FILE, gen=gen, pristine=True)
     hits = []
     for obj in env.objects:
         if obj.type.name != "MonoBehaviour":
