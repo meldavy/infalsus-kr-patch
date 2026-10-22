@@ -346,7 +346,7 @@ check here before improvising a new one.
   "수행편"). Iris shows up and they hang out; Ayame/Iris arc. Then 142/145:
   Nia live-streams Keats's confession and dives into his mindscape, living
   through his RMI-Separation memory (Selene, April, "샘") and seeing
-  '코에부스 인페르나움'. 149/150: attempts a dive on two Xavier students to
+  '코에이부스 인페르나움'. 149/150: attempts a dive on two Xavier students to
   extract a meeting place; 153 she hears the recorded Xavier meeting. In 160
   Mei, suspecting her, resolves to self-dive — Nia is the quiet center of
   the arc's back half
