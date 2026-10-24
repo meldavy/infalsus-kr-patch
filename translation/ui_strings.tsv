@@ -1103,6 +1103,8 @@
 1571	Modal_AudioDriftDetectedDescription	뮤직 플레이 중 곡과 노트 오브젝트(이하⏎노트) 사이에서 탈동기화 현상이 감지되었습니다.⏎즉 곡 도중에 음보다 노트가 먼저 떨어지고⏎있습니다.⏎이 현상이 계속되면 <b>오디오 버퍼 크기</b>⏎값을 늘리는 것을 추천합니다.⏎⏎또한 관련해서, 노트를 두드렸을 때의⏎효과음도 지연되어 재생될 수 있습니다.⏎그 경우 <b>퀵 설정</b>에서 오디오 오프셋⏎조정이 필요합니다.⏎⏎지금 <b>오디오 버퍼 크기</b>를 조정하시겠습니까?⏎참고로 조정은 <b>고급 오디오 설정</b>에서⏎언제든지 할 수 있습니다.
 1572	Modal_AudioDriftDetected_ApplyForMe	설정값 늘리기
 1573	Modal_AudioDriftDetected_DisabledApplyForMe	이미 오디오 버퍼 크기가 최댓값입니다.
+1574	Modal_IotaPlacementLimitTitle	입자 배치 한도
+1575	Modal_IotaPlacementLimitBody	배치 가능한 입자 수가 최대치에 도달했습니다.
 3700	SettingsHeader_NoteBehavior	노트 동작
 1580	Key_1580	이 곡 팩을 구매하시겠습니까?
 1581	Key_1581	곡 팩은 구매 후 게임을 한 번 재시작해야 활성화됩니다.
@@ -1115,3 +1117,10 @@
 1588	Key_1588	시나리오
 1590	Key_1590	구매
 1593	Key_1593	총 페널티 0
+1594	SelectMultipleToolTip	입자 하나를 클릭하면 같은 입자 스택 전체를 선택합니다. Shift 키를 누른 채 클릭하면 여러 스택을 한꺼번에 선택하거나 해제할 수 있습니다.
+1595	IotaMaxLimit	최대:
+1596	IotaInventoryFullUpper	입자 인벤토리 가득 참
+1597	SelectedTraitsUpper	선택한⏎특성
+1598	SelectedTraits	선택한 특성
+1599	SelectTraits	특성 선택
+1600	SelectedTraitsNum	선택한 특성 ({0})

@@ -3,7 +3,7 @@
 # The original Japanese lives in the game install; run
 #   ifalsus.py extract-translations && tools/dump_jp.py <NNN>
 # to read it alongside this file.
-047-001	───평상시에 운동 좀 할껄 그랬어.
+047-001	───평상시에 운동 좀 할걸 그랬어.
 047-002	어릴 적엔 훨씬 더 많이 뛰어다녔던 것 같다.⏎그런데 지금은…….
 047-003	무모한 방종을 물리치고, 책이라는 말의 바다에 빠져 지낸 결과가 이거다.
 047-004	지금의 나는 몸집이 작고 약해서……걸음걸이조차 불안하다.

@@ -3,7 +3,7 @@
 # key in DynamicStringMapping.rawStoryNameTypeMapping; only rows this
 # project translates are listed.
 ???	???
-Advisor	고문 선생님
+Advisor	담당자
 Announcer	아나운서
 Another Boy's Voice	다른 소년의 목소리
 Another Girl's Voice	다른 소녀의 목소리
@@ -13,7 +13,7 @@ Another girl's voice	다른 여자아이의 목소리
 April	에이프릴
 Aria	아리아
 Ayame	아야메
-Beck Student	베크의 학생
+Beck Student	벡고 학생
 Botany Steve	보타니 스티브
 Boy	소년
 Boy's Voice	소년의 목소리
@@ -46,9 +46,9 @@ Io	이오
 Iris	아이리스
 Iris's Dad	아이리스의 아버지
 J	『J』
-Janitor A	용무원:A
-Janitor B	용무원:B
-Janitor C	용무원:C
+Janitor A	경비원 A
+Janitor B	경비원 B
+Janitor C	경비원 C
 Kanae	카나에
 Kanau	카나우
 Keats	키츠
